@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012430394490}
   - 114: {fileID: 114000012321825068}
+  - 61: {fileID: 61000013879063158}
   m_Layer: 0
   m_Name: Resizeable Platform
   m_TagString: platform
@@ -40,6 +41,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &61000013879063158
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013739837372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!114 &114000012321825068
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,14 +18,19 @@ public class PlayerController : MonoBehaviour {
     public GameObject currPlatform;
 
     public float height;
-    
-	// Use this for initialization
-	void Start () {
+
+    public GameObject background;
+
+    Bounds bgSpriteBounds;
+
+    // Use this for initialization
+    void Start () {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
         height = transform.localScale.y;
+        bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
     }
 	
 	// Update is called once per frame
@@ -32,6 +38,19 @@ public class PlayerController : MonoBehaviour {
 
 
         canMove = !levelScript.rotating;
+
+        
+        float bgMinY = background.transform.position.y + bgSpriteBounds.min.y;
+        float bgMinX = background.transform.position.x + bgSpriteBounds.min.x;
+        float bgMaxX = background.transform.position.x + bgSpriteBounds.max.x;
+
+        //Debug.Log(GameObject.Find("Background").GetComponent<SpriteRenderer>().sprite.bounds.max);
+
+        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if(canMove)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -76,7 +95,7 @@ public class PlayerController : MonoBehaviour {
         if(coll.gameObject.tag == "platform" && canMove)
         {
             oldPlatform = currPlatform;
-            currPlatform = coll.gameObject.transform.parent.gameObject;
+            currPlatform = coll.gameObject;
             currPlatform.transform.parent = null;
             levelScript.levelRoot.transform.parent = currPlatform.transform;
             if(oldPlatform)

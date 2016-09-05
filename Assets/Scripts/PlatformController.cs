@@ -11,6 +11,8 @@ public class PlatformController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        GetComponent<BoxCollider2D>().size = new Vector2(numBlocks, 1);
+
         thickness = transform.localScale.y;
 
         float xPos = -(numBlocks) / 2 + 0.5f;
