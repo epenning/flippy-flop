@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
         if(coll.gameObject.tag == "platform" && canMove)
         {
             oldPlatform = currPlatform;
-            currPlatform = coll.gameObject;
+            currPlatform = coll.gameObject.transform.parent.gameObject;
             currPlatform.transform.parent = null;
             levelScript.levelRoot.transform.parent = currPlatform.transform;
             if(oldPlatform)
