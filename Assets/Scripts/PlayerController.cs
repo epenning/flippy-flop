@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     Rigidbody2D rbody;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
 
     public bool canMove = true;
 
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
         height = transform.localScale.y;
     }
@@ -53,6 +57,17 @@ public class PlayerController : MonoBehaviour {
             rbody.isKinematic = true;
         }
 
+        //animations
+        Vector2 velocity = rbody.velocity;
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+        if (velocity.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
