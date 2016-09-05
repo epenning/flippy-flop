@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: 9df1d32afaa7a2d4cbc9be5cf1bae9be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b097b9b4541521b4ebfcbfc496e4a8f5, type: 3}
   m_Color: {r: 0.5579585, g: 0.70610607, b: 0.9485294, a: 1}
   m_FlipX: 0
   m_FlipY: 0
