@@ -54,8 +54,9 @@ public class PlayerController : MonoBehaviour {
 
         if(canMove)
         {
-            // flipping
-            if (canFlip)
+            rbody.isKinematic = false;
+
+            if (canFlip)    // flipping and moving quickly on platforms
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
@@ -65,16 +66,27 @@ public class PlayerController : MonoBehaviour {
                     levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     Debug.Log(levelScript.currRotPoint);
                 }
-            }
 
-            rbody.isKinematic = false;
-            if (Input.GetKey(KeyCode.D))
-            {
-                rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
+                }
             }
-            else if (Input.GetKey(KeyCode.A))
+            else            
             {
-                rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
+                // moving slowly while falling
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
+                }
             }
         } else
         {
@@ -94,6 +106,21 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 
+    // use for physics manipulations
+    void FixedUpdate ()
+    {
+        if (canMove)
+        {
+            if (!canFlip)
+            {
+                // horizontal drag while falling
+                Vector2 v = rbody.velocity;
+                v.x = 0.95f * v.x;
+                rbody.velocity = v;
+            }
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("collided");
@@ -109,7 +136,15 @@ public class PlayerController : MonoBehaviour {
             // allow flip on collision with platform - likely to break when colliding with side of platform
             canFlip = true;
         }
-        
+    }
+
+    void OnCollisionStay2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "platform" && canMove)
+        {
+            // allow flip on collision with platform - likely to break when colliding with side of platform
+            canFlip = true;
+        }
     }
 
     void OnCollisionExit2D(Collision2D coll)
