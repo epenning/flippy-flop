@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     SpriteRenderer spriteRenderer;
 
     public bool canMove = true;
+    public bool canFlip = false;
 
     public GameObject levelController;
 
@@ -53,13 +54,17 @@ public class PlayerController : MonoBehaviour {
 
         if(canMove)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            // flipping
+            if (canFlip)
             {
-                levelScript.rotating = true;
-                levelScript.currDir *= -1;
-                //levelScript.currRotPoint = new Vector3(transform.position.x, currPlatform.transform.position.y, 0);
-                levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
-                Debug.Log(levelScript.currRotPoint);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    levelScript.rotating = true;
+                    levelScript.currDir *= -1;
+                    //levelScript.currRotPoint = new Vector3(transform.position.x, currPlatform.transform.position.y, 0);
+                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
+                    Debug.Log(levelScript.currRotPoint);
+                }
             }
 
             rbody.isKinematic = false;
@@ -76,7 +81,7 @@ public class PlayerController : MonoBehaviour {
             rbody.isKinematic = true;
         }
 
-        //animations
+        // animations
         Vector2 velocity = rbody.velocity;
         animator.SetFloat("Speed", Mathf.Abs(velocity.x));
         if (velocity.x < 0)
@@ -100,6 +105,19 @@ public class PlayerController : MonoBehaviour {
             levelScript.levelRoot.transform.parent = currPlatform.transform;
             if(oldPlatform)
                 oldPlatform.transform.parent = levelScript.levelRoot.transform;
+
+            // allow flip on collision with platform - likely to break when colliding with side of platform
+            canFlip = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        Debug.Log("de-collided");
+        if(coll.gameObject.tag == "platform" && canMove)
+        {
+            // disallow 
+            canFlip = false;
         }
     }
 }
