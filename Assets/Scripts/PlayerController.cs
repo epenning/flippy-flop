@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour {
             // allow flip on collision with platform - likely to break when colliding with side of platform
             canFlip = true;
         }
+        
     }
 
     void OnCollisionExit2D(Collision2D coll)
@@ -118,6 +119,15 @@ public class PlayerController : MonoBehaviour {
         {
             // disallow 
             canFlip = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        Debug.Log("triggered");
+        if (coll.gameObject.tag == "exit")
+        {
+            SceneManager.LoadScene("end");
         }
     }
 }

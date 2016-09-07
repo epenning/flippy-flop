@@ -5,6 +5,8 @@ public class LevelController : MonoBehaviour {
 
     public GameObject levelRoot;
 
+    public GameObject exit;
+
     public Vector3 currRotPoint;
     public int currDir = -1;
 
