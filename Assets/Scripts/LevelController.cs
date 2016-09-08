@@ -12,6 +12,8 @@ public class LevelController : MonoBehaviour {
 
     public bool rotating = false;
 
+    public float rotSpeed;
+
     // Use this for initialization
     void Start () {
 	
@@ -25,10 +27,8 @@ public class LevelController : MonoBehaviour {
         {
             if(currDir == 1)
             {
-                //Debug.Log(levelRoot.transform.rotation.eulerAngles.x);
                 if(levelRoot.transform.parent.transform.rotation.eulerAngles.x > 180f)
                 {
-                    Debug.Log("done rotating");
                     rotating = false;
                     levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180, 0, 0);
                     
@@ -53,15 +53,6 @@ public class LevelController : MonoBehaviour {
 
     void rotateLevel()
     {
-        if(currDir == 1)
-        {
-            //levelRoot.transform.RotateAround(currRotPoint, Vector3.right, currDir * 10 * (0.8f * Mathf.Abs(180 - levelRoot.transform.rotation.eulerAngles.x)) * Time.deltaTime);
-            levelRoot.transform.parent.transform.Rotate(new Vector3(currDir * 10 * (0.8f * Mathf.Abs(180 - levelRoot.transform.rotation.eulerAngles.x)) * Time.deltaTime, 0, 0));
-        } else
-        {
-            //levelRoot.transform.RotateAround(currRotPoint, Vector3.right, currDir * 10 * (0.8f * Mathf.Abs(levelRoot.transform.rotation.eulerAngles.x - 180)) * Time.deltaTime);
-            levelRoot.transform.parent.transform.Rotate(new Vector3(currDir * 10 * (0.8f * Mathf.Abs(levelRoot.transform.rotation.eulerAngles.x - 180)) * Time.deltaTime, 0, 0));
-        }
-        //levelRoot.transform.RotateAround(currRotPoint, Vector3.right, currDir * 500 * Time.deltaTime);
+        levelRoot.transform.parent.transform.Rotate(new Vector3(currDir * rotSpeed * Mathf.Abs(currDir * (180 - levelRoot.transform.rotation.eulerAngles.x)) * Time.deltaTime, 0, 0));
     }
 }

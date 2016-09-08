@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -339,6 +339,7 @@ MonoBehaviour:
   currRotPoint: {x: 0, y: 0, z: 0}
   currDir: -1
   rotating: 0
+  rotSpeed: 8
 --- !u!4 &326020494
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,6 +1313,10 @@ MonoBehaviour:
   currPlatform: {fileID: 0}
   height: 0
   background: {fileID: 932341389}
+  speed: 0
+  accel: 0
+  currSpeed: 0
+  tgtSpeed: 0
 --- !u!95 &1690531629
 Animator:
   serializedVersion: 3

@@ -24,6 +24,13 @@ public class PlayerController : MonoBehaviour {
 
     Bounds bgSpriteBounds;
 
+    public float speed;
+    public float accel;
+
+    public float currSpeed;
+    public float tgtSpeed;
+
+
     // Use this for initialization
     void Start () {
         rbody = GetComponent<Rigidbody2D>();
@@ -45,8 +52,6 @@ public class PlayerController : MonoBehaviour {
         float bgMinX = background.transform.position.x + bgSpriteBounds.min.x;
         float bgMaxX = background.transform.position.x + bgSpriteBounds.max.x;
 
-        //Debug.Log(GameObject.Find("Background").GetComponent<SpriteRenderer>().sprite.bounds.max);
-
         if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -62,10 +67,13 @@ public class PlayerController : MonoBehaviour {
                 {
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
-                    //levelScript.currRotPoint = new Vector3(transform.position.x, currPlatform.transform.position.y, 0);
                     levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     Debug.Log(levelScript.currRotPoint);
                 }
+
+                //tgtSpeed = Input.GetAxisRaw("Horizontal") * speed;
+                //currSpeed = 
+
 
                 if (Input.GetKey(KeyCode.D))
                 {
@@ -78,15 +86,15 @@ public class PlayerController : MonoBehaviour {
             }
             else            
             {
-                // moving slowly while falling
+                //moving slowly while falling
                 if (Input.GetKey(KeyCode.D))
-                {
-                    rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
-                }
-                else if (Input.GetKey(KeyCode.A))
-                {
-                    rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
-                }
+                    {
+                        rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
+                    }
+                    else if (Input.GetKey(KeyCode.A))
+                    {
+                        rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
+                    }
             }
         } else
         {
@@ -106,6 +114,22 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 
+    // Increment n toward tgt by speed
+    //
+    //float incToward(float n, float tgt, float speed)
+    //{
+    //    if( n == tgt)
+    //    {
+    //        return n;
+    //    } else
+    //    {
+    //        float dir = Mathf.Sign(tgt - n); // sign to either increase or decrease n
+    //        n += speed * Time.deltaTime * dir;
+    //        return (dir == Mathf.Sign(tgt - n)) ? n : tgt; // if n overshot tgt, return tgt. otherwise return n
+    //    }
+    //}
+
+
     // use for physics manipulations
     void FixedUpdate ()
     {
@@ -118,13 +142,22 @@ public class PlayerController : MonoBehaviour {
                 v.x = 0.95f * v.x;
                 rbody.velocity = v;
             }
+
+            //if (Input.GetKey(KeyCode.D))
+            //{
+            //    rbody.MovePosition(rbody.position + new Vector2(4, 0) * Time.fixedDeltaTime);
+            //}
+            //else if (Input.GetKey(KeyCode.A))
+            //{
+            //    rbody.MovePosition(rbody.position + new Vector2(-4, 0) * Time.fixedDeltaTime);
+            //}
         }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("collided");
-        if(coll.gameObject.tag == "platform" && canMove)
+        if(coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y < (transform.position.y - height))
         {
             oldPlatform = currPlatform;
             currPlatform = coll.gameObject;
