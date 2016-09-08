@@ -24,12 +24,23 @@ public class PlayerController : MonoBehaviour {
 
     Bounds bgSpriteBounds;
 
-    public float speed;
+    public float maxSpeed;
     public float accel;
 
     public float currSpeed;
     public float tgtSpeed;
 
+    public float grav;
+
+    public Vector2 velocity;
+
+    public int currDir = 0;
+
+    public bool midair = true;
+
+    public float horizAccel;
+
+    public float vertAccel;
 
     // Use this for initialization
     void Start () {
@@ -70,39 +81,14 @@ public class PlayerController : MonoBehaviour {
                     levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     Debug.Log(levelScript.currRotPoint);
                 }
-
-                //tgtSpeed = Input.GetAxisRaw("Horizontal") * speed;
-                //currSpeed = 
-
-
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
-                }
-                else if (Input.GetKey(KeyCode.A))
-                {
-                    rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
-                }
             }
-            else            
-            {
-                //moving slowly while falling
-                if (Input.GetKey(KeyCode.D))
-                    {
-                        rbody.AddForce(new Vector2(10, 0), ForceMode2D.Force);
-                    }
-                    else if (Input.GetKey(KeyCode.A))
-                    {
-                        rbody.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
-                    }
-            }
+
         } else
         {
             rbody.isKinematic = true;
         }
 
         // animations
-        Vector2 velocity = rbody.velocity;
         animator.SetFloat("Speed", Mathf.Abs(velocity.x));
         if (velocity.x < 0)
         {
@@ -114,22 +100,6 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 
-    // Increment n toward tgt by speed
-    //
-    //float incToward(float n, float tgt, float speed)
-    //{
-    //    if( n == tgt)
-    //    {
-    //        return n;
-    //    } else
-    //    {
-    //        float dir = Mathf.Sign(tgt - n); // sign to either increase or decrease n
-    //        n += speed * Time.deltaTime * dir;
-    //        return (dir == Mathf.Sign(tgt - n)) ? n : tgt; // if n overshot tgt, return tgt. otherwise return n
-    //    }
-    //}
-
-
     // use for physics manipulations
     void FixedUpdate ()
     {
@@ -138,27 +108,51 @@ public class PlayerController : MonoBehaviour {
             if (!canFlip)
             {
                 // horizontal drag while falling
-                Vector2 v = rbody.velocity;
-                v.x = 0.95f * v.x;
-                rbody.velocity = v;
+                //Vector2 v = rbody.velocity;
+                //v.x = 0.95f * v.x;
+                //rbody.velocity = v;
             }
 
-            //if (Input.GetKey(KeyCode.D))
-            //{
-            //    rbody.MovePosition(rbody.position + new Vector2(4, 0) * Time.fixedDeltaTime);
-            //}
-            //else if (Input.GetKey(KeyCode.A))
-            //{
-            //    rbody.MovePosition(rbody.position + new Vector2(-4, 0) * Time.fixedDeltaTime);
-            //}
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                currDir = 1;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                currDir = -1;
+                
+            } else
+            {
+                currDir = 0;
+            }
+
+            if(currDir != 0)
+                currSpeed += horizAccel * ((maxSpeed * currDir) - currSpeed);
+            else
+                currSpeed += 1.2f * horizAccel * ((maxSpeed * currDir) - currSpeed);
+
+            if (midair)
+            {
+                velocity.y += vertAccel * (-grav - velocity.y);
+            } else
+            {
+                velocity.y = 0;
+            }
+
+            velocity.x = currSpeed;
+
+            rbody.MovePosition(rbody.position + new Vector2(velocity.x, velocity.y) * Time.fixedDeltaTime);
         }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("collided");
-        if(coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y < (transform.position.y - height))
+        
+        if (coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y < (transform.position.y - height))
         {
+            midair = false;
             oldPlatform = currPlatform;
             currPlatform = coll.gameObject;
             currPlatform.transform.parent = null;
@@ -187,6 +181,7 @@ public class PlayerController : MonoBehaviour {
         {
             // disallow 
             canFlip = false;
+            midair = true;
         }
     }
 
