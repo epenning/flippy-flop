@@ -8,8 +8,7 @@ public class PlayerController : MonoBehaviour {
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    public bool canMove = true;
-    public bool canFlip = false;
+
 
     public GameObject levelController;
 
@@ -24,23 +23,24 @@ public class PlayerController : MonoBehaviour {
 
     Bounds bgSpriteBounds;
 
-    public float maxSpeed;
-    public float accel;
+    public bool canMove = true;
+    public bool canFlip = false;
 
+    public float maxSpeed;
     public float currSpeed;
-    public float tgtSpeed;
+    public int currDir = 0;
+    public float horizAccel;
 
     public float grav;
+    public float jumpSpeed;
+    public bool midair = true;
+    public float vertAccel;
 
     public Vector2 velocity;
 
-    public int currDir = 0;
+    
 
-    public bool midair = true;
 
-    public float horizAccel;
-
-    public float vertAccel;
 
     // Use this for initialization
     void Start () {
@@ -74,7 +74,12 @@ public class PlayerController : MonoBehaviour {
 
             if (canFlip)    // flipping and moving quickly on platforms
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    velocity.y = jumpSpeed;
+                    midair = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.F))
                 {
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;

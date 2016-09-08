@@ -1051,7 +1051,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1294,7 +1294,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 1.28}
+  m_Size: {x: 1, y: 2}
 --- !u!114 &1690531628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,23 +1306,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bbce16018adcd49bcbb677f70d89fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
-  canFlip: 0
   levelController: {fileID: 326020492}
   oldPlatform: {fileID: 0}
   currPlatform: {fileID: 0}
   height: 0
   background: {fileID: 932341389}
-  maxSpeed: 7
-  accel: 0
+  canMove: 1
+  canFlip: 0
+  maxSpeed: 5
   currSpeed: 0
-  tgtSpeed: 0
-  grav: 40
-  velocity: {x: 0, y: 0}
   currDir: 0
-  midair: 1
   horizAccel: 0.15
-  vertAccel: 0.01
+  grav: 40
+  jumpSpeed: 13
+  midair: 1
+  vertAccel: 0.017
+  velocity: {x: 0, y: 0}
 --- !u!95 &1690531629
 Animator:
   serializedVersion: 3
