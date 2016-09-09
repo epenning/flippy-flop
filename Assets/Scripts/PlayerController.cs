@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject currPlatform;
 
     public float height;
+    public float minYBounds;
 
     public GameObject background;
 
@@ -35,8 +36,11 @@ public class PlayerController : MonoBehaviour {
     public float jumpSpeed;
     public bool midair = true;
     public float vertAccel;
+    public bool hasJumped;
 
     public Vector2 velocity;
+
+    public float collCorrection;
 
     
 
@@ -48,13 +52,13 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
-        height = transform.localScale.y;
+        height = GetComponent<BoxCollider2D>().size.y;
+        minYBounds = GetComponent<BoxCollider2D>().offset.y - (height / 2);
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
     }
 	
 	// Update is called once per frame
 	void Update () {
-
 
         canMove = !levelScript.rotating;
 
@@ -78,12 +82,13 @@ public class PlayerController : MonoBehaviour {
                 {
                     velocity.y = jumpSpeed;
                     midair = true;
+                    hasJumped = true;
                 }
                 else if (Input.GetKeyDown(KeyCode.F))
                 {
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
-                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - ((height / 2) + (currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
+                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y + minYBounds -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     Debug.Log(levelScript.currRotPoint);
                 }
             }
@@ -110,14 +115,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (canMove)
         {
-            if (!canFlip)
-            {
-                // horizontal drag while falling
-                //Vector2 v = rbody.velocity;
-                //v.x = 0.95f * v.x;
-                //rbody.velocity = v;
-            }
-
 
             if (Input.GetKey(KeyCode.D))
             {
@@ -133,9 +130,13 @@ public class PlayerController : MonoBehaviour {
             }
 
             if(currDir != 0)
+            {
                 currSpeed += horizAccel * ((maxSpeed * currDir) - currSpeed);
-            else
-                currSpeed += 1.2f * horizAccel * ((maxSpeed * currDir) - currSpeed);
+
+            } else
+            {
+                currSpeed += 1.2f * horizAccel * -currSpeed;
+            }
 
             if (midair)
             {
@@ -154,26 +155,38 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("collided");
-        
-        if (coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y < (transform.position.y - height))
-        {
-            midair = false;
-            oldPlatform = currPlatform;
-            currPlatform = coll.gameObject;
-            currPlatform.transform.parent = null;
-            levelScript.levelRoot.transform.parent = currPlatform.transform;
-            if(oldPlatform)
-                oldPlatform.transform.parent = levelScript.levelRoot.transform;
 
-            // allow flip on collision with platform - likely to break when colliding with side of platform
-            canFlip = true;
+        //Debug.Log(coll.gameObject.transform.position.y);
+        //Debug.Log(transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2));
+
+        if (canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
+        {
+
+            midair = false;
+            hasJumped = false;
+
+            if (coll.gameObject.tag == "platform")
+            {
+                oldPlatform = currPlatform;
+                currPlatform = coll.gameObject;
+                currPlatform.transform.parent = null;
+                levelScript.levelRoot.transform.parent = currPlatform.transform;
+                if (oldPlatform)
+                    oldPlatform.transform.parent = levelScript.levelRoot.transform;
+
+                // allow flip on collision with platform - likely to break when colliding with side of platform
+                canFlip = true;
+            }
         }
+
     }
 
     void OnCollisionStay2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "platform" && canMove)
+        if (!hasJumped && coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
+            midair = false;
+
             // allow flip on collision with platform - likely to break when colliding with side of platform
             canFlip = true;
         }
