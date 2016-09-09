@@ -11,6 +11,9 @@ public class PlatformController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        numBlocks = transform.localScale.x;
+        transform.localScale = Vector3.one;
+
         GetComponent<BoxCollider2D>().size = new Vector2(numBlocks, 1);
 
         thickness = transform.localScale.y;
