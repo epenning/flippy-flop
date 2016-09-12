@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-
+    public int numColliding;
 
     public GameObject levelController;
 
@@ -52,8 +52,10 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
-        height = GetComponent<BoxCollider2D>().size.y;
-        minYBounds = GetComponent<BoxCollider2D>().offset.y - (height / 2);
+        //height = GetComponent<BoxCollider2D>().size.y;
+        //minYBounds = GetComponent<BoxCollider2D>().offset.y - (height / 2);
+        height = 1.9f;
+        minYBounds = -0.035f - (height / 2);
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
     }
 	
@@ -78,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 
             if (canFlip)    // flipping and moving quickly on platforms
             {
-                if(Input.GetKeyDown(KeyCode.Space))
+                if(Input.GetKeyDown(KeyCode.Space) && !hasJumped)
                 {
                     velocity.y = jumpSpeed;
                     midair = true;
@@ -155,6 +157,7 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("collided");
+        numColliding++;
 
         //Debug.Log(coll.gameObject.transform.position.y);
         //Debug.Log(transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2));
@@ -176,6 +179,7 @@ public class PlayerController : MonoBehaviour {
 
                 // allow flip on collision with platform - likely to break when colliding with side of platform
                 canFlip = true;
+
             }
         }
 
@@ -195,7 +199,8 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionExit2D(Collision2D coll)
     {
         Debug.Log("de-collided");
-        if(coll.gameObject.tag == "platform" && canMove)
+        numColliding--;
+        if (numColliding <= 0)
         {
             // disallow 
             canFlip = false;
