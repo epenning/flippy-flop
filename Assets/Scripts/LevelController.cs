@@ -7,6 +7,9 @@ public class LevelController : MonoBehaviour {
 
     public GameObject exit;
 
+    public AudioSource dayMusic;
+    public AudioSource nightMusic;
+
     public Vector3 currRotPoint;
     public int currDir = -1;
 
@@ -16,7 +19,8 @@ public class LevelController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+        dayMusic.volume = 1f;
+        nightMusic.volume = 0f;
 	}
 	
 	// Update is called once per frame
@@ -31,21 +35,41 @@ public class LevelController : MonoBehaviour {
                 {
                     rotating = false;
                     levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180, 0, 0);
+
+                    // control music to daytime
+                    dayMusic.volume = 0f;
+                    nightMusic.volume = 1f;
                     
                 } else
                 {
                     rotateLevel();
+
+                    // fade nightMusic out, fade dayMusic in
+                    if (dayMusic.volume > 0)
+                        dayMusic.volume -= 0.05f;
+                    if (nightMusic.volume < 1)
+                        nightMusic.volume += 0.05f;
                 }
             } else
             {
                 if (levelRoot.transform.parent.transform.localRotation.x > 0f)
                 {
                     rotateLevel();
+
+                    // fade dayMusic out, fade nightMusic in
+                    if (nightMusic.volume > 0)
+                        nightMusic.volume -= 0.05f;
+                    if (dayMusic.volume < 1)
+                        dayMusic.volume += 0.05f;
                 }
                 else
                 {
                     rotating = false;
                     levelRoot.transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                    // control music to nighttime
+                    dayMusic.volume = 1f;
+                    nightMusic.volume = 0f;
                 }
             }
         }
