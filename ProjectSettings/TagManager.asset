@@ -6,6 +6,7 @@ TagManager:
   tags:
   - platform
   - exit
+  - obstacle
   layers:
   - Default
   - TransparentFX

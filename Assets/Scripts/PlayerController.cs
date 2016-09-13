@@ -36,16 +36,12 @@ public class PlayerController : MonoBehaviour {
     public float jumpSpeed;
     public bool midair = true;
     public float vertAccel;
-    public bool hasJumped;
+    public bool hasJumped = false;
 
     public Vector2 velocity;
 
     public float collCorrection;
-
     
-
-
-
     // Use this for initialization
     void Start () {
         rbody = GetComponent<Rigidbody2D>();
@@ -78,15 +74,18 @@ public class PlayerController : MonoBehaviour {
         {
             rbody.isKinematic = false;
 
-            if (canFlip)    // flipping and moving quickly on platforms
+            // jumping
+            if (Input.GetKeyDown(KeyCode.Space) && !hasJumped && !midair)
             {
-                if(Input.GetKeyDown(KeyCode.Space) && !hasJumped)
-                {
-                    velocity.y = jumpSpeed;
-                    midair = true;
-                    hasJumped = true;
-                }
-                else if (Input.GetKeyDown(KeyCode.F))
+                velocity.y = jumpSpeed;
+                midair = true;
+                hasJumped = true;
+            }
+
+            // flipping
+            if (canFlip && !midair)    
+            {
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
@@ -94,7 +93,6 @@ public class PlayerController : MonoBehaviour {
                     Debug.Log(levelScript.currRotPoint);
                 }
             }
-
         } else
         {
             rbody.isKinematic = true;
@@ -115,9 +113,9 @@ public class PlayerController : MonoBehaviour {
     // use for physics manipulations
     void FixedUpdate ()
     {
+        // handle movement
         if (canMove)
         {
-
             if (Input.GetKey(KeyCode.D))
             {
                 currDir = 1;
@@ -162,14 +160,15 @@ public class PlayerController : MonoBehaviour {
         //Debug.Log(coll.gameObject.transform.position.y);
         //Debug.Log(transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2));
 
+        // landed on a platform
         if (canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
-
             midair = false;
             hasJumped = false;
 
             if (coll.gameObject.tag == "platform")
             {
+                // set which platform the flip occurs around
                 oldPlatform = currPlatform;
                 currPlatform = coll.gameObject;
                 currPlatform.transform.parent = null;
@@ -178,8 +177,7 @@ public class PlayerController : MonoBehaviour {
                     oldPlatform.transform.parent = levelScript.levelRoot.transform;
 
                 // allow flip on collision with platform - likely to break when colliding with side of platform
-                canFlip = true;
-
+                //canFlip = true;
             }
         }
 
@@ -187,12 +185,13 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D coll)
     {
+        // staying standing on a platform
         if (!hasJumped && coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
             midair = false;
 
             // allow flip on collision with platform - likely to break when colliding with side of platform
-            canFlip = true;
+            //canFlip = true;
         }
     }
 
@@ -202,8 +201,8 @@ public class PlayerController : MonoBehaviour {
         numColliding--;
         if (numColliding <= 0)
         {
-            // disallow 
-            canFlip = false;
+            // disallow flipping and jumping midair
+            //canFlip = false;
             midair = true;
         }
     }
@@ -211,6 +210,7 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll)
     {
         Debug.Log("triggered");
+        // handle end condition
         if (coll.gameObject.tag == "exit")
         {
             SceneManager.LoadScene("end");
