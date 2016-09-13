@@ -256,13 +256,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89139220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.97, y: 14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 886916645}
+  m_RootOrder: 19
 --- !u!4 &122730356 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -1045,6 +1045,7 @@ Transform:
   - {fileID: 1185192864}
   - {fileID: 1756215686}
   - {fileID: 1428558380}
+  - {fileID: 89139223}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &932341389
@@ -1597,6 +1598,7 @@ MonoBehaviour:
   hasJumped: 0
   velocity: {x: 0, y: 0}
   collCorrection: 0.1
+  keys: 0
 --- !u!95 &1690531629
 Animator:
   serializedVersion: 3
