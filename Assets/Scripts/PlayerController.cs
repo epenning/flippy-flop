@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour {
     public Vector2 velocity;
 
     public float collCorrection;
+
+	public int keys;
     
     // Use this for initialization
     void Start () {
@@ -213,7 +215,17 @@ public class PlayerController : MonoBehaviour {
         // handle end condition
         if (coll.gameObject.tag == "exit")
         {
-            SceneManager.LoadScene("end");
+			if (keys >= 1)
+				SceneManager.LoadScene ("end");
+			else {
+				Debug.Log ("You need a key to open this door!");
+			}
         }
+		if (coll.gameObject.tag == "key") 
+		{
+			Debug.Log ("Picked up a key!");
+			keys++;
+			Destroy (coll.gameObject);
+		}
     }
 }
