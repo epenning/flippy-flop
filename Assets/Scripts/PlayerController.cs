@@ -188,12 +188,14 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionStay2D(Collision2D coll)
     {
         // staying standing on a platform
-        if (!hasJumped && coll.gameObject.tag == "platform" && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
+        if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
             midair = false;
-
             // allow flip on collision with platform - likely to break when colliding with side of platform
             //canFlip = true;
+        } else
+        {
+            midair = true;
         }
     }
 
