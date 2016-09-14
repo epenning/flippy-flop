@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour {
     public float collCorrection;
 
 	public int keys;
+    public GameObject keyIndicator;
     
     // Use this for initialization
     void Start () {
@@ -98,6 +99,16 @@ public class PlayerController : MonoBehaviour {
         } else
         {
             rbody.isKinematic = true;
+        }
+
+        // display key indicator
+        if (keys > 0)
+        {
+            keyIndicator.SetActive(true);
+        }
+        else
+        {
+            keyIndicator.SetActive(false);
         }
 
         // animations
@@ -217,11 +228,15 @@ public class PlayerController : MonoBehaviour {
         // handle end condition
         if (coll.gameObject.tag == "exit")
         {
-			if (keys >= 1)
-				SceneManager.LoadScene ("end");
-			else {
-				Debug.Log ("You need a key to open this door!");
-			}
+            if (keys >= 1)
+            {
+                keys--;
+                SceneManager.LoadScene("end");
+            }
+            else
+            {
+                Debug.Log("You need a key to open this door!");
+            }
         }
 		if (coll.gameObject.tag == "key") 
 		{
