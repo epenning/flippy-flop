@@ -1,33 +1,77 @@
 fileFormatVersion: 2
-guid: 915b7f2c65c495b47baf1f0a064df0c1
-timeCreated: 1473110866
+guid: 0ce0337c701a41945b822efd0ad2009d
+timeCreated: 1473890118
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: act_plr_02_0
-    21300002: act_plr_02_1
-    21300004: act_plr_02_2
-    21300006: act_plr_02_3
-    21300008: act_plr_02_4
-    21300010: act_plr_02_5
-    21300012: act_plr_02_6
-    21300014: act_plr_02_7
-    21300016: act_plr_02_8
-    21300018: act_plr_02_9
-    21300020: act_plr_02_10
-    21300022: act_plr_02_11
-    21300024: act_plr_02_12
-    21300026: act_plr_02_13
-    21300028: act_plr_02_14
-    21300030: act_plr_02_15
-    21300032: act_plr_02_16
-    21300034: act_plr_02_17
-    21300036: act_plr_02_18
-    21300038: act_plr_02_19
-    21300040: act_plr_02_20
-    21300042: act_plr_02_21
-    21300044: act_plr_02_22
-    21300046: act_plr_02_23
+    21300000: act_plr_04_0
+    21300002: act_plr_04_1
+    21300004: act_plr_04_2
+    21300006: act_plr_04_3
+    21300008: act_plr_04_4
+    21300010: act_plr_04_5
+    21300012: act_plr_04_6
+    21300014: act_plr_04_7
+    21300016: act_plr_04_8
+    21300018: act_plr_04_9
+    21300020: act_plr_04_10
+    21300022: act_plr_04_11
+    21300024: act_plr_04_12
+    21300026: act_plr_04_13
+    21300028: act_plr_04_14
+    21300030: act_plr_04_15
+    21300032: act_plr_04_16
+    21300034: act_plr_04_17
+    21300036: act_plr_04_18
+    21300038: act_plr_04_19
+    21300040: act_plr_04_20
+    21300042: act_plr_04_21
+    21300044: act_plr_04_22
+    21300046: act_plr_04_23
+    21300048: act_plr_04_24
+    21300050: act_plr_04_25
+    21300052: act_plr_04_26
+    21300054: act_plr_04_27
+    21300056: act_plr_04_28
+    21300058: act_plr_04_29
+    21300060: act_plr_04_30
+    21300062: act_plr_04_31
+    21300064: act_plr_04_32
+    21300066: act_plr_04_33
+    21300068: act_plr_02_0
+    21300070: act_plr_02_1
+    21300072: act_plr_02_2
+    21300074: act_plr_02_3
+    21300076: act_plr_02_4
+    21300078: act_plr_02_5
+    21300080: act_plr_02_6
+    21300082: act_plr_02_7
+    21300084: act_plr_02_8
+    21300086: act_plr_02_9
+    21300088: act_plr_02_10
+    21300090: act_plr_02_11
+    21300092: act_plr_02_12
+    21300094: act_plr_02_13
+    21300096: act_plr_02_14
+    21300098: act_plr_02_15
+    21300100: act_plr_02_16
+    21300102: act_plr_02_17
+    21300104: act_plr_02_18
+    21300106: act_plr_02_19
+    21300108: act_plr_02_20
+    21300110: act_plr_02_21
+    21300112: act_plr_02_22
+    21300114: act_plr_02_23
+    21300116: act_plr_02_24
+    21300118: act_plr_02_25
+    21300120: act_plr_02_26
+    21300122: act_plr_02_27
+    21300124: act_plr_02_28
+    21300126: act_plr_02_29
+    21300128: act_plr_02_30
+    21300130: act_plr_02_31
+    21300132: act_plr_02_32
+    21300134: act_plr_02_33
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -81,7 +125,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -94,7 +138,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -107,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -120,7 +164,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -133,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -146,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -159,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -172,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 448
-        y: 256
+        y: 512
         width: 64
         height: 128
       alignment: 0
@@ -185,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -198,7 +242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -211,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -224,7 +268,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -237,7 +281,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -250,7 +294,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -263,7 +307,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -276,7 +320,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 448
-        y: 128
+        y: 384
         width: 64
         height: 128
       alignment: 0
@@ -289,7 +333,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -302,7 +346,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -315,7 +359,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -328,7 +372,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -341,7 +385,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -354,7 +398,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -367,7 +411,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 256
         width: 64
         height: 128
       alignment: 0
@@ -380,6 +424,136 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 448
+        y: 256
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: act_plr_02_33
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 0
         width: 64
         height: 128

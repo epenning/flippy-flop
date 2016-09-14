@@ -83,6 +83,9 @@ public class PlayerController : MonoBehaviour {
                 velocity.y = jumpSpeed;
                 midair = true;
                 hasJumped = true;
+
+                // trigger jump animation
+                animator.SetTrigger("Jump");
             }
 
             // flipping
@@ -121,6 +124,7 @@ public class PlayerController : MonoBehaviour {
         {
             spriteRenderer.flipX = false;
         }
+        animator.SetBool("Midair", midair);
 	}
 
     // use for physics manipulations
