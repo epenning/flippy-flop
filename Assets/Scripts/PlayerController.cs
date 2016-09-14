@@ -208,7 +208,7 @@ public class PlayerController : MonoBehaviour {
             midair = false;
             // allow flip on collision with platform - likely to break when colliding with side of platform
             //canFlip = true;
-        } else
+        } else if(!levelScript.rotating)
         {
             midair = true;
         }
@@ -222,7 +222,8 @@ public class PlayerController : MonoBehaviour {
         {
             // disallow flipping and jumping midair
             //canFlip = false;
-            midair = true;
+            if (!levelScript.rotating)
+                midair = true;
         }
     }
 
