@@ -208,9 +208,12 @@ public class PlayerController : MonoBehaviour {
             midair = false;
             // allow flip on collision with platform - likely to break when colliding with side of platform
             //canFlip = true;
-        } else if(!levelScript.rotating)
+        }
+        else if(!levelScript.rotating)
         {
-            midair = true;
+            // this line was making the "midair" variable true whenever touching two objects
+            // what was this for?
+            //midair = true;
         }
     }
 
