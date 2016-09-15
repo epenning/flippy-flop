@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour {
 			Destroy (coll.gameObject);
 		}
         // handle trap collision (only if flipped upside-down)
-        if (coll.gameObject.tag == "trap" && levelScript.currDir == 1)
+        if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy") && levelScript.currDir == 1)
         {
             // only die if flipped upside-down
             Die();
