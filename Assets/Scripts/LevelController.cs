@@ -27,7 +27,7 @@ public class LevelController : MonoBehaviour {
         // enable day sprites, disable night sprites
         foreach (Transform child in levelRoot.transform)
         {
-            if (child.gameObject.tag == "obstacle")
+            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
             {
                 child.gameObject.GetComponent<Renderer>().enabled = true;
                 child.GetChild(0).GetComponent<Renderer>().enabled = false;
@@ -71,7 +71,7 @@ public class LevelController : MonoBehaviour {
                         // enable night sprites, disable day sprites
                         foreach (Transform child in levelRoot.transform)
                         {
-                            if (child.gameObject.tag == "obstacle")
+                            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
                             {
                                 child.gameObject.GetComponent<Renderer>().enabled = false;
                                 child.GetChild(0).GetComponent<Renderer>().enabled = true;
@@ -100,7 +100,7 @@ public class LevelController : MonoBehaviour {
                         // enable day sprites, disable night sprites
                         foreach (Transform child in levelRoot.transform)
                         {
-                            if (child.gameObject.tag == "obstacle")
+                            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
                             {
                                 child.gameObject.GetComponent<Renderer>().enabled = true;
                                 child.GetChild(0).GetComponent<Renderer>().enabled = false;

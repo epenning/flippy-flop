@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Die();
         }
 
         if(canMove)
@@ -246,11 +246,23 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log("You need a key to open this door!");
             }
         }
+        // handle key pickup
 		if (coll.gameObject.tag == "key") 
 		{
 			Debug.Log ("Picked up a key!");
 			keys++;
 			Destroy (coll.gameObject);
 		}
+        // handle trap collision (only if flipped upside-down)
+        if (coll.gameObject.tag == "trap" && levelScript.currDir == 1)
+        {
+            // only die if flipped upside-down
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
