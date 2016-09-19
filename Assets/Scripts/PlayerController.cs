@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour {
         float bgMinX = background.transform.position.x + bgSpriteBounds.min.x;
         float bgMaxX = background.transform.position.x + bgSpriteBounds.max.x;
 
-        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
+        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY)
         {
             Die();
         }
