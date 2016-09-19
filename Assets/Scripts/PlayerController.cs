@@ -52,6 +52,16 @@ public class PlayerController : MonoBehaviour {
     public float bgYScale;
     public float bgXScale;
 
+    public Sprite cooldownFlipIcon;
+    public Sprite disabledFlipIcon;
+    public Sprite readyFlipIcon;
+
+    public float flipCooldown;
+    public float timeToNextFlip;
+    public bool flipOnCooldown;
+
+    public GameObject flipIcon;
+
     // Use this for initialization
     void Start () {
         rbody = GetComponent<Rigidbody2D>();
@@ -72,6 +82,24 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         canMove = !levelScript.rotating;
+
+
+        if(timeToNextFlip <= Time.time)
+        {
+            flipOnCooldown = false;
+
+            if(canFlip && !midair)
+            {
+                flipIcon.GetComponent<SpriteRenderer>().sprite = readyFlipIcon;
+            } else
+            {
+                flipIcon.GetComponent<SpriteRenderer>().sprite = disabledFlipIcon;
+            }
+        } else
+        {
+            flipIcon.GetComponent<SpriteRenderer>().sprite = cooldownFlipIcon;
+        }
+
 
         // Get boundaries of background (taking scale into account)
         bgMinY = background.transform.position.y + bgSpriteBounds.min.y * bgYScale;
@@ -101,10 +129,12 @@ public class PlayerController : MonoBehaviour {
             }
 
             // flipping
-            if (canFlip && !midair)    
+            if (canFlip && !midair && !flipOnCooldown)    
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    timeToNextFlip = Time.time + flipCooldown;
+                    flipOnCooldown = true;
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
                     // Designate the point around which the world will rotate (along the x-axis)
