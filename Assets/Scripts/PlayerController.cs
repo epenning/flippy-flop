@@ -44,18 +44,38 @@ public class PlayerController : MonoBehaviour {
 
 	public int keys;
     public GameObject keyIndicator;
-    
+
+    public float bgMinY;
+    public float bgMinX;
+    public float bgMaxX;
+
+    public float bgYScale;
+    public float bgXScale;
+
+    public Sprite cooldownFlipIcon;
+    public Sprite disabledFlipIcon;
+    public Sprite readyFlipIcon;
+
+    public float flipCooldown;
+    public float timeToNextFlip;
+    public bool flipOnCooldown;
+
+    public GameObject flipIcon;
+
     // Use this for initialization
     void Start () {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
-        //height = GetComponent<BoxCollider2D>().size.y;
-        //minYBounds = GetComponent<BoxCollider2D>().offset.y - (height / 2);
+
+        // hardcoded values from when we had a BoxCollider2D. should be changed but I tried changing it and everything broke
         height = 1.9f;
         minYBounds = -0.035f - (height / 2);
+
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
+        bgYScale = background.transform.localScale.y;
+        bgXScale = background.transform.localScale.x;
     }
 	
 	// Update is called once per frame
@@ -63,13 +83,33 @@ public class PlayerController : MonoBehaviour {
 
         canMove = !levelScript.rotating;
 
-        
-        float bgMinY = background.transform.position.y + bgSpriteBounds.min.y;
-        float bgMinX = background.transform.position.x + bgSpriteBounds.min.x;
-        float bgMaxX = background.transform.position.x + bgSpriteBounds.max.x;
 
-        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY)
+        if(timeToNextFlip <= Time.time)
         {
+            flipOnCooldown = false;
+
+            if(canFlip && !midair)
+            {
+                flipIcon.GetComponent<SpriteRenderer>().sprite = readyFlipIcon;
+            } else
+            {
+                flipIcon.GetComponent<SpriteRenderer>().sprite = disabledFlipIcon;
+            }
+        } else
+        {
+            flipIcon.GetComponent<SpriteRenderer>().sprite = cooldownFlipIcon;
+        }
+
+
+        // Get boundaries of background (taking scale into account)
+        bgMinY = background.transform.position.y + bgSpriteBounds.min.y * bgYScale;
+        bgMinX = background.transform.position.x + bgSpriteBounds.min.x * bgXScale;
+        bgMaxX = background.transform.position.x + bgSpriteBounds.max.x * bgXScale;
+
+
+        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
+        {
+            // Reached the border of the background or hit the reset button
             Die();
         }
 
@@ -89,18 +129,22 @@ public class PlayerController : MonoBehaviour {
             }
 
             // flipping
-            if (canFlip && !midair)    
+            if (canFlip && !midair && !flipOnCooldown)    
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    timeToNextFlip = Time.time + flipCooldown;
+                    flipOnCooldown = true;
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
+                    // Designate the point around which the world will rotate (along the x-axis)
                     levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y + minYBounds -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
-                    Debug.Log(levelScript.currRotPoint);
+                    //Debug.Log(levelScript.currRotPoint);
                 }
             }
         } else
         {
+            // Freeze the character
             rbody.isKinematic = true;
         }
 
@@ -193,8 +237,6 @@ public class PlayerController : MonoBehaviour {
                 if (oldPlatform)
                     oldPlatform.transform.parent = levelScript.levelRoot.transform;
 
-                // allow flip on collision with platform - likely to break when colliding with side of platform
-                //canFlip = true;
             }
         }
 
@@ -203,17 +245,18 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionStay2D(Collision2D coll)
     {
         // staying standing on a platform
+
+
         if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
             midair = false;
             // allow flip on collision with platform - likely to break when colliding with side of platform
             //canFlip = true;
         }
-        else if(!levelScript.rotating)
+        else if(numColliding <= 1)
         {
-            // this line was making the "midair" variable true whenever touching two objects
-            // what was this for?
-            //midair = true;
+            // we are colliding with one object, but it isn't below us (our feet aren't touching it)
+            midair = true;
         }
     }
 

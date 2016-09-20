@@ -53,7 +53,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010832090338}
   - 212: {fileID: 212000011497947636}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Minimap Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
