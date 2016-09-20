@@ -276,31 +276,36 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll)
     {
         Debug.Log("triggered");
-        // handle end condition
-        if (coll.gameObject.tag == "exit")
+
+        // don't activate triggers if hitting in the middle of flipping
+        if (!levelScript.rotating)
         {
-            if (keys >= 1)
+            // handle end condition
+            if (coll.gameObject.tag == "exit")
             {
-                keys--;
-                SceneManager.LoadScene("end");
+                if (keys >= 1)
+                {
+                    keys--;
+                    SceneManager.LoadScene("end");
+                }
+                else
+                {
+                    Debug.Log("You need a key to open this door!");
+                }
             }
-            else
+            // handle key pickup
+            if (coll.gameObject.tag == "key")
             {
-                Debug.Log("You need a key to open this door!");
+                Debug.Log("Picked up a key!");
+                keys++;
+                Destroy(coll.gameObject);
             }
-        }
-        // handle key pickup
-		if (coll.gameObject.tag == "key") 
-		{
-			Debug.Log ("Picked up a key!");
-			keys++;
-			Destroy (coll.gameObject);
-		}
-        // handle trap collision (only if flipped upside-down)
-        if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy") && levelScript.currDir == 1)
-        {
-            // only die if flipped upside-down
-            Die();
+            // handle trap collision (only if flipped upside-down)
+            if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy") && levelScript.currDir == 1)
+            {
+                // only die if flipped upside-down
+                Die();
+            }
         }
     }
 
