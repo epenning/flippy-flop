@@ -18,8 +18,10 @@ public class EnemyPathController : MonoBehaviour {
         rbody.velocity = new Vector3(speed * direction, 0, 0);
 	}
 
-    void OnTriggerExit2D()
+    void OnTriggerExit2D(Collider2D coll)
     {
-        direction *= -1;
+        // turn around if about to move off platform
+        if (coll.gameObject.tag == "platform")
+            direction *= -1;
     }
 }
