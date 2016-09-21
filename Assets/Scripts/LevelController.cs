@@ -18,8 +18,12 @@ public class LevelController : MonoBehaviour {
 
     public float rotSpeed;
 
+    public int flipSide;
+
     // Use this for initialization
     void Start () {
+        flipSide = 1;
+
         // control music to daytime
         dayMusic.volume = 1f;
         nightMusic.volume = 0f;
@@ -125,5 +129,10 @@ public class LevelController : MonoBehaviour {
     void rotateLevel()
     {
         levelRoot.transform.parent.transform.Rotate(new Vector3(currDir * rotSpeed * Mathf.Abs(currDir * (180 - levelRoot.transform.rotation.eulerAngles.x)) * Time.deltaTime, 0, 0));
+    }
+
+    void loadLastCheckpoint()
+    {
+
     }
 }

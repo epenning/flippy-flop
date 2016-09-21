@@ -62,6 +62,11 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject flipIcon;
 
+    public GameObject lastCheckpoint;
+    public bool respawning;
+
+    public GameObject checkpointPrefab;
+
     // Use this for initialization
     void Start () {
         rbody = GetComponent<Rigidbody2D>();
@@ -76,12 +81,16 @@ public class PlayerController : MonoBehaviour {
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
         bgYScale = background.transform.localScale.y;
         bgXScale = background.transform.localScale.x;
+
+        GameObject startingCheckpoint = GameObject.Instantiate(checkpointPrefab);
+        startingCheckpoint.transform.position = transform.position;
+        startingCheckpoint.transform.parent = levelScript.levelRoot.transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        canMove = !levelScript.rotating;
+        canMove = !levelScript.rotating && !respawning;
 
 
         if(timeToNextFlip <= Time.time)
@@ -137,6 +146,7 @@ public class PlayerController : MonoBehaviour {
                     flipOnCooldown = true;
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
+                    levelScript.flipSide *= -1;
                     // Designate the point around which the world will rotate (along the x-axis)
                     levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y + minYBounds -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     //Debug.Log(levelScript.currRotPoint);
@@ -246,7 +256,8 @@ public class PlayerController : MonoBehaviour {
     {
         // staying standing on a platform
 
-
+        //Debug.Log("platform yPos: " + coll.gameObject.transform.position.y);
+        //Debug.Log("feetPos: " + (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)));
         if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)))
         {
             midair = false;
@@ -298,7 +309,8 @@ public class PlayerController : MonoBehaviour {
             {
                 Debug.Log("Picked up a key!");
                 keys++;
-                Destroy(coll.gameObject);
+                coll.gameObject.SetActive(false);
+                lastCheckpoint.GetComponent<CheckpointController>().pickups.Add(coll.gameObject);
             }
             // handle trap collision (only if flipped upside-down)
             if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy") && levelScript.currDir == 1)
@@ -311,6 +323,37 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (respawning)
+            return;
+
+        respawning = true;
+        velocity = Vector2.zero;
+        //rbody.isKinematic = true;
+        CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
+        if(checkpointScript.flipSide != levelScript.flipSide)
+        {
+            levelScript.rotating = true;
+            levelScript.currDir *= -1;
+            levelScript.flipSide *= -1;
+            // Designate the point around which the world will rotate (along the x-axis)
+            levelScript.currRotPoint = checkpointScript.rotPoint;
+
+            Invoke("resetPosToCheckpoint", 0.2f);
+        } else
+        {
+            resetPosToCheckpoint();
+        }
+        keys = checkpointScript.numKeys;
+        checkpointScript.activatePickups();
+
+        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void resetPosToCheckpoint()
+    {
+        //rbody.isKinematic = false;
+        respawning = false;
+        transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
     }
 }

@@ -95,7 +95,7 @@ GameObject:
   - 61: {fileID: 61000011990690660}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,8 +176,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012275394692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: -5, z: -1}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -11.5, y: -5.5, z: -1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011250398432}
@@ -202,7 +202,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: -15.9, z: 0}
+  m_LocalPosition: {x: -13.99, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -232,7 +232,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012804836230}
   m_LocalRotation: {x: 6.9199546e-12, y: -0.0000026305806, z: -0.0000026305806, w: 1}
-  m_LocalPosition: {x: 12, y: 6, z: 10}
+  m_LocalPosition: {x: 12.84, y: 6.78, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -440,12 +440,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.185, y: -0.99}
-      - {x: 0.185, y: -0.99}
-      - {x: 0.45, y: -0.625}
+    - - {x: -0.185, y: -0.9}
+      - {x: 0.185, y: -0.9}
+      - {x: 0.41, y: -0.52}
       - {x: 0.26, y: 0.876}
       - {x: -0.26, y: 0.876}
-      - {x: -0.45, y: -0.625}
+      - {x: -0.41, y: -0.52}
 --- !u!60 &60000012413043786
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -712,10 +712,11 @@ MonoBehaviour:
   cooldownFlipIcon: {fileID: 21300000, guid: 1087817ffaf2cae42beff3173fc0109c, type: 3}
   disabledFlipIcon: {fileID: 21300000, guid: cc4d428011e0d6943bca6ed28dbdae97, type: 3}
   readyFlipIcon: {fileID: 21300000, guid: 990d538fc90b7dc468a1d57f736ce38a, type: 3}
-  flipCooldown: 1
+  flipCooldown: 0.5
   timeToNextFlip: 0
   flipOnCooldown: 0
   flipIcon: {fileID: 1000012804836230}
+  lastCheckpoint: {fileID: 0}
 --- !u!114 &114000010887426860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,7 +768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d49a733fc446c4b40b74915f22d545cb, type: 3}
-  m_Color: {r: 0.32179928, g: 0.6838235, b: 0.42915818, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.2965517, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000012419097526
