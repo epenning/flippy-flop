@@ -202,7 +202,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.99, y: 0, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -717,6 +717,9 @@ MonoBehaviour:
   flipOnCooldown: 0
   flipIcon: {fileID: 1000012804836230}
   lastCheckpoint: {fileID: 0}
+  respawning: 0
+  checkpointPrefab: {fileID: 1000011163982994, guid: e4658675f16c3fb4791e463a25bb41dc,
+    type: 2}
 --- !u!114 &114000010887426860
 MonoBehaviour:
   m_ObjectHideFlags: 1
