@@ -234,7 +234,7 @@ public class PlayerController : MonoBehaviour {
         BoxCollider2D collCollider = coll.gameObject.GetComponent<BoxCollider2D>();
 
         // landed on a platform
-        if (canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y / 2) + collCollider.offset.y)))
+        if (canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)))
         {
             midair = false;
             hasJumped = false;
@@ -261,10 +261,10 @@ public class PlayerController : MonoBehaviour {
         BoxCollider2D collCollider = coll.gameObject.GetComponent<BoxCollider2D>();
 
         Debug.Log("platform yPos: " + coll.gameObject.transform.position.y);
-        Debug.Log("feetPos: " + (transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2)));
+        Debug.Log("feetPos: " + (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)));
 
 
-        if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y / 2) + collCollider.offset.y)))
+        if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)))
         {
             midair = false;
             // allow flip on collision with platform - likely to break when colliding with side of platform
