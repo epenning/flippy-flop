@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject currPlatform;
 
     public float height;
-    public float minYBounds;
+    public float distToFeet;
 
     public GameObject background;
 
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
 
         // hardcoded values from when we had a BoxCollider2D. should be changed but I tried changing it and everything broke
         height = 1.9f;
-        minYBounds = -0.035f - (height / 2);
+        distToFeet = Mathf.Abs(-0.035f - (height / 2));
 
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
         bgYScale = background.transform.localScale.y;
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour {
                     levelScript.currDir *= -1;
                     levelScript.flipSide *= -1;
                     // Designate the point around which the world will rotate (along the x-axis)
-                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y + minYBounds -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
+                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - distToFeet -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     //Debug.Log(levelScript.currRotPoint);
                 }
             }
@@ -221,6 +221,9 @@ public class PlayerController : MonoBehaviour {
 
             rbody.MovePosition(rbody.position + new Vector2(velocity.x, velocity.y) * Time.fixedDeltaTime);
         }
+
+        if (!levelScript.rotating && numColliding <= 0 && !respawning)
+            midair = true;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -229,12 +232,18 @@ public class PlayerController : MonoBehaviour {
         numColliding++;
 
         //Debug.Log(coll.gameObject.transform.position.y);
-        //Debug.Log(transform.position.y + minYBounds + collCorrection - (coll.gameObject.transform.localScale.y / 2));
+        //Debug.Log(transform.position.y + distToFeet + collCorrection - (coll.gameObject.transform.localScale.y / 2));
 
         BoxCollider2D collCollider = coll.gameObject.GetComponent<BoxCollider2D>();
 
+        float platformTop = collCollider.bounds.max.y;
+        float xDiff = Mathf.Abs(transform.position.x - coll.transform.position.x);
+        float xWindow = Mathf.Abs(collCollider.bounds.max.x - coll.gameObject.transform.position.x) + 0.25f;
+
+
+
         // landed on a platform
-        if (canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)))
+        if (canMove && (transform.position.y - platformTop) <= (distToFeet + collCorrection) && (transform.position.y - platformTop) > 0 && xDiff <= xWindow)
         {
             midair = false;
             hasJumped = false;
@@ -259,12 +268,21 @@ public class PlayerController : MonoBehaviour {
         // staying standing on a platform
 
         BoxCollider2D collCollider = coll.gameObject.GetComponent<BoxCollider2D>();
+        
+        float platformTop = collCollider.bounds.max.y;
+        float xDiff = Mathf.Abs(transform.position.x - coll.transform.position.x);
+        float xWindow = Mathf.Abs(collCollider.bounds.max.x - coll.gameObject.transform.position.x) + 0.25f;
+        //Debug.Log("player ypos: " + transform.position.y);
+        //Debug.Log("player feet: " + (transform.position.y - distToFeet));
+        //Debug.Log("platform top: " + platformTop);
 
-        Debug.Log("platform yPos: " + coll.gameObject.transform.position.y);
-        Debug.Log("feetPos: " + (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)));
+        //Debug.Log("dist btwn player and platform top: " + (transform.position.y - platformTop));
+        //Debug.Log("dist if on top: " + (distToFeet + collCorrection));
 
+        Debug.Log("xdiff: " + xDiff);
+        Debug.Log("x window: " + xWindow);
 
-        if (!hasJumped && canMove && coll.gameObject.transform.position.y <= (transform.position.y + minYBounds + collCorrection - ((collCollider.size.y * coll.gameObject.transform.localScale.y / 2) + collCollider.offset.y)))
+        if (!hasJumped && canMove && (transform.position.y - platformTop) <= (distToFeet + collCorrection) && (transform.position.y - platformTop) > 0 && xDiff <= xWindow)
         {
             midair = false;
             // allow flip on collision with platform - likely to break when colliding with side of platform
@@ -332,6 +350,8 @@ public class PlayerController : MonoBehaviour {
         if (respawning)
             return;
 
+        Debug.Log("im dying");
+
         respawning = true;
         velocity = Vector2.zero;
         //rbody.isKinematic = true;
@@ -343,10 +363,11 @@ public class PlayerController : MonoBehaviour {
             levelScript.flipSide *= -1;
             // Designate the point around which the world will rotate (along the x-axis)
             levelScript.currRotPoint = checkpointScript.rotPoint;
-
-            Invoke("resetPosToCheckpoint", 0.2f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            Invoke("resetPosToCheckpoint", 0.4f);
         } else
         {
+
             resetPosToCheckpoint();
         }
         keys = checkpointScript.numKeys;
@@ -358,6 +379,7 @@ public class PlayerController : MonoBehaviour {
 
     void resetPosToCheckpoint()
     {
+        GetComponent<SpriteRenderer>().enabled = true;
         //rbody.isKinematic = false;
         respawning = false;
         transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
