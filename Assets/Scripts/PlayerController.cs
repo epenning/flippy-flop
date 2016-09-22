@@ -224,11 +224,19 @@ public class PlayerController : MonoBehaviour {
 
         if (!levelScript.rotating && numColliding <= 0 && !respawning)
             midair = true;
+
+        //if(midair)
+        //{
+        //    GetComponent<SpriteRenderer>().color = Color.red;
+        //} else
+        //{
+        //    GetComponent<SpriteRenderer>().color = Color.white;
+        //}
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("collided");
+        //Debug.Log("collided");
         numColliding++;
 
         //Debug.Log(coll.gameObject.transform.position.y);
@@ -279,8 +287,8 @@ public class PlayerController : MonoBehaviour {
         //Debug.Log("dist btwn player and platform top: " + (transform.position.y - platformTop));
         //Debug.Log("dist if on top: " + (distToFeet + collCorrection));
 
-        Debug.Log("xdiff: " + xDiff);
-        Debug.Log("x window: " + xWindow);
+        //Debug.Log("xdiff: " + xDiff);
+        //Debug.Log("x window: " + xWindow);
 
         if (!hasJumped && canMove && (transform.position.y - platformTop) <= (distToFeet + collCorrection) && (transform.position.y - platformTop) > 0 && xDiff <= xWindow)
         {
@@ -297,7 +305,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D coll)
     {
-        Debug.Log("de-collided");
+        //Debug.Log("de-collided");
         numColliding--;
         if (numColliding <= 0)
         {
@@ -310,7 +318,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("triggered");
+        //Debug.Log("triggered");
 
         // don't activate triggers if hitting in the middle of flipping
         if (!levelScript.rotating)
@@ -325,13 +333,13 @@ public class PlayerController : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log("You need a key to open this door!");
+                    //Debug.Log("You need a key to open this door!");
                 }
             }
             // handle key pickup
             if (coll.gameObject.tag == "key")
             {
-                Debug.Log("Picked up a key!");
+                //Debug.Log("Picked up a key!");
                 keys++;
                 coll.gameObject.SetActive(false);
                 lastCheckpoint.GetComponent<CheckpointController>().pickups.Add(coll.gameObject);
@@ -349,8 +357,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (respawning)
             return;
-
-        Debug.Log("im dying");
 
         respawning = true;
         velocity = Vector2.zero;

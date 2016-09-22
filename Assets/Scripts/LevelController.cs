@@ -68,7 +68,7 @@ public class LevelController : MonoBehaviour {
                         nightMusic.volume += 0.05f;
 
                     // activates once halfway through the rotation
-                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x > 0.5))
+                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x > 0.75))
                     {
                         halfRotated = true;
 
@@ -97,7 +97,7 @@ public class LevelController : MonoBehaviour {
                         dayMusic.volume += 0.05f;
 
                     // activates once halfway through the rotation
-                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x < 0.5))
+                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x < 0.75))
                     {
                         halfRotated = true;
 

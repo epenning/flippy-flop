@@ -11,6 +11,8 @@ public class PlatformController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        GetComponent<SpriteRenderer>().enabled = false;
+
         numBlocks = transform.localScale.x;
         transform.localScale = Vector3.one;
 
