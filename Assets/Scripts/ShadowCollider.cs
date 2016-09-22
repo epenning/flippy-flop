@@ -27,8 +27,8 @@ public class ShadowCollider : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("shadow triggered");
-        Debug.Log(coll.gameObject.tag);
+        //Debug.Log("shadow triggered");
+        //Debug.Log(coll.gameObject.tag);
 
 
         // disallow player flipping on shadow collision with obstacles, platforms
@@ -41,7 +41,7 @@ public class ShadowCollider : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D coll)
     {
-        Debug.Log("shadow de-triggered");
+        //Debug.Log("shadow de-triggered");
 
 
         // allow player to flip again

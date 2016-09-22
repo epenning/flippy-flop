@@ -360,7 +360,6 @@ public class PlayerController : MonoBehaviour {
 
         respawning = true;
         velocity = Vector2.zero;
-        //rbody.isKinematic = true;
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
         if(checkpointScript.flipSide != levelScript.flipSide)
         {
@@ -386,7 +385,6 @@ public class PlayerController : MonoBehaviour {
     void resetPosToCheckpoint()
     {
         GetComponent<SpriteRenderer>().enabled = true;
-        //rbody.isKinematic = false;
         respawning = false;
         transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
     }

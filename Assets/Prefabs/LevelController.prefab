@@ -61,3 +61,6 @@ MonoBehaviour:
   halfRotated: 0
   rotSpeed: 5.5
   flipSide: 0
+  startRotate: 0
+  flipDuration: 0.7
+  volControl: 0

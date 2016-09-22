@@ -20,6 +20,12 @@ public class LevelController : MonoBehaviour {
 
     public int flipSide;
 
+    public bool startRotate;
+
+    public float flipDuration;
+
+    public float volControl;
+
     // Use this for initialization
     void Start () {
         flipSide = 1;
@@ -42,93 +48,100 @@ public class LevelController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
         if (rotating)
         {
             if(currDir == 1)
             {
-                if (levelRoot.transform.parent.transform.rotation.eulerAngles.x > 180f)
+
+                if (!halfRotated && (levelRoot.transform.parent.localRotation.x > 0.75))
                 {
-                    rotating = false;
-                    halfRotated = false;
-                    levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180, 0, 0);
-
-                    // control music to nighttime
-                    dayMusic.volume = 0f;
-                    nightMusic.volume = 1f;
-                }
-                else
-                {
-                    rotateLevel();
-
-                    // fade dayMusic out, fade nightMusic in
-                    if (dayMusic.volume > 0)
-                        dayMusic.volume -= 0.05f;
-                    if (nightMusic.volume < 1)
-                        nightMusic.volume += 0.05f;
-
-                    // activates once halfway through the rotation
-                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x > 0.75))
+                    halfRotated = true;
+                    Debug.Log("swap sprites");
+                    // enable night sprites, disable day sprites
+                    foreach (Transform child in levelRoot.transform)
                     {
-                        halfRotated = true;
-
-                        // enable night sprites, disable day sprites
-                        foreach (Transform child in levelRoot.transform)
+                        if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
                         {
-                            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
-                            {
-                                child.gameObject.GetComponent<Renderer>().enabled = false;
-                                child.GetChild(0).GetComponent<Renderer>().enabled = true;
-                            }
+                            child.gameObject.GetComponent<Renderer>().enabled = false;
+                            child.GetChild(0).GetComponent<Renderer>().enabled = true;
                         }
                     }
                 }
             }
             else
             {
-                if (levelRoot.transform.parent.transform.localRotation.x > 0f)
+
+                if (!halfRotated && (levelRoot.transform.parent.localRotation.x < 0.75))
                 {
-                    rotateLevel();
-
-                    // fade nightMusic out, fade dayMusic in
-                    if (nightMusic.volume > 0)
-                        nightMusic.volume -= 0.05f;
-                    if (dayMusic.volume < 1)
-                        dayMusic.volume += 0.05f;
-
-                    // activates once halfway through the rotation
-                    if (!halfRotated && (levelRoot.transform.parent.transform.localRotation.x < 0.75))
+                    halfRotated = true;
+                    Debug.Log("swap sprites");
+                    // enable day sprites, disable night sprites
+                    foreach (Transform child in levelRoot.transform)
                     {
-                        halfRotated = true;
-
-                        // enable day sprites, disable night sprites
-                        foreach (Transform child in levelRoot.transform)
+                        if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
                         {
-                            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
-                            {
-                                child.gameObject.GetComponent<Renderer>().enabled = true;
-                                child.GetChild(0).GetComponent<Renderer>().enabled = false;
-                            }
+                            child.gameObject.GetComponent<Renderer>().enabled = true;
+                            child.GetChild(0).GetComponent<Renderer>().enabled = false;
                         }
                     }
                 }
-                else
-                {
-                    rotating = false;
-                    halfRotated = false;
-                    levelRoot.transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
-
-                    // control music to daytime
-                    dayMusic.volume = 1f;
-                    nightMusic.volume = 0f;
-                }
             }
+            
+
+            if (!startRotate)
+                rotateLevel();
+
         }
 	}
 
     void rotateLevel()
     {
-        levelRoot.transform.parent.transform.Rotate(new Vector3(currDir * rotSpeed * Mathf.Abs(currDir * (180 - levelRoot.transform.rotation.eulerAngles.x)) * Time.deltaTime, 0, 0));
+        startRotate = true;
+
+        Hashtable rotArgs = new Hashtable();
+        rotArgs.Add("amount", new Vector3(0.5f, 0, 0));
+        rotArgs.Add("time", flipDuration);
+        rotArgs.Add("easetype", iTween.EaseType.easeInOutCirc);
+        rotArgs.Add("oncomplete", "finishRotating");
+        rotArgs.Add("oncompletetarget", gameObject);
+
+        iTween.RotateBy(levelRoot.transform.parent.gameObject, rotArgs);
+
+        Hashtable volArgs = new Hashtable();
+        volArgs.Add("from", volControl);
+        volArgs.Add("to", 1f);
+        volArgs.Add("time", flipDuration);
+        volArgs.Add("onupdate", "updateMusicVols");
+        volArgs.Add("onupdatetarget", gameObject);
+
+        iTween.ValueTo(gameObject, volArgs);
+
+    }
+
+    public void updateMusicVols(float val)
+    {
+        if (currDir == -1)
+        {
+            dayMusic.volume = val;
+            nightMusic.volume = 1 - val;
+        }
+        else
+        {
+            dayMusic.volume = 1 - val;
+            nightMusic.volume = val;
+        }
+    }
+
+    public void finishRotating()
+    {
+        rotating = false;
+        startRotate = false;
+
+        halfRotated = false;
+        levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180 * ((currDir + 1) / 2), 0, 0);
+
+        volControl = 0f;
+
     }
 
     void loadLastCheckpoint()
