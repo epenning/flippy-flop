@@ -119,6 +119,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
             // Reached the border of the background or hit the reset button
+
             Die();
         }
 
@@ -147,8 +148,6 @@ public class PlayerController : MonoBehaviour {
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
                     levelScript.flipSide *= -1;
-                    // Designate the point around which the world will rotate (along the x-axis)
-                    levelScript.currRotPoint = new Vector3(transform.position.x, transform.position.y - distToFeet -  ((currPlatform.GetComponent<PlatformController>().thickness / 2)), 0);
                     //Debug.Log(levelScript.currRotPoint);
                 }
             }
@@ -355,7 +354,7 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
-        if (respawning)
+        if (respawning || levelScript.rotating)
             return;
 
         respawning = true;
@@ -363,13 +362,12 @@ public class PlayerController : MonoBehaviour {
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
         if(checkpointScript.flipSide != levelScript.flipSide)
         {
-            levelScript.rotating = true;
+            
             levelScript.currDir *= -1;
             levelScript.flipSide *= -1;
-            // Designate the point around which the world will rotate (along the x-axis)
-            levelScript.currRotPoint = checkpointScript.rotPoint;
             GetComponent<SpriteRenderer>().enabled = false;
-            Invoke("resetPosToCheckpoint", 0.4f);
+            levelScript.instantFlip();
+            Invoke("resetPosToCheckpoint", 0.021f);
         } else
         {
 
@@ -377,9 +375,6 @@ public class PlayerController : MonoBehaviour {
         }
         keys = checkpointScript.numKeys;
         checkpointScript.activatePickups();
-
-        
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void resetPosToCheckpoint()

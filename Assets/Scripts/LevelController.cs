@@ -10,7 +10,6 @@ public class LevelController : MonoBehaviour {
     public AudioSource dayMusic;
     public AudioSource nightMusic;
 
-    public Vector3 currRotPoint;
     public int currDir = -1;
 
     public bool rotating = false;
@@ -25,6 +24,8 @@ public class LevelController : MonoBehaviour {
     public float flipDuration;
 
     public float volControl;
+
+    //public bool instantFlip;
 
     // Use this for initialization
     void Start () {
@@ -56,7 +57,6 @@ public class LevelController : MonoBehaviour {
                 if (!halfRotated && (levelRoot.transform.parent.localRotation.x > 0.75))
                 {
                     halfRotated = true;
-                    Debug.Log("swap sprites");
                     // enable night sprites, disable day sprites
                     foreach (Transform child in levelRoot.transform)
                     {
@@ -74,7 +74,6 @@ public class LevelController : MonoBehaviour {
                 if (!halfRotated && (levelRoot.transform.parent.localRotation.x < 0.75))
                 {
                     halfRotated = true;
-                    Debug.Log("swap sprites");
                     // enable day sprites, disable night sprites
                     foreach (Transform child in levelRoot.transform)
                     {
@@ -118,6 +117,55 @@ public class LevelController : MonoBehaviour {
 
     }
 
+    // Use this when the player dies and the last checkpoint is on the other side of the world (prevents weird-looking repawn)
+    public void instantFlip()
+    {
+        Hashtable rotArgs = new Hashtable();
+        rotArgs.Add("amount", new Vector3(0.5f, 0, 0));
+        rotArgs.Add("time", 0);
+        rotArgs.Add("easetype", iTween.EaseType.easeInOutCirc);
+        rotArgs.Add("oncomplete", "finishRotating");
+        rotArgs.Add("oncompletetarget", gameObject);
+
+        iTween.RotateBy(levelRoot.transform.parent.gameObject, rotArgs);
+
+        Hashtable volArgs = new Hashtable();
+        volArgs.Add("from", volControl);
+        volArgs.Add("to", 1f);
+        volArgs.Add("time", 0);
+        volArgs.Add("onupdate", "updateMusicVols");
+        volArgs.Add("onupdatetarget", gameObject);
+
+        iTween.ValueTo(gameObject, volArgs);
+
+        if (currDir == 1)
+        {
+            // enable night sprites, disable day sprites
+            foreach (Transform child in levelRoot.transform)
+            {
+                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
+                {
+                    child.gameObject.GetComponent<Renderer>().enabled = false;
+                    child.GetChild(0).GetComponent<Renderer>().enabled = true;
+                }
+            }
+        }
+        else
+        {
+            // enable day sprites, disable night sprites
+            foreach (Transform child in levelRoot.transform)
+            {
+                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
+                {
+                    child.gameObject.GetComponent<Renderer>().enabled = true;
+                    child.GetChild(0).GetComponent<Renderer>().enabled = false;
+                }
+            }
+
+        }
+
+    }
+
     public void updateMusicVols(float val)
     {
         if (currDir == -1)
@@ -136,7 +184,7 @@ public class LevelController : MonoBehaviour {
     {
         rotating = false;
         startRotate = false;
-
+        //instantFlip = false;
         halfRotated = false;
         levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180 * ((currDir + 1) / 2), 0, 0);
 
@@ -144,8 +192,4 @@ public class LevelController : MonoBehaviour {
 
     }
 
-    void loadLastCheckpoint()
-    {
-
-    }
 }

@@ -3,17 +3,14 @@ using System.Collections;
 
 public class BlackBoxController : MonoBehaviour {
 
-    public GameObject player;
-    public GameObject levelController;
-
 	// Use this for initialization
 	void Start () {
-	
-	}
+        //transform.localPosition = GameObject.Find("Player").transform.position;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = player.transform.position;
+
 
 
     }
