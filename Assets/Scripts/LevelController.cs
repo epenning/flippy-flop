@@ -142,25 +142,19 @@ public class LevelController : MonoBehaviour {
         if (currDir == 1)
         {
             // enable night sprites, disable day sprites
-            foreach (Transform child in levelRoot.transform)
+            foreach (GameObject obj in objList)
             {
-                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap" || child.gameObject.tag == "platform")
-                {
-                    child.gameObject.GetComponent<Renderer>().enabled = false;
-                    child.GetChild(0).GetComponent<Renderer>().enabled = true;
-                }
+                obj.GetComponent<Renderer>().enabled = true;
+                obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
             }
         }
         else
         {
             // enable day sprites, disable night sprites
-            foreach (Transform child in levelRoot.transform)
+            foreach (GameObject obj in objList)
             {
-                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap" || child.gameObject.tag == "platform")
-                {
-                    child.gameObject.GetComponent<Renderer>().enabled = true;
-                    child.GetChild(0).GetComponent<Renderer>().enabled = false;
-                }
+                obj.GetComponent<Renderer>().enabled = true;
+                obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
             }
 
         }
