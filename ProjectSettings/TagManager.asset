@@ -11,6 +11,8 @@ TagManager:
   - trap
   - enemy
   - minimap
+  - platform block
+  - root
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - 
   - 
   - Minimap
-  - 
+  - Black Bars
   - 
   - 
   - 

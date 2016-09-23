@@ -10,13 +10,13 @@ public class PlatformController : MonoBehaviour {
     public GameObject blockPrefab;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         GetComponent<SpriteRenderer>().enabled = false;
 
         numBlocks = transform.localScale.x;
         transform.localScale = Vector3.one;
 
-        GetComponent<BoxCollider2D>().size = new Vector2(numBlocks, 1);
+        GetComponent<BoxCollider2D>().size = new Vector2(numBlocks, GetComponent<BoxCollider2D>().size.y);
 
         thickness = transform.localScale.y;
 

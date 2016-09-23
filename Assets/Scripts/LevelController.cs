@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class LevelController : MonoBehaviour {
 
@@ -25,7 +26,11 @@ public class LevelController : MonoBehaviour {
 
     public float volControl;
 
-    //public bool instantFlip;
+    public GameObject[] platformBlockList;
+    public GameObject[] obstacleList;
+    public GameObject[] trapList;
+
+    public GameObject[] objList;
 
     // Use this for initialization
     void Start () {
@@ -35,14 +40,16 @@ public class LevelController : MonoBehaviour {
         dayMusic.volume = 1f;
         nightMusic.volume = 0f;
 
-        // enable day sprites, disable night sprites
-        foreach (Transform child in levelRoot.transform)
+        platformBlockList = GameObject.FindGameObjectsWithTag("platform block");
+        obstacleList = GameObject.FindGameObjectsWithTag("obstacle");
+        trapList = GameObject.FindGameObjectsWithTag("trap");
+
+        objList = platformBlockList.Concat<GameObject>(obstacleList).ToArray<GameObject>().Concat<GameObject>(trapList).ToArray<GameObject>();
+
+        foreach(GameObject obj in objList)
         {
-            if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
-            {
-                child.gameObject.GetComponent<Renderer>().enabled = true;
-                child.GetChild(0).GetComponent<Renderer>().enabled = false;
-            }
+            obj.GetComponent<Renderer>().enabled = true;
+            obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         }
     }
 	
@@ -58,13 +65,10 @@ public class LevelController : MonoBehaviour {
                 {
                     halfRotated = true;
                     // enable night sprites, disable day sprites
-                    foreach (Transform child in levelRoot.transform)
+                    foreach (GameObject obj in objList)
                     {
-                        if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
-                        {
-                            child.gameObject.GetComponent<Renderer>().enabled = false;
-                            child.GetChild(0).GetComponent<Renderer>().enabled = true;
-                        }
+                        obj.GetComponent<Renderer>().enabled = false;
+                        obj.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
                     }
                 }
             }
@@ -75,13 +79,10 @@ public class LevelController : MonoBehaviour {
                 {
                     halfRotated = true;
                     // enable day sprites, disable night sprites
-                    foreach (Transform child in levelRoot.transform)
+                    foreach (GameObject obj in objList)
                     {
-                        if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
-                        {
-                            child.gameObject.GetComponent<Renderer>().enabled = true;
-                            child.GetChild(0).GetComponent<Renderer>().enabled = false;
-                        }
+                        obj.GetComponent<Renderer>().enabled = true;
+                        obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
                     }
                 }
             }
@@ -143,7 +144,7 @@ public class LevelController : MonoBehaviour {
             // enable night sprites, disable day sprites
             foreach (Transform child in levelRoot.transform)
             {
-                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
+                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap" || child.gameObject.tag == "platform")
                 {
                     child.gameObject.GetComponent<Renderer>().enabled = false;
                     child.GetChild(0).GetComponent<Renderer>().enabled = true;
@@ -155,7 +156,7 @@ public class LevelController : MonoBehaviour {
             // enable day sprites, disable night sprites
             foreach (Transform child in levelRoot.transform)
             {
-                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap")
+                if (child.gameObject.tag == "obstacle" || child.gameObject.tag == "trap" || child.gameObject.tag == "platform")
                 {
                     child.gameObject.GetComponent<Renderer>().enabled = true;
                     child.GetChild(0).GetComponent<Renderer>().enabled = false;
