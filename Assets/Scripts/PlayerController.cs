@@ -220,10 +220,17 @@ public class PlayerController : MonoBehaviour {
 
             rbody.MovePosition(rbody.position + new Vector2(velocity.x, velocity.y) * Time.fixedDeltaTime);
         }
+        
+        // not sure why I put this here initially, but it does represent cases in which midair should be true
+        // commented out because it was causing midair to be set to true right after a flip (due to delay between the flip ending and collisions being detected)
+        //if (!levelScript.rotating && numColliding <= 0 && !respawning)
+        //{
+            //Debug.Log("midair changed in Update()");
+            //midair = true;
 
-        if (!levelScript.rotating && numColliding <= 0 && !respawning)
-            midair = true;
+        //}
 
+        // use this for debugging midair
         //if(midair)
         //{
         //    GetComponent<SpriteRenderer>().color = Color.red;

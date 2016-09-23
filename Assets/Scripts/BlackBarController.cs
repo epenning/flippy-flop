@@ -50,8 +50,8 @@ public class BlackBarController : MonoBehaviour {
                 moving = true;
 
                 
-                // Not sure why the value is 3, but it works
-                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -3, transform.localPosition.z);
+                // Not sure why the value is 2.75, but it works
+                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2.75f, transform.localPosition.z);
 
                 //Debug.Log(tgtLocalPos);
 
