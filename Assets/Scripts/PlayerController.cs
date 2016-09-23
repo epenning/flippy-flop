@@ -374,7 +374,8 @@ public class PlayerController : MonoBehaviour {
             levelScript.flipSide *= -1;
             GetComponent<SpriteRenderer>().enabled = false;
             levelScript.instantFlip();
-            Invoke("resetPosToCheckpoint", 0.021f);
+            // Wait a bit to allow the world to flip (it's supposed to be instant, but the values take a bit to update)
+            Invoke("resetPosToCheckpoint", 0.03f);
         } else
         {
 

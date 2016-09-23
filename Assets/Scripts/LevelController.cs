@@ -144,8 +144,8 @@ public class LevelController : MonoBehaviour {
             // enable night sprites, disable day sprites
             foreach (GameObject obj in objList)
             {
-                obj.GetComponent<Renderer>().enabled = true;
-                obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+                obj.GetComponent<Renderer>().enabled = false;
+                obj.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
             }
         }
         else
