@@ -695,10 +695,10 @@ MonoBehaviour:
   currSpeed: 0
   currDir: 0
   horizAccel: 0.13
-  grav: 60
+  grav: 40
   jumpSpeed: 14
   midair: 1
-  vertAccel: 0.012
+  vertAccel: 0.018
   hasJumped: 0
   velocity: {x: 0, y: 0}
   collCorrection: 0.1
