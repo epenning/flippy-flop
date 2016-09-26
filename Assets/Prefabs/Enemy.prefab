@@ -58,6 +58,7 @@ GameObject:
   - 61: {fileID: 61000012639309108}
   - 114: {fileID: 114000014057982172}
   - 50: {fileID: 50000013294424388}
+  - 61: {fileID: 61000013682536414}
   m_Layer: 0
   m_Name: Enemy Path
   m_TagString: Untagged
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013108207278}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -25, y: -1.5, z: 0}
+  m_LocalPosition: {x: -17, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_Children:
@@ -182,6 +183,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!61 &61000013682536414
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013526671508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1}
 --- !u!95 &95000012285886624
 Animator:
   serializedVersion: 3
@@ -210,8 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccff61464863794ebbf4d294a52f8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
   direction: 1
+  spriteRendererUp: {fileID: 0}
+  spriteRendererDown: {fileID: 0}
 --- !u!212 &212000011050010032
 SpriteRenderer:
   m_ObjectHideFlags: 1

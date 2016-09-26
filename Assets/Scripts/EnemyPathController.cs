@@ -44,6 +44,15 @@ public class EnemyPathController : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        // turn around if about to hit an obstacle
+        if (coll.gameObject.tag == "obstacle")
+        {
+            direction *= -1;
+        }
+    }
+
     void OnTriggerExit2D(Collider2D coll)
     {
         // turn around if about to move off platform
