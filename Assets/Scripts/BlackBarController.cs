@@ -13,10 +13,46 @@ public class BlackBarController : MonoBehaviour {
 
     public bool moving;
 
+    public int barType;
+
+
     // Use this for initialization
     void Start () {
         player = GameObject.Find("Player");
         levelController = GameObject.Find("LevelController");
+
+
+        Vector3 worldCameraMin = Camera.main.ScreenToWorldPoint(Vector3.zero);
+        Vector3 worldCameraMax = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, Camera.main.nearClipPlane));
+        Vector3 worldCameraCenter = Camera.main.ViewportToWorldPoint(Camera.main.rect.center);
+
+        Debug.Log("min (rect): " + Camera.main.ViewportToWorldPoint(new Vector3(0, 0, -Camera.main.transform.position.z)));
+        Debug.Log("min: " + worldCameraMin);
+        Debug.Log("max: " + worldCameraMax);
+        Debug.Log("center: " + worldCameraCenter);
+
+        switch (barType)
+        {
+            // Left
+            case 1:
+                transform.position = new Vector3(worldCameraMin.x - (transform.localScale.x / 2), worldCameraCenter.y, 0);
+                break;
+            // Top
+            case 2:
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y + (transform.localScale.y / 2), 0);
+                break;
+            // Right
+            case 3:
+                transform.position = new Vector3(worldCameraMax.x + (transform.localScale.x / 2), worldCameraCenter.y, 0);
+                break;
+            // Bottom
+            case 4:
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y - (transform.localScale.y / 2), 0);
+                break;
+            default:
+                break;
+
+        }
 
         distToPlayerY = transform.position.y - player.transform.position.y;
         distToPlayerX = transform.position.x - player.transform.position.x;
