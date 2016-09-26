@@ -106,7 +106,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010658430188}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000010658430188
 Transform:
   m_ObjectHideFlags: 1
@@ -118,10 +118,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000010055325794}
-  - {fileID: 4000011075684360}
   - {fileID: 4000012593934680}
+  - {fileID: 4000010055325794}
   - {fileID: 4000012209316478}
+  - {fileID: 4000011075684360}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000011075684360
@@ -136,7 +136,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010658430188}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &4000012209316478
 Transform:
   m_ObjectHideFlags: 1
@@ -145,11 +145,11 @@ Transform:
   m_GameObject: {fileID: 1000013326194370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 55.5, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 18, z: 1}
+  m_LocalScale: {x: 80, y: 50, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010658430188}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &4000012593934680
 Transform:
   m_ObjectHideFlags: 1
@@ -158,11 +158,11 @@ Transform:
   m_GameObject: {fileID: 1000013020147338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -55.5, y: 0, z: 0}
-  m_LocalScale: {x: 80, y: 18, z: 1}
+  m_LocalScale: {x: 80, y: 50, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010658430188}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!114 &114000010659424994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +181,7 @@ MonoBehaviour:
   distToPlayerX: 0
   playerToPlatform: 0
   moving: 0
+  barType: 4
 --- !u!114 &114000011221010194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,6 +200,7 @@ MonoBehaviour:
   distToPlayerX: 0
   playerToPlatform: 0
   moving: 0
+  barType: 2
 --- !u!114 &114000013047000248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,6 +219,7 @@ MonoBehaviour:
   distToPlayerX: 0
   playerToPlatform: 0
   moving: 0
+  barType: 1
 --- !u!114 &114000013839307920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +238,7 @@ MonoBehaviour:
   distToPlayerX: 0
   playerToPlatform: 0
   moving: 0
+  barType: 3
 --- !u!212 &212000010067111562
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -263,7 +267,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: d49a733fc446c4b40b74915f22d545cb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -296,7 +300,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: d49a733fc446c4b40b74915f22d545cb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -329,7 +333,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: d49a733fc446c4b40b74915f22d545cb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -362,7 +366,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: d49a733fc446c4b40b74915f22d545cb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0

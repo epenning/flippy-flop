@@ -71,7 +71,7 @@ public class BlackBarController : MonoBehaviour {
     public void toggleMoving()
     {
         // Need a slight delay at the end of the iTween call to avoid translating the box twice in one rotation
-        Invoke("turnOffMoving", 0.05f);
+        Invoke("turnOffMoving", 0.25f * levelScript.flipDuration);
     }
 
     public void turnOffMoving()
@@ -102,7 +102,7 @@ public class BlackBarController : MonoBehaviour {
                 Hashtable moveArgs = new Hashtable();
                 moveArgs.Add("position", tgtLocalPos);
                 moveArgs.Add("islocal", true);
-                moveArgs.Add("time", levelScript.flipDuration);
+                moveArgs.Add("time", 0.8f * levelScript.flipDuration);
                 moveArgs.Add("easetype", iTween.EaseType.easeInQuad);
                 moveArgs.Add("oncomplete", "toggleMoving");
                 moveArgs.Add("oncompletetarget", gameObject);
