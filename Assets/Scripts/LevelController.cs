@@ -29,6 +29,7 @@ public class LevelController : MonoBehaviour {
     public GameObject[] platformBlockList;
     public GameObject[] obstacleList;
     public GameObject[] trapList;
+    public GameObject[] enemyList;
 
     public GameObject[] objList;
 
@@ -43,8 +44,9 @@ public class LevelController : MonoBehaviour {
         platformBlockList = GameObject.FindGameObjectsWithTag("platform block");
         obstacleList = GameObject.FindGameObjectsWithTag("obstacle");
         trapList = GameObject.FindGameObjectsWithTag("trap");
+        enemyList = GameObject.FindGameObjectsWithTag("enemy");
 
-        objList = platformBlockList.Concat<GameObject>(obstacleList).ToArray<GameObject>().Concat<GameObject>(trapList).ToArray<GameObject>();
+        objList = platformBlockList.Concat<GameObject>(obstacleList).ToArray<GameObject>().Concat<GameObject>(trapList).ToArray<GameObject>().Concat<GameObject>(enemyList).ToArray<GameObject>();
 
         foreach(GameObject obj in objList)
         {
