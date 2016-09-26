@@ -22,14 +22,13 @@ public class BlackBarController : MonoBehaviour {
         levelController = GameObject.Find("LevelController");
 
 
-        Vector3 worldCameraMin = Camera.main.ScreenToWorldPoint(Vector3.zero);
-        Vector3 worldCameraMax = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, Camera.main.nearClipPlane));
-        Vector3 worldCameraCenter = Camera.main.ViewportToWorldPoint(Camera.main.rect.center);
+        Vector3 worldCameraMin = GetWorldPositionOnPlane(Vector3.zero, 0);
+        Vector3 worldCameraMax = GetWorldPositionOnPlane(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, Camera.main.nearClipPlane), 0);
+        Vector3 worldCameraCenter = GetWorldPositionOnPlane(new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, Camera.main.nearClipPlane), 0);
 
-        Debug.Log("min (rect): " + Camera.main.ViewportToWorldPoint(new Vector3(0, 0, -Camera.main.transform.position.z)));
-        Debug.Log("min: " + worldCameraMin);
-        Debug.Log("max: " + worldCameraMax);
-        Debug.Log("center: " + worldCameraCenter);
+        //Debug.Log("min: " + worldCameraMin);
+        //Debug.Log("max: " + worldCameraMax);
+        //Debug.Log("center: " + worldCameraCenter);
 
         switch (barType)
         {
@@ -47,7 +46,7 @@ public class BlackBarController : MonoBehaviour {
                 break;
             // Bottom
             case 4:
-                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y - (transform.localScale.y / 2), 0);
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMin.y - (transform.localScale.y / 2), 0);
                 break;
             default:
                 break;
@@ -58,6 +57,15 @@ public class BlackBarController : MonoBehaviour {
         distToPlayerX = transform.position.x - player.transform.position.x;
         levelScript = levelController.GetComponent<LevelController>();
         transform.parent = levelScript.levelRoot.transform;
+    }
+
+    public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+        Plane xy = new Plane(Vector3.forward, new Vector3(0, 0, z));
+        float distance;
+        xy.Raycast(ray, out distance);
+        return ray.GetPoint(distance);
     }
 
     public void toggleMoving()
@@ -87,9 +95,9 @@ public class BlackBarController : MonoBehaviour {
 
                 
                 // Not sure why the value is 2.75, but it works
-                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2.75f, transform.localPosition.z);
+                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2.5f, transform.localPosition.z);
 
-                //Debug.Log(tgtLocalPos);
+                Debug.Log("moving to: " + tgtLocalPos);
 
                 Hashtable moveArgs = new Hashtable();
                 moveArgs.Add("position", tgtLocalPos);
@@ -105,6 +113,7 @@ public class BlackBarController : MonoBehaviour {
         {
             // Convert the box's desired world position to the root's local coordinates
             Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
+            Debug.Log("should end up at: " + tgtLocalPos);
             tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
             transform.localPosition = tgtLocalPos;
         }
