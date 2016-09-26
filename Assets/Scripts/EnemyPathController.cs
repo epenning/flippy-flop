@@ -9,8 +9,8 @@ public class EnemyPathController : MonoBehaviour {
     Rigidbody2D rbody;
     Animator animatorUp;
     Animator animatorDown;
-    SpriteRenderer spriteRendererUp;
-    SpriteRenderer spriteRendererDown;
+    public SpriteRenderer spriteRendererUp;
+    public SpriteRenderer spriteRendererDown;
 
     // Use this for initialization
     void Start () {
@@ -31,13 +31,16 @@ public class EnemyPathController : MonoBehaviour {
         if (animatorUp)
             animatorUp.SetFloat("Speed", Mathf.Abs(vx));
         animatorDown.SetFloat("Speed", Mathf.Abs(vx));
+        Debug.Log(vx);
         if (vx < 0)
         {
             spriteRendererUp.flipX = true;
+            spriteRendererDown.flipX = true;
         }
         else
         {
             spriteRendererUp.flipX = false;
+            spriteRendererDown.flipX = false;
         }
     }
 
