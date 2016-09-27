@@ -37,7 +37,7 @@ GameObject:
   - 4: {fileID: 4000010681627838}
   - 212: {fileID: 212000012345330140}
   - 61: {fileID: 61000012720990180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacle
   m_TagString: obstacle
   m_Icon: {fileID: 0}

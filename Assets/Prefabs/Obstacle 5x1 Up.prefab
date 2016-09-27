@@ -53,7 +53,7 @@ GameObject:
   - 4: {fileID: 4000012184462756}
   - 212: {fileID: 212000013123023728}
   - 61: {fileID: 61000013553570842}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacle 5x1 Up
   m_TagString: obstacle
   m_Icon: {fileID: 0}
