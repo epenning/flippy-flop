@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000012321825068}
   - 61: {fileID: 61000013879063158}
   - 212: {fileID: 212000010007386198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Resizeable Platform
   m_TagString: platform
   m_Icon: {fileID: 0}

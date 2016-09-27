@@ -86,13 +86,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011250398432}
   - 212: {fileID: 212000012419097526}
-  - 50: {fileID: 50000014100606780}
   - 114: {fileID: 114000010357207832}
   - 95: {fileID: 95000013799231998}
-  - 60: {fileID: 60000011763988628}
-  - 58: {fileID: 58000012253199736}
-  - 58: {fileID: 58000013550243778}
   - 61: {fileID: 61000011990690660}
+  - 114: {fileID: 114000010033078364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -202,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: -16.9, z: 0}
+  m_LocalPosition: {x: -13, y: -14.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -381,71 +378,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!50 &50000014100606780
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011922104290}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &58000012253199736
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011922104290}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.14, y: -0.68}
-  serializedVersion: 2
-  m_Radius: 0.315
---- !u!58 &58000013550243778
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011922104290}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.14, y: -0.68}
-  serializedVersion: 2
-  m_Radius: 0.315
---- !u!60 &60000011763988628
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011922104290}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -0.185, y: -0.9}
-      - {x: 0.185, y: -0.9}
-      - {x: 0.41, y: -0.52}
-      - {x: 0.26, y: 0.876}
-      - {x: -0.26, y: 0.876}
-      - {x: -0.41, y: -0.52}
 --- !u!60 &60000012413043786
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -472,14 +404,14 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.015213013, y: -0.035000086}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.4327736, y: 1.9}
+  m_Size: {x: 0.7, y: 2}
 --- !u!64 &64000011090758742
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -671,6 +603,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010033078364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011922104290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a96be0306f21d45af5ee81113ef845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  horizontalRayCount: 8
+  verticalRayCount: 4
+  maxClimbAngle: 80
+  maxDescendAngle: 80
 --- !u!114 &114000010357207832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,7 +650,6 @@ MonoBehaviour:
   midair: 1
   vertAccel: 0.018
   hasJumped: 0
-  velocity: {x: 0, y: 0}
   collCorrection: 0.1
   keys: 0
   keyIndicator: {fileID: 1000010554571710}
@@ -720,6 +669,15 @@ MonoBehaviour:
   respawning: 0
   checkpointPrefab: {fileID: 1000011163982994, guid: e4658675f16c3fb4791e463a25bb41dc,
     type: 2}
+  jumpHeight: 2.25
+  timeToJumpApex: 0.35
+  accelerationTimeAirborne: 0.2
+  accelerationTimeGrounded: 0.15
+  moveSpeed: 5.25
+  jumpVelocity: 0
+  gravity: 0
+  velocity: {x: 0, y: 0, z: 0}
+  velocityXSmoothing: 0
 --- !u!114 &114000010887426860
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -31,7 +31,7 @@ public class EnemyPathController : MonoBehaviour {
         if (animatorUp)
             animatorUp.SetFloat("Speed", Mathf.Abs(vx));
         animatorDown.SetFloat("Speed", Mathf.Abs(vx));
-        Debug.Log(vx);
+        //Debug.Log(vx);
         if (vx < 0)
         {
             spriteRendererUp.flipX = true;
