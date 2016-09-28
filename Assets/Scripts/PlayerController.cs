@@ -88,6 +88,9 @@ public class PlayerController : MonoBehaviour {
 
     MovementController controller;
 
+    // SFX
+    public AudioSource flipSFX;
+
 
     // Use this for initialization
     void Start () {
@@ -165,6 +168,9 @@ public class PlayerController : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    // play flip SFX
+                    flipSFX.Play();
+
                     timeToNextFlip = Time.time + flipCooldown;
                     flipOnCooldown = true;
                     levelScript.rotating = true;

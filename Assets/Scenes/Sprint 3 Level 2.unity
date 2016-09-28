@@ -4148,55 +4148,6 @@ Prefab:
       propertyPath: background
       value: 
       objectReference: {fileID: 281054933}
-    - target: {fileID: 4000011862688702, guid: bc7b05984478b95458e304036f5c2250, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: moveSpeed
-      value: 4.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: accelerationTimeAirborne
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: timeToJumpApex
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: accelerationTimeGrounded
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012860521964, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.409
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012860521964, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.353
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012860521964, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.122
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012860521964, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000012983914658, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 91b60996fcc5f69459cb71147e10c1f4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
