@@ -348,8 +348,8 @@ public class PlayerController : MonoBehaviour {
     {
         Hashtable moveArgs = new Hashtable();
         moveArgs.Add("position", lastCheckpoint.GetComponent<CheckpointController>().transform.position);
-        moveArgs.Add("time", 0.5f);
-        moveArgs.Add("easetype", iTween.EaseType.easeOutQuad);
+        moveArgs.Add("time", 0.5f + 0.25f * (transform.position - lastCheckpoint.GetComponent<CheckpointController>().transform.position).magnitude / 15);
+        moveArgs.Add("easetype", iTween.EaseType.easeInOutQuad);
         moveArgs.Add("oncomplete", "finishRespawning");
         moveArgs.Add("oncompletetarget", gameObject);
 

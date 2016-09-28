@@ -228,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: -1.4, z: 0}
+  m_LocalPosition: {x: -11.47, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -618,7 +618,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91b60996fcc5f69459cb71147e10c1f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0f3788738910b004e8bec76091123f03, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -765,7 +765,7 @@ MonoBehaviour:
   cooldownFlipIcon: {fileID: 21300000, guid: 1087817ffaf2cae42beff3173fc0109c, type: 3}
   disabledFlipIcon: {fileID: 21300000, guid: cc4d428011e0d6943bca6ed28dbdae97, type: 3}
   readyFlipIcon: {fileID: 21300000, guid: 990d538fc90b7dc468a1d57f736ce38a, type: 3}
-  flipCooldown: 0.5
+  flipCooldown: 0.95
   timeToNextFlip: 0
   flipOnCooldown: 0
   flipIcon: {fileID: 1000012804836230}
