@@ -30,6 +30,8 @@ public class LevelController : MonoBehaviour {
     public GameObject[] obstacleList;
     public GameObject[] trapList;
     public GameObject[] enemyList;
+    public GameObject[] checkpointList;
+    public GameObject[] doorList;
 
     public GameObject[] objList;
 
@@ -41,12 +43,15 @@ public class LevelController : MonoBehaviour {
         dayMusic.volume = 1f;
         nightMusic.volume = 0f;
 
+
         platformBlockList = GameObject.FindGameObjectsWithTag("platform block");
         obstacleList = GameObject.FindGameObjectsWithTag("obstacle");
         trapList = GameObject.FindGameObjectsWithTag("trap");
         enemyList = GameObject.FindGameObjectsWithTag("enemy");
+        checkpointList = GameObject.FindGameObjectsWithTag("checkpoint");
+        doorList = GameObject.FindGameObjectsWithTag("exit");
 
-        objList = platformBlockList.Concat<GameObject>(obstacleList).ToArray<GameObject>().Concat<GameObject>(trapList).ToArray<GameObject>().Concat<GameObject>(enemyList).ToArray<GameObject>();
+        objList = platformBlockList.Concat<GameObject>(obstacleList).Concat<GameObject>(trapList).Concat<GameObject>(enemyList).Concat<GameObject>(checkpointList).Concat<GameObject>(doorList).ToArray<GameObject>();
 
         foreach(GameObject obj in objList)
         {

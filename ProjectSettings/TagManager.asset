@@ -13,6 +13,7 @@ TagManager:
   - minimap
   - platform block
   - root
+  - checkpoint
   layers:
   - Default
   - TransparentFX

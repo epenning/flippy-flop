@@ -115,9 +115,9 @@ public class PlayerController : MonoBehaviour {
         bgYScale = background.transform.localScale.y;
         bgXScale = background.transform.localScale.x;
 
-        GameObject startingCheckpoint = GameObject.Instantiate(checkpointPrefab);
-        startingCheckpoint.transform.position = transform.position;
-        startingCheckpoint.transform.parent = levelScript.levelRoot.transform;
+        //GameObject startingCheckpoint = GameObject.Instantiate(checkpointPrefab);
+        //startingCheckpoint.transform.position = transform.position;
+        //startingCheckpoint.transform.parent = levelScript.levelRoot.transform;
     }
 	
 	// Update is called once per frame
@@ -190,14 +190,17 @@ public class PlayerController : MonoBehaviour {
 
             if(canFlip && !midair)
             {
-                flipIcon.GetComponent<SpriteRenderer>().sprite = readyFlipIcon;
+                //flipIcon.GetComponent<SpriteRenderer>().sprite = readyFlipIcon;
+                flipIcon.GetComponent<SpriteRenderer>().color = Color.white;
             } else
             {
-                flipIcon.GetComponent<SpriteRenderer>().sprite = disabledFlipIcon;
+                //flipIcon.GetComponent<SpriteRenderer>().sprite = disabledFlipIcon;
+                flipIcon.GetComponent<SpriteRenderer>().color = new Color(90f / 255, 30f / 255, 0, 104f / 255);
             }
         } else
         {
-            flipIcon.GetComponent<SpriteRenderer>().sprite = cooldownFlipIcon;
+            //flipIcon.GetComponent<SpriteRenderer>().sprite = cooldownFlipIcon;
+            flipIcon.GetComponent<SpriteRenderer>().color = new Color(90f / 255, 30f / 255, 0, 104f / 255);
         }
 
 
@@ -205,7 +208,6 @@ public class PlayerController : MonoBehaviour {
         bgMinY = background.transform.position.y + bgSpriteBounds.min.y * bgYScale;
         bgMinX = background.transform.position.x + bgSpriteBounds.min.x * bgXScale;
         bgMaxX = background.transform.position.x + bgSpriteBounds.max.x * bgXScale;
-
 
         if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
