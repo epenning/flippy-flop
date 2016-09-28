@@ -34,19 +34,19 @@ public class BlackBarController : MonoBehaviour {
         {
             // Left
             case 1:
-                transform.position = new Vector3(worldCameraMin.x - (transform.localScale.x / 2), worldCameraCenter.y, 0);
+                transform.position = new Vector3(worldCameraMin.x - (transform.localScale.x / 1.95f), worldCameraCenter.y, 0);
                 break;
             // Top
             case 2:
-                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y + (transform.localScale.y / 2), 0);
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y + (transform.localScale.y / 1.95f), 0);
                 break;
             // Right
             case 3:
-                transform.position = new Vector3(worldCameraMax.x + (transform.localScale.x / 2), worldCameraCenter.y, 0);
+                transform.position = new Vector3(worldCameraMax.x + (transform.localScale.x / 1.95f), worldCameraCenter.y, 0);
                 break;
             // Bottom
             case 4:
-                transform.position = new Vector3(worldCameraCenter.x, worldCameraMin.y - (transform.localScale.y / 2), 0);
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMin.y - (transform.localScale.y / 1.95f), 0);
                 break;
             default:
                 break;

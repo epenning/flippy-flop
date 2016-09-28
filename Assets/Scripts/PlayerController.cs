@@ -312,7 +312,7 @@ public class PlayerController : MonoBehaviour {
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
 
         GetComponent<SpriteRenderer>().enabled = false;
-        levelScript.flipDuration *= 0.5f;
+        //levelScript.flipDuration *= 0.5f;
         if (checkpointScript.flipSide != levelScript.flipSide)
         {
             levelScript.rotating = true;
@@ -354,7 +354,7 @@ public class PlayerController : MonoBehaviour {
 
     void finishRespawning()
     {
-        levelScript.flipDuration *= 2f;
+        //levelScript.flipDuration *= 2f;
         GetComponent<SpriteRenderer>().enabled = true;
         respawning = false;
     }

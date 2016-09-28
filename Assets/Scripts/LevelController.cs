@@ -35,6 +35,8 @@ public class LevelController : MonoBehaviour {
 
     public GameObject[] objList;
 
+    public int levelNum;
+
     // Use this for initialization
     void Start () {
         flipSide = 1;
@@ -65,34 +67,38 @@ public class LevelController : MonoBehaviour {
 
         if (rotating)
         {
-            if(currDir == 1)
+            if(levelNum != 1)
             {
-
-                if (!halfRotated && (levelRoot.transform.parent.localRotation.x > 0.75))
+                if (currDir == 1)
                 {
-                    halfRotated = true;
-                    // enable night sprites, disable day sprites
-                    foreach (GameObject obj in objList)
+
+                    if (!halfRotated && (levelRoot.transform.parent.localRotation.x > 0.75))
                     {
-                        obj.GetComponent<Renderer>().enabled = false;
-                        obj.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+                        halfRotated = true;
+                        // enable night sprites, disable day sprites
+                        foreach (GameObject obj in objList)
+                        {
+                            obj.GetComponent<Renderer>().enabled = false;
+                            obj.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+
+                    if (!halfRotated && (levelRoot.transform.parent.localRotation.x < 0.75))
+                    {
+                        halfRotated = true;
+                        // enable day sprites, disable night sprites
+                        foreach (GameObject obj in objList)
+                        {
+                            obj.GetComponent<Renderer>().enabled = true;
+                            obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+                        }
                     }
                 }
             }
-            else
-            {
-
-                if (!halfRotated && (levelRoot.transform.parent.localRotation.x < 0.75))
-                {
-                    halfRotated = true;
-                    // enable day sprites, disable night sprites
-                    foreach (GameObject obj in objList)
-                    {
-                        obj.GetComponent<Renderer>().enabled = true;
-                        obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
-                    }
-                }
-            }
+            
             
 
             if (!startRotate)
