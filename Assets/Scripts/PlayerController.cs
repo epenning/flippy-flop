@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour {
                 if (keys >= 1)
                 {
                     keys--;
-                    SceneManager.LoadScene("end");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 else
                 {
@@ -285,7 +285,8 @@ public class PlayerController : MonoBehaviour {
                 //Debug.Log("Picked up a key!");
                 keys++;
                 coll.gameObject.SetActive(false);
-                lastCheckpoint.GetComponent<CheckpointController>().pickups.Add(coll.gameObject);
+                if(lastCheckpoint)
+                    lastCheckpoint.GetComponent<CheckpointController>().pickups.Add(coll.gameObject);
             }
             // handle trap collision (only if flipped upside-down)
             if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy"))
@@ -299,6 +300,12 @@ public class PlayerController : MonoBehaviour {
     {
         if (respawning || levelScript.rotating)
             return;
+
+        if (!lastCheckpoint)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
+        }
 
         respawning = true;
         velocity = Vector2.zero;
