@@ -284,9 +284,8 @@ public class PlayerController : MonoBehaviour {
                 lastCheckpoint.GetComponent<CheckpointController>().pickups.Add(coll.gameObject);
             }
             // handle trap collision (only if flipped upside-down)
-            if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy") && levelScript.currDir == 1)
+            if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy"))
             {
-                // only die if flipped upside-down
                 Die();
             }
         }

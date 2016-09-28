@@ -275,6 +275,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -409,6 +415,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -459,6 +471,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -584,32 +602,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 33
       objectReference: {fileID: 0}
-    - target: {fileID: 212000010874186998, guid: f7059fa074513604b8cc44cffe6ea0fb,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3c44f62d06673f54bbc784e3e66b2d5c,
-        type: 3}
-    - target: {fileID: 212000010085611676, guid: f7059fa074513604b8cc44cffe6ea0fb,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a8353b4fe54a87f44a324e39230e7f01,
-        type: 3}
-    - target: {fileID: 4000013381573774, guid: f7059fa074513604b8cc44cffe6ea0fb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000010085611676, guid: f7059fa074513604b8cc44cffe6ea0fb,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000010085611676, guid: f7059fa074513604b8cc44cffe6ea0fb,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7059fa074513604b8cc44cffe6ea0fb, type: 2}
   m_IsPrefabParent: 0
@@ -711,6 +703,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -880,6 +878,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -930,6 +934,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -1128,6 +1138,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -1174,6 +1190,12 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -1490,6 +1512,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -1679,6 +1707,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -1852,6 +1886,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -2350,6 +2390,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -2530,6 +2576,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
@@ -3555,6 +3607,12 @@ Prefab:
       propertyPath: m_Name
       value: Resizeable Platform (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012321825068, guid: aaef633b6a3024543b0cc6236612a7c6,
+        type: 2}
+      propertyPath: blockPrefab
+      value: 
+      objectReference: {fileID: 1000013962284272, guid: c1c718f053ae4c342ac7b8dc9ae8db71,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
