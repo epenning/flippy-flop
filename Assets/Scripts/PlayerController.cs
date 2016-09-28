@@ -209,11 +209,15 @@ public class PlayerController : MonoBehaviour {
         bgMinX = background.transform.position.x + bgSpriteBounds.min.x * bgXScale;
         bgMaxX = background.transform.position.x + bgSpriteBounds.max.x * bgXScale;
 
-        if (Input.GetKeyDown(KeyCode.R) || transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Die(false);
+        }
+        if (transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
             // Reached the border of the background or hit the reset button
 
-            Die();
+            Die(true);
         }
 
 
@@ -286,12 +290,12 @@ public class PlayerController : MonoBehaviour {
             // handle trap collision (only if flipped upside-down)
             if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy"))
             {
-                Die();
+                Die(false);
             }
         }
     }
 
-    void Die()
+    void Die(bool outOfBounds)
     {
         if (respawning || levelScript.rotating)
             return;
@@ -299,16 +303,24 @@ public class PlayerController : MonoBehaviour {
         respawning = true;
         velocity = Vector2.zero;
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
-        if(checkpointScript.flipSide != levelScript.flipSide)
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        levelScript.flipDuration *= 0.5f;
+        if (checkpointScript.flipSide != levelScript.flipSide)
         {
-            
+            levelScript.rotating = true;
             levelScript.currDir *= -1;
             levelScript.flipSide *= -1;
-            GetComponent<SpriteRenderer>().enabled = false;
-            levelScript.instantFlip();
+
+
+
+            //levelScript.instantFlip();
+
             // Wait a bit to allow the world to flip (it's supposed to be instant, but the values take a bit to update)
             //Debug.Log(Time.deltaTime);
-            Invoke("resetPosToCheckpoint", 0.05f);
+
+            
+            Invoke("resetPosToCheckpoint", levelScript.flipDuration);
 
         } else
         {
@@ -321,8 +333,22 @@ public class PlayerController : MonoBehaviour {
 
     void resetPosToCheckpoint()
     {
+        Hashtable moveArgs = new Hashtable();
+        moveArgs.Add("position", lastCheckpoint.GetComponent<CheckpointController>().transform.position);
+        moveArgs.Add("time", 0.5f);
+        moveArgs.Add("easetype", iTween.EaseType.easeOutQuad);
+        moveArgs.Add("oncomplete", "finishRespawning");
+        moveArgs.Add("oncompletetarget", gameObject);
+
+        iTween.MoveTo(gameObject, moveArgs);
+
+        //transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
+    }
+
+    void finishRespawning()
+    {
+        levelScript.flipDuration *= 2f;
         GetComponent<SpriteRenderer>().enabled = true;
         respawning = false;
-        transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
     }
 }
