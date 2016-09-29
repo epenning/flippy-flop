@@ -64,7 +64,7 @@ public class CheckpointController : MonoBehaviour {
             activated = true;
             flipSide = levelScript.flipSide;
             playerScript.lastCheckpoint = gameObject;
-
+            GetComponentInChildren<ParticleSystem>().Stop();
             GetComponent<SpriteRenderer>().sprite = activeSpriteFront;
             transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = activeSpriteBack;
         }

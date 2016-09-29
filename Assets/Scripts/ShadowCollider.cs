@@ -32,7 +32,7 @@ public class ShadowCollider : MonoBehaviour {
 
 
         // disallow player flipping on shadow collision with obstacles, platforms
-        if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle")
+        if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle" || coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy")
         {
             numColls++;
             //playerController.canFlip = false;
@@ -45,7 +45,7 @@ public class ShadowCollider : MonoBehaviour {
 
 
         // allow player to flip again
-        if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle")
+        if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle" || coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy")
         {
             numColls--;
             //playerController.canFlip = true;

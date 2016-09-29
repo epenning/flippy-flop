@@ -195,7 +195,7 @@ public class LevelController : MonoBehaviour {
         //instantFlip = false;
         halfRotated = false;
         levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180 * ((currDir + 1) / 2), 0, 0);
-
+        GameObject.Find("Player").GetComponent<BoxCollider2D>().enabled = true;
         volControl = 0f;
 
     }

@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour {
     public bool flipOnCooldown;
 
     public GameObject flipIcon;
+    FlipIconController flipIconScript;
 
     public GameObject lastCheckpoint;
     public bool respawning;
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
-
+        flipIconScript = flipIcon.GetComponent<FlipIconController>();
 
 
         controller = GetComponent<MovementController>();
@@ -109,18 +110,10 @@ public class PlayerController : MonoBehaviour {
 
 
 
-
-        // hardcoded values from when we had a BoxCollider2D. should be changed but I tried changing it and everything broke
-        height = 1.9f;
-        distToFeet = Mathf.Abs(-0.035f - (height / 2));
-
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
         bgYScale = background.transform.localScale.y;
         bgXScale = background.transform.localScale.x;
 
-        //GameObject startingCheckpoint = GameObject.Instantiate(checkpointPrefab);
-        //startingCheckpoint.transform.position = transform.position;
-        //startingCheckpoint.transform.parent = levelScript.levelRoot.transform;
     }
 	
 	// Update is called once per frame
@@ -166,17 +159,24 @@ public class PlayerController : MonoBehaviour {
             // flipping
             if (canFlip && !midair && !flipOnCooldown)
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.W))
                 {
                     // play flip SFX
                     flipSFX.Play();
-
+                    GetComponent<BoxCollider2D>().enabled = false;
                     timeToNextFlip = Time.time + flipCooldown;
                     flipOnCooldown = true;
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
                     levelScript.flipSide *= -1;
                     //Debug.Log(levelScript.currRotPoint);
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    flipIconScript.flashDisabled();
                 }
             }
         }
@@ -189,25 +189,27 @@ public class PlayerController : MonoBehaviour {
 
         canMove = !levelScript.rotating && !respawning;
 
-
-        if(timeToNextFlip <= Time.time)
+        if(!flipIconScript.hidden)
         {
-            flipOnCooldown = false;
+            if (timeToNextFlip <= Time.time)
+            {
+                flipOnCooldown = false;
 
-            if(canFlip && !midair)
-            {
-                //flipIcon.GetComponent<SpriteRenderer>().sprite = readyFlipIcon;
-                flipIcon.GetComponent<SpriteRenderer>().color = Color.white;
-            } else
-            {
-                //flipIcon.GetComponent<SpriteRenderer>().sprite = disabledFlipIcon;
-                flipIcon.GetComponent<SpriteRenderer>().color = new Color(90f / 255, 30f / 255, 0, 104f / 255);
+                if (canFlip && !midair)
+                {
+                    flipIconScript.updateColor(Color.white);
+                }
+                else
+                {
+                    flipIconScript.updateColor(new Color(90f / 255, 30f / 255, 0, 104f / 255));
+                }
             }
-        } else
-        {
-            //flipIcon.GetComponent<SpriteRenderer>().sprite = cooldownFlipIcon;
-            flipIcon.GetComponent<SpriteRenderer>().color = new Color(90f / 255, 30f / 255, 0, 104f / 255);
+            else
+            {
+                flipIconScript.updateColor(new Color(90f / 255, 30f / 255, 0, 104f / 255));
+            }
         }
+
 
 
         // Get boundaries of background (taking scale into account)
@@ -318,6 +320,7 @@ public class PlayerController : MonoBehaviour {
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
 
         GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
         //levelScript.flipDuration *= 0.5f;
         if (checkpointScript.flipSide != levelScript.flipSide)
         {
@@ -354,13 +357,11 @@ public class PlayerController : MonoBehaviour {
         moveArgs.Add("oncompletetarget", gameObject);
 
         iTween.MoveTo(gameObject, moveArgs);
-
-        //transform.position = lastCheckpoint.GetComponent<CheckpointController>().transform.position;
     }
 
     void finishRespawning()
     {
-        //levelScript.flipDuration *= 2f;
+        GetComponent<BoxCollider2D>().enabled = true;        
         GetComponent<SpriteRenderer>().enabled = true;
         respawning = false;
     }
