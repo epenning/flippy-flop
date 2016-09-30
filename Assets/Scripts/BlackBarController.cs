@@ -94,8 +94,7 @@ public class BlackBarController : MonoBehaviour {
                 moving = true;
 
                 
-                // Not sure why the value is 2.75, but it works
-                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2.5f, transform.localPosition.z);
+                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2 * playerToPlatform, transform.localPosition.z);
 
                 //Debug.Log("moving to: " + tgtLocalPos);
 
@@ -113,7 +112,6 @@ public class BlackBarController : MonoBehaviour {
         {
             // Convert the box's desired world position to the root's local coordinates
             Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
-            //Debug.Log("should end up at: " + tgtLocalPos);
             tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
             transform.localPosition = tgtLocalPos;
         }
