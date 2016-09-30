@@ -23,6 +23,9 @@ public class ShadowCollider : MonoBehaviour {
         {
             playerController.canFlip = false;
         }
+
+        if (playerController.respawning)
+            numColls = 0;
 	}
 
     void OnTriggerEnter2D(Collider2D coll)

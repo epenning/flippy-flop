@@ -24,7 +24,14 @@ public class EnemyPathController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // move forward
-        rbody.velocity = new Vector3(speed * direction, 0, 0);
+        if (GameObject.Find("LevelController").GetComponent<LevelController>().rotating)
+        {
+            rbody.velocity = Vector3.zero;
+        } else
+        {
+            rbody.velocity = new Vector3(speed * direction, 0, 0);
+
+        }
 
         // update animation
         float vx = rbody.velocity.x;
@@ -37,7 +44,7 @@ public class EnemyPathController : MonoBehaviour {
             spriteRendererUp.flipX = true;
             spriteRendererDown.flipX = true;
         }
-        else
+        else if (vx > 0)
         {
             spriteRendererUp.flipX = false;
             spriteRendererDown.flipX = false;
@@ -49,7 +56,10 @@ public class EnemyPathController : MonoBehaviour {
         // turn around if about to hit an obstacle
         if (coll.gameObject.tag == "obstacle")
         {
-            direction *= -1;
+            if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating) {
+                direction *= -1;
+            }
+            
         }
     }
 
@@ -57,6 +67,8 @@ public class EnemyPathController : MonoBehaviour {
     {
         // turn around if about to move off platform
         if (coll.gameObject.tag == "platform")
-            direction *= -1;
+            if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating) {
+                direction *= -1;
+            }
     }
 }
