@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     // SFX
     public AudioSource flipSFX;
+    public FootstepSFX footstepSFX;
 
     // player components
     Animator animator;
@@ -92,6 +93,15 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        // foosteps SFX
+        if ((velocity.x < -0.1f || velocity.x > 0.1f) && !midair)
+        {
+            footstepSFX.Play(3);
+        } else
+        {
+            footstepSFX.Stop();
+        }
 
         // hit something vertically
         if (movementScript.collisions.above || movementScript.collisions.below)

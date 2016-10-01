@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011340655880}
   - 82: {fileID: 82000011902121080}
+  - 114: {fileID: 114000011364829546}
   m_Layer: 0
   m_Name: Footstep SFX
   m_TagString: Untagged
@@ -245,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: -1.4, z: 0}
+  m_LocalPosition: {x: 2.7, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -835,43 +836,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bbce16018adcd49bcbb677f70d89fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numColliding: 0
+  flipSFX: {fileID: 82000010168381756}
+  footstepSFX: {fileID: 114000011364829546}
   levelController: {fileID: 0}
-  oldPlatform: {fileID: 0}
-  currPlatform: {fileID: 0}
-  height: 0
-  distToFeet: 0
   background: {fileID: 0}
-  canMove: 1
-  canFlip: 0
-  maxSpeed: 5.5
-  currSpeed: 0
-  currDir: 0
-  horizAccel: 0.13
-  grav: 40
-  jumpSpeed: 14
-  midair: 1
-  vertAccel: 0.018
-  hasJumped: 0
-  collCorrection: 0.1
-  keys: 0
-  keyIndicator: {fileID: 1000010554571710}
   bgMinY: 0
   bgMinX: 0
   bgMaxX: 0
   bgYScale: 0
   bgXScale: 0
-  cooldownFlipIcon: {fileID: 21300000, guid: 1087817ffaf2cae42beff3173fc0109c, type: 3}
-  disabledFlipIcon: {fileID: 21300000, guid: cc4d428011e0d6943bca6ed28dbdae97, type: 3}
-  readyFlipIcon: {fileID: 21300000, guid: 990d538fc90b7dc468a1d57f736ce38a, type: 3}
+  oldPlatform: {fileID: 0}
+  currPlatform: {fileID: 0}
+  canMove: 1
+  canFlip: 0
+  midair: 1
+  keys: 0
+  keyIndicator: {fileID: 1000010554571710}
   flipCooldown: 0.95
   timeToNextFlip: 0
   flipOnCooldown: 0
   flipIcon: {fileID: 1000012804836230}
   lastCheckpoint: {fileID: 0}
   respawning: 0
-  checkpointPrefab: {fileID: 1000011163982994, guid: e4658675f16c3fb4791e463a25bb41dc,
-    type: 2}
   jumpHeight: 2.25
   timeToJumpApex: 0.35
   accelerationTimeAirborne: 0.2
@@ -881,7 +867,6 @@ MonoBehaviour:
   gravity: 0
   velocity: {x: 0, y: 0, z: 0}
   velocityXSmoothing: 0
-  flipSFX: {fileID: 82000010168381756}
 --- !u!114 &114000010887426860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -896,6 +881,27 @@ MonoBehaviour:
   player: {fileID: 1000011922104290}
   playerController: {fileID: 0}
   numColls: 0
+--- !u!114 &114000011364829546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013229080976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb7690eaa5860240b4039f188f2e0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepSource: {fileID: 82000011902121080}
+  hellSteps:
+  - {fileID: 8300000, guid: 48eb0a2d9feb942408641d0f50b3e7fb, type: 3}
+  - {fileID: 8300000, guid: 5801ad0b1e658034db4ca215cb1419b4, type: 3}
+  - {fileID: 8300000, guid: fd510853b436598498fe9f00b57d63c6, type: 3}
+  - {fileID: 8300000, guid: 48b4e168df9bd0944aefe5fa29608cb1, type: 3}
+  - {fileID: 8300000, guid: e9aae9c40e26e224fba7036d30801449, type: 3}
+  woodStep: {fileID: 8300000, guid: e3d98cc91bae285439a9c855edf5cd64, type: 3}
+  timeBetween: 0.35
+  timer: 0
 --- !u!114 &114000013578754618
 MonoBehaviour:
   m_ObjectHideFlags: 1
