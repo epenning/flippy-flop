@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
         // foosteps SFX
         if ((velocity.x < -0.1f || velocity.x > 0.1f) && !midair)
         {
-            footstepSFX.Play(3);
+            footstepSFX.Play(levelScript.levelNum);
         } else
         {
             footstepSFX.Stop();
