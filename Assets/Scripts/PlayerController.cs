@@ -4,56 +4,40 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
-    Rigidbody2D rbody;
+    // SFX
+    public AudioSource flipSFX;
+    public FootstepSFX footstepSFX;
+
+    // player components
     Animator animator;
     SpriteRenderer spriteRenderer;
+    MovementController movementScript;
 
-    public int numColliding;
-
+    // level variables
     public GameObject levelController;
-
     LevelController levelScript;
-
-    public GameObject oldPlatform;
-    public GameObject currPlatform;
-
-    public float height;
-    public float distToFeet;
-
     public GameObject background;
-
     Bounds bgSpriteBounds;
-
-    public bool canMove = true;
-    public bool canFlip = false;
-
-    public float maxSpeed;
-    public float currSpeed;
-    public int currDir = 0;
-    public float horizAccel;
-
-    public float grav;
-    public float jumpSpeed;
-    public bool midair = true;
-    public float vertAccel;
-    public bool hasJumped = false;
-
-    public float collCorrection;
-
-	public int keys;
-    public GameObject keyIndicator;
-
     public float bgMinY;
     public float bgMinX;
     public float bgMaxX;
-
     public float bgYScale;
     public float bgXScale;
 
-    public Sprite cooldownFlipIcon;
-    public Sprite disabledFlipIcon;
-    public Sprite readyFlipIcon;
+    // contacted platforms
+    public GameObject oldPlatform;
+    public GameObject currPlatform;
 
+    // physical state
+    public bool canMove = true;
+    public bool canFlip = false;
+    public bool midair = true;
+
+    // keys
+	public int keys;
+    public GameObject keyIndicator;
+    
+    // flipping
     public float flipCooldown;
     public float timeToNextFlip;
     public bool flipOnCooldown;
@@ -61,13 +45,13 @@ public class PlayerController : MonoBehaviour {
     public GameObject flipIcon;
     FlipIconController flipIconScript;
 
+    // checkpoints
     public GameObject lastCheckpoint;
     public bool respawning;
-
-    public GameObject checkpointPrefab;
-
-
-    /* New movement + colllision system */
+    
+    /*
+     * New movement + colllision system
+     */
     public float jumpHeight = 4;
 
     // Time to reach the highest point of the jump
@@ -86,45 +70,47 @@ public class PlayerController : MonoBehaviour {
 
     // Used for horizontal drag
     public float velocityXSmoothing;
-
-    MovementController controller;
-
-    // SFX
-    public AudioSource flipSFX;
-
+    
 
     // Use this for initialization
     void Start () {
-        rbody = GetComponent<Rigidbody2D>();
+        // get components and scripts
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         levelScript = levelController.GetComponent<LevelController>();
         flipIconScript = flipIcon.GetComponent<FlipIconController>();
-
-
-        controller = GetComponent<MovementController>();
+        movementScript = GetComponent<MovementController>();
 
         // Use kinematics equations to calculate necessary gravity and jumpVelocity
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-
-
-
+        
+        // calculate level bounds from background
         bgSpriteBounds = background.GetComponent<SpriteRenderer>().sprite.bounds;
         bgYScale = background.transform.localScale.y;
         bgXScale = background.transform.localScale.x;
-
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (controller.collisions.above || controller.collisions.below)
+        // foosteps SFX
+        if ((velocity.x < -0.1f || velocity.x > 0.1f) && !midair)
+        {
+            footstepSFX.Play(3);
+        } else
+        {
+            footstepSFX.Stop();
+        }
+
+        // hit something vertically
+        if (movementScript.collisions.above || movementScript.collisions.below)
         {
             velocity.y = 0;
         }
 
-        if(controller.collisions.below)
+        // landed on something
+        if(movementScript.collisions.below)
         {
             midair = false;
         } else
@@ -132,13 +118,14 @@ public class PlayerController : MonoBehaviour {
             midair = true;
         }
 
+        // movement input
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-
-
+        // not rotating or respawning
         if (canMove)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
+            // jump
+            if (Input.GetKeyDown(KeyCode.Space) && !midair)
             {
                 velocity.y = jumpVelocity;
 
@@ -150,11 +137,11 @@ public class PlayerController : MonoBehaviour {
             float targetVelocityX = input.x * moveSpeed;
 
             // Smooth out horizontal velocity (changes depending on if we're grounded or airborne)
-            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
+            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (movementScript.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
 
             velocity.y += gravity * Time.deltaTime;
 
-            controller.Move(velocity * Time.deltaTime);
+            movementScript.Move(velocity * Time.deltaTime);
 
             // flipping
             if (canFlip && !midair && !flipOnCooldown)
@@ -163,9 +150,11 @@ public class PlayerController : MonoBehaviour {
                 {
                     // play flip SFX
                     flipSFX.Play();
+
                     GetComponent<BoxCollider2D>().enabled = false;
                     timeToNextFlip = Time.time + flipCooldown;
                     flipOnCooldown = true;
+
                     levelScript.rotating = true;
                     levelScript.currDir *= -1;
                     levelScript.flipSide *= -1;
@@ -193,10 +182,13 @@ public class PlayerController : MonoBehaviour {
 
         canMove = !levelScript.rotating && !respawning;
 
+        // if flipping mechanic has been introduced
         if(!flipIconScript.hidden)
         {
             if (!flipOnCooldown)
             {
+                // flip is off cooldown now
+                flipOnCooldown = false;
 
                 if (canFlip && !midair)
                 {
@@ -220,14 +212,16 @@ public class PlayerController : MonoBehaviour {
         bgMinX = background.transform.position.x + bgSpriteBounds.min.x * bgXScale;
         bgMaxX = background.transform.position.x + bgSpriteBounds.max.x * bgXScale;
 
+        // respawn from checkpoint
         if(Input.GetKeyDown(KeyCode.R))
         {
             Die(false);
         }
+
+        // respawn from falling off map
         if (transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
         {
-            // Reached the border of the background or hit the reset button
-
+            // Reached the border of the background
             Die(true);
         }
 
@@ -366,6 +360,6 @@ public class PlayerController : MonoBehaviour {
     {
         GetComponent<BoxCollider2D>().enabled = true;        
         GetComponent<SpriteRenderer>().enabled = true;
-        respawning = false;
+        respawning = false; 
     }
 }

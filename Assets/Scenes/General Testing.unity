@@ -202,11 +202,22 @@ MonoBehaviour:
   exit: {fileID: 2115692694}
   dayMusic: {fileID: 274603910}
   nightMusic: {fileID: 63210620}
-  currRotPoint: {x: 0, y: 0, z: 0}
   currDir: -1
   rotating: 0
   halfRotated: 0
   rotSpeed: 8
+  flipSide: 0
+  startRotate: 0
+  flipDuration: 0
+  volControl: 0
+  platformBlockList: []
+  obstacleList: []
+  trapList: []
+  enemyList: []
+  checkpointList: []
+  doorList: []
+  objList: []
+  levelNum: 0
 --- !u!4 &326020494
 Transform:
   m_ObjectHideFlags: 0
@@ -834,11 +845,6 @@ Prefab:
       propertyPath: background
       value: 
       objectReference: {fileID: 932341389}
-    - target: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: orthographic size
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
