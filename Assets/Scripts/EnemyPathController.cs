@@ -12,6 +12,8 @@ public class EnemyPathController : MonoBehaviour {
     public SpriteRenderer spriteRendererUp;
     public SpriteRenderer spriteRendererDown;
 
+    float startingY;
+
     // Use this for initialization
     void Start () {
         rbody = transform.parent.gameObject.GetComponent<Rigidbody2D>();
@@ -19,6 +21,7 @@ public class EnemyPathController : MonoBehaviour {
         animatorDown = transform.parent.GetChild(0).GetComponent<Animator>();
         spriteRendererUp = GetComponentInParent<SpriteRenderer>();
         spriteRendererDown = transform.parent.GetChild(0).GetComponent<SpriteRenderer>();
+        startingY = transform.parent.localPosition.y;
     }
 	
 	// Update is called once per frame
@@ -29,6 +32,7 @@ public class EnemyPathController : MonoBehaviour {
             rbody.velocity = Vector3.zero;
         } else
         {
+            transform.parent.localPosition = new Vector3(transform.parent.localPosition.x, startingY, 0);
             rbody.velocity = new Vector3(speed * direction, 0, 0);
 
         }
@@ -67,8 +71,8 @@ public class EnemyPathController : MonoBehaviour {
     {
         // turn around if about to move off platform
         if (coll.gameObject.tag == "platform")
-            if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating) {
+            //if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating) {
                 direction *= -1;
-            }
+            //}
     }
 }

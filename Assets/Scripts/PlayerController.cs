@@ -186,14 +186,17 @@ public class PlayerController : MonoBehaviour {
             velocity = Vector3.zero;
         }
 
+        if (timeToNextFlip <= Time.time)
+        {
+            flipOnCooldown = false;
+        }
 
         canMove = !levelScript.rotating && !respawning;
 
         if(!flipIconScript.hidden)
         {
-            if (timeToNextFlip <= Time.time)
+            if (!flipOnCooldown)
             {
-                flipOnCooldown = false;
 
                 if (canFlip && !midair)
                 {
