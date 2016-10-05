@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     // SFX
     public AudioSource flipSFX;
     public FootstepSFX footstepSFX;
+    public TriggeredSFX triggeredSFX;
 
     // player components
     Animator animator;
@@ -288,6 +289,10 @@ public class PlayerController : MonoBehaviour {
             if (coll.gameObject.tag == "key")
             {
                 //Debug.Log("Picked up a key!");
+                // play key pickup sfx
+                triggeredSFX.Play("key");
+
+                // update state
                 keys++;
                 coll.gameObject.SetActive(false);
                 if(lastCheckpoint)

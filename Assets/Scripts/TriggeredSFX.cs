@@ -1,0 +1,22 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TriggeredSFX : MonoBehaviour {
+
+    AudioSource source;
+
+    public AudioClip key;
+
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+    
+	public void Play(string type)
+    {
+        if (type == "key")
+        {
+            source.PlayOneShot(key, 1f);
+        }
+    }
+}
