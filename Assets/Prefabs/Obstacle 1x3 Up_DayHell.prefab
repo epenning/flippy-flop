@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000010737744610}
   - 61: {fileID: 61000013805129538}
   m_Layer: 10
-  m_Name: Obstacle 1x3 Up
+  m_Name: Obstacle 1x3 Up_DayHell
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
