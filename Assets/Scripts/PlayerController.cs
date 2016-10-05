@@ -277,6 +277,10 @@ public class PlayerController : MonoBehaviour {
             {
                 if (keys >= 1)
                 {
+                    // play door sound
+                    triggeredSFX.Play("door");
+
+                    // progress to next level
                     keys--;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }

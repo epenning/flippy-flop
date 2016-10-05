@@ -7,6 +7,8 @@ public class FootstepSFX : MonoBehaviour {
 
     public AudioClip[] hellSteps;
     public AudioClip woodStep;
+    public AudioClip grassStep;
+    public AudioClip carpetStep;
 
     public GameObject playerController;
     PlayerController playerScript;
@@ -63,17 +65,20 @@ public class FootstepSFX : MonoBehaviour {
                 timer = 0f;
 
                 AudioClip step;
+                float volume = 1f;
 
                 if (stepType == 3)
                 {
                     step = hellSteps[Random.Range(0, hellSteps.Length - 1)];
+                    volume = 0.5f;
                 }
                 else
                 {
-                    step = woodStep;
+                    step = grassStep;
+                    volume = 1f;
                 }
 
-                footstepSource.PlayOneShot(step, 0.5f);
+                footstepSource.PlayOneShot(step, volume);
             } else
             {
                 timer += Time.deltaTime;
