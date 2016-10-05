@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     // level variables
     public GameObject levelController;
-    LevelController levelScript;
+    public LevelController levelScript;
     public GameObject background;
     Bounds bgSpriteBounds;
     public float bgMinY;
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour {
         // foosteps SFX
         if ((velocity.x < -0.1f || velocity.x > 0.1f) && !midair)
         {
-            footstepSFX.Play(3);
+            footstepSFX.Play();
         } else
         {
             footstepSFX.Stop();

@@ -246,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7, y: -0.9, z: 0}
+  m_LocalPosition: {x: -18.65, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -900,6 +900,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 48b4e168df9bd0944aefe5fa29608cb1, type: 3}
   - {fileID: 8300000, guid: e9aae9c40e26e224fba7036d30801449, type: 3}
   woodStep: {fileID: 8300000, guid: e3d98cc91bae285439a9c855edf5cd64, type: 3}
+  playerController: {fileID: 1000011922104290}
   timeBetween: 0.35
   timer: 0
 --- !u!114 &114000013578754618
