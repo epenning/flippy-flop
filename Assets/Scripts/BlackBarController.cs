@@ -113,9 +113,9 @@ public class BlackBarController : MonoBehaviour {
             transform.parent = player.transform;
 
             // Convert the box's desired world position to the root's local coordinates
-            Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
-            tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
-            transform.localPosition = tgtLocalPos;
+            //Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
+            //tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
+            //transform.localPosition = tgtLocalPos;
         }
 
 	}
