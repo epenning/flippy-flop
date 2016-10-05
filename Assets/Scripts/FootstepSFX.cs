@@ -15,7 +15,7 @@ public class FootstepSFX : MonoBehaviour {
     public float timer = 0f;
 
     bool playing = false;
-    int stepType = 0;
+    int stepType = 0;   // 1 means day, 2 means night, 3 means hell
 
     void Start()
     {
@@ -38,12 +38,19 @@ public class FootstepSFX : MonoBehaviour {
     void Update()
     {
         // set step type by world
-        if (playerScript.levelScript.flipSide == 1)
+        if (playerScript.levelScript.levelNum == 1 || playerScript.levelScript.flipSide == 1)
         {
+            // day steps
             stepType = 1;
         }
-        else if (playerScript.levelScript.flipSide == -1)
+        else if (playerScript.levelScript.levelNum == 2)
         {
+            // night steps
+            stepType = 2;
+        }
+        else
+        {
+            // hell steps
             stepType = 3;
         }
 
