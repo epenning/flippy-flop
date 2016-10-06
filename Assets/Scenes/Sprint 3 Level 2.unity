@@ -5012,6 +5012,22 @@ MonoBehaviour:
   noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
   noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}
   dx11NoiseShader: {fileID: 4800000, guid: 8b30686bb4322ab42ad5eb50a0210b58, type: 3}
+--- !u!114 &1383142569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383142562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a704ad5d1f03e41ad90bf26d919431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curShader: {fileID: 4800000, guid: bf5fa2119cbc8b34c82100700b746ab4, type: 3}
+  Distortion: 0.2
+  InputGamma: 2.4
+  OutputGamma: 1.26
+  TextureSize: 744.21
 --- !u!1001 &1385839549
 Prefab:
   m_ObjectHideFlags: 0
@@ -5452,6 +5468,7 @@ GameObject:
   - 33: {fileID: 1472706410}
   - 64: {fileID: 1472706409}
   - 23: {fileID: 1472706408}
+  - 114: {fileID: 1472706412}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -5520,6 +5537,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1472706412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472706407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a704ad5d1f03e41ad90bf26d919431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curShader: {fileID: 4800000, guid: bf5fa2119cbc8b34c82100700b746ab4, type: 3}
+  Distortion: 0.1
+  InputGamma: 2.4
+  OutputGamma: 2.2
+  TextureSize: 768
 --- !u!4 &1481465255 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010472944032, guid: 09e3a55868d6fe84782fb0748a21fd9d,
@@ -6042,7 +6075,7 @@ Transform:
   m_GameObject: {fileID: 1602374757}
   m_LocalRotation: {x: -0.95145595, y: 0.23390266, z: 0.17406575, w: -0.09860128}
   m_LocalPosition: {x: -24.88, y: 0, z: -389.52}
-  m_LocalScale: {x: 32, y: 18, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 6.05, y: 202.06099, z: -151.20601}
   m_Children: []
   m_Father: {fileID: 0}
