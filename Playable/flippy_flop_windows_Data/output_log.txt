@@ -2,39 +2,51 @@ Initialize engine version: 5.4.0f3 (a6d8d714de6f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
     Vendor:   NVIDIA
-    VRAM:     4058 MB
+    VRAM:     3040 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.116 seconds
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.049 seconds
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Unity Projects\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.711013 ms
+UnloadTime: 1.039802 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at LevelController.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.250887 ms
+UnloadTime: 4.642368 ms
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3310.
-Total: 0.541808 ms (FindLiveObjects: 0.145534 ms CreateObjectMapping: 0.030977 ms MarkObjects: 0.346593 ms  DeleteObjects: 0.018410 ms)
+Total: 0.671209 ms (FindLiveObjects: 0.144197 ms CreateObjectMapping: 0.035555 ms MarkObjects: 0.469728 ms  DeleteObjects: 0.021333 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.254575 ms
+UnloadTime: 1.279209 ms
 
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3661.
-Total: 0.621004 ms (FindLiveObjects: 0.152840 ms CreateObjectMapping: 0.022794 ms MarkObjects: 0.423452 ms  DeleteObjects: 0.021625 ms)
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 3698.
+Total: 0.706370 ms (FindLiveObjects: 0.202666 ms CreateObjectMapping: 0.028444 ms MarkObjects: 0.452345 ms  DeleteObjects: 0.022518 ms)
 
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 268c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.390616 ms
+
+Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 3822.
+Total: 1.531653 ms (FindLiveObjects: 0.127604 ms CreateObjectMapping: 0.063209 ms MarkObjects: 0.557036 ms  DeleteObjects: 0.783407 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1f40 -> priority: 1 
+  Thread -> id: 3af4 -> priority: 1 
