@@ -24,6 +24,8 @@ public class CheckpointController : MonoBehaviour {
     public Sprite inactiveSpriteBack;
     public Sprite activeSpriteBack;
 
+    Animator animator;
+
     void Awake()
     {
         playerScript = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -33,6 +35,7 @@ public class CheckpointController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = inactiveSpriteBack;
+        animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -65,7 +68,12 @@ public class CheckpointController : MonoBehaviour {
             flipSide = levelScript.flipSide;
             playerScript.lastCheckpoint = gameObject;
             GetComponentInChildren<ParticleSystem>().Stop();
-            GetComponent<SpriteRenderer>().sprite = activeSpriteFront;
+            if (animator)
+                animator.SetTrigger("Grow");
+            else
+                GetComponent<SpriteRenderer>().sprite = activeSpriteFront;
+
+
             transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = activeSpriteBack;
         }
     }
