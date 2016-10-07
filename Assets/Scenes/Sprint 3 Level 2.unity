@@ -581,6 +581,35 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
+--- !u!21 &134988353
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Forth
+  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!82 &153278861 stripped
 AudioSource:
   m_PrefabParentObject: {fileID: 82000012983914658, guid: bc7b05984478b95458e304036f5c2250,
@@ -984,7 +1013,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257008149}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -383.5}
+  m_LocalPosition: {x: 0, y: 0, z: -379.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
@@ -1423,6 +1452,36 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
+--- !u!21 &356494208
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Second
+  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
+  m_ShaderKeywords: VHS_BLEED_ON VHS_FISHEYE_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON
+    VHS_VIGNETTE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _CurvesTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &357060804
 Prefab:
   m_ObjectHideFlags: 0
@@ -2309,6 +2368,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21607765af87aa44dbbc37a410be9aaf, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &592697317
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Tape
+  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!4 &609959574 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -2558,6 +2640,41 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &686734727
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Third
+  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LastTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1 &701613485 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011904136690, guid: efb4382a5024c36449dbac67c6dffb05,
@@ -4986,7 +5103,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011946066800, guid: bc7b05984478b95458e304036f5c2250,
     type: 2}
   m_PrefabInternal: {fileID: 1497743811}
---- !u!114 &1383142568
+--- !u!114 &1383142564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4994,40 +5111,143 @@ MonoBehaviour:
   m_GameObject: {fileID: 1383142562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9191284b058eef549b7108b5f04e1117, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba5113e7208c4316acb1028a08587a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensityMultiplier: 1.68
-  generalIntensity: 0.5
-  blackIntensity: 1
-  whiteIntensity: 1
-  midGrey: 0.2
-  dx11Grain: 0
-  softness: 0
-  monochrome: 0
-  intensities: {x: 1, y: 1, z: 1}
-  tiling: {x: 64, y: 64, z: 64}
-  monochromeTiling: 64
-  filterMode: 1
-  noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
-  noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}
-  dx11NoiseShader: {fileID: 4800000, guid: 8b30686bb4322ab42ad5eb50a0210b58, type: 3}
---- !u!114 &1383142569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383142562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a704ad5d1f03e41ad90bf26d919431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curShader: {fileID: 4800000, guid: bf5fa2119cbc8b34c82100700b746ab4, type: 3}
-  Distortion: 0.2
-  InputGamma: 2.4
-  OutputGamma: 1.26
-  TextureSize: 744.21
+  shader1: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
+  shader2: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
+  shader3: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
+  shader4: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
+  shader_clear: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
+  shader_tape: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
+  mat1: {fileID: 1668223865}
+  mat2: {fileID: 356494208}
+  mat3: {fileID: 686734727}
+  mat4: {fileID: 134988353}
+  mat_clear: {fileID: 1916832962}
+  mat_tape: {fileID: 592697317}
+  g_showCRT: 1
+  g_showNoise: 1
+  g_showJitter: 1
+  g_showSignal: 1
+  g_showFeedback: 1
+  g_showExtra: 1
+  g_showBypass: 0
+  bleedOn: 1
+  crtMode: 0
+  crtLinesMode: 0
+  screenLinesNum: 0
+  bleedAmount: 1
+  bleedDebugOn: 0
+  bleedCurveY:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bleedCurveI:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: -0.5
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -0.5
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bleedCurveQ:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: -0.5
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -0.5
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  bleedLength: 24
+  bleedCurveEditModeOn: 0
+  bleedCurveIQSyncOn: 1
+  fisheyeOn: 1
+  fisheyeBend: 2
+  fisheyeType: 0
+  fisheyeSize: 1.2
+  cutoffX: 50
+  cutoffY: 7.3
+  cutoffFadeX: 5
+  cutoffFadeY: 5
+  vignetteOn: 1
+  vignetteAmount: 0.2
+  vignetteSpeed: 1
+  noiseLinesMode: 1
+  noiseLinesNum: 240
+  noiseQuantizeX: 0
+  filmgrainOn: 1
+  filmGrainAmount: 0.016
+  signalNoiseOn: 1
+  signalNoiseAmount: 0.15
+  signalNoisePower: 0.83
+  tapeNoiseOn: 0
+  tapeNoiseTH: 0.63
+  tapeNoiseAmount: 1
+  tapeNoiseSpeed: 1
+  lineNoiseOn: 0
+  lineNoiseAmount: 1
+  lineNoiseSpeed: 5
+  scanLinesOn: 0
+  scanLineWidth: 20
+  linesFloatOn: 0
+  linesFloatSpeed: 1
+  stretchOn: 1
+  twitchHOn: 0
+  twitchHFreq: 0
+  twitchVOn: 0
+  twitchVFreq: 1
+  jitterHOn: 1
+  jitterHAmount: 0.5
+  jitterVOn: 0
+  jitterVAmount: 3.89
+  jitterVSpeed: 1
+  signalTweakOn: 1
+  signalAdjustY: 0
+  signalAdjustI: 0
+  signalAdjustQ: 0
+  signalShiftY: 1
+  signalShiftI: 1
+  signalShiftQ: 1
+  gammaCorection: 1
+  feedbackOn: 0
+  feedbackMode: 0
+  feedbackThresh: 0.1
+  feedbackAmount: 2
+  feedbackFade: 0.8
+  feedbackColor: {r: 1, g: 0.5, b: 0, a: 1}
+  feedbackDebugOn: 0
+  independentTimeOn: 0
+  bypassTex: {fileID: 0}
+  spriteTex: {fileID: 0}
 --- !u!1001 &1385839549
 Prefab:
   m_ObjectHideFlags: 0
@@ -5468,7 +5688,6 @@ GameObject:
   - 33: {fileID: 1472706410}
   - 64: {fileID: 1472706409}
   - 23: {fileID: 1472706408}
-  - 114: {fileID: 1472706412}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -5532,27 +5751,11 @@ Transform:
   m_GameObject: {fileID: 1472706407}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -400}
-  m_LocalScale: {x: 32, y: 18, z: 1}
+  m_LocalScale: {x: 32, y: 24, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!114 &1472706412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1472706407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a704ad5d1f03e41ad90bf26d919431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curShader: {fileID: 4800000, guid: bf5fa2119cbc8b34c82100700b746ab4, type: 3}
-  Distortion: 0.1
-  InputGamma: 2.4
-  OutputGamma: 2.2
-  TextureSize: 768
 --- !u!4 &1481465255 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010472944032, guid: 09e3a55868d6fe84782fb0748a21fd9d,
@@ -5671,17 +5874,17 @@ Prefab:
     - target: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: m_BackGroundColor.r
-      value: 0
+      value: 0.09411765
       objectReference: {fileID: 0}
     - target: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: m_BackGroundColor.g
-      value: 0
+      value: 0.09411765
       objectReference: {fileID: 0}
     - target: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: m_BackGroundColor.b
-      value: 0
+      value: 0.09411765
       objectReference: {fileID: 0}
     - target: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
@@ -6042,7 +6245,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 0.8308824, g: 1, b: 0.9776168, a: 1}
+  m_Color: {r: 1, g: 0.9764706, b: 0.78676474, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -6332,6 +6535,30 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
+--- !u!21 &1668223865
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_First
+  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_FISHEYE_ON VHS_JITTER_H_ON VHS_STRETCH_ON
+    VHS_YIQNOISE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!4 &1678449122 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -6715,6 +6942,66 @@ Prefab:
       propertyPath: m_RootOrder
       value: 81
       objectReference: {fileID: 0}
+    - target: {fileID: 212000010975190350, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010975190350, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010975190350, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000012659925978, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000012659925978, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000012659925978, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011326357482, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011326357482, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011326357482, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010067111562, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010067111562, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.09558821
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010067111562, guid: 54b99fe6047691e47972228c391670c1,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.09558821
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54b99fe6047691e47972228c391670c1, type: 2}
   m_IsPrefabParent: 0
@@ -7021,6 +7308,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaef633b6a3024543b0cc6236612a7c6, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &1916832962
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Clear
+  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1 &1919002310
 GameObject:
   m_ObjectHideFlags: 0
@@ -7637,6 +7947,10 @@ Prefab:
     - target: {fileID: 4000013669560222, guid: b942ad1a7973b5e4babd1c550304e883, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011067132676, guid: b942ad1a7973b5e4babd1c550304e883, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b942ad1a7973b5e4babd1c550304e883, type: 2}
