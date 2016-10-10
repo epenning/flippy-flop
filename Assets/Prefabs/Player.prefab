@@ -1130,8 +1130,8 @@ MonoBehaviour:
   bleedLength: 24
   bleedCurveEditModeOn: 0
   bleedCurveIQSyncOn: 1
-  fisheyeOn: 1
-  fisheyeBend: 2
+  fisheyeOn: 0
+  fisheyeBend: 0
   fisheyeType: 0
   fisheyeSize: 1.2
   cutoffX: 50
@@ -1147,8 +1147,8 @@ MonoBehaviour:
   filmgrainOn: 1
   filmGrainAmount: 0.016
   signalNoiseOn: 1
-  signalNoiseAmount: 0.15
-  signalNoisePower: 0.83
+  signalNoiseAmount: 0.078
+  signalNoisePower: 0.471
   tapeNoiseOn: 0
   tapeNoiseTH: 0.63
   tapeNoiseAmount: 1
