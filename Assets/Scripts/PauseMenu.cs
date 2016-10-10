@@ -39,5 +39,6 @@ public class PauseMenu : MonoBehaviour {
 
     public void ExitGame(){
         Application.LoadLevel("UI Test");
+        Time.timeScale = 1;
     }
 }

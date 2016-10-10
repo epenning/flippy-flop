@@ -5617,6 +5617,21 @@ Prefab:
       propertyPath: screenLinesNum
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: fisheyeBend
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: signalNoiseAmount
+      value: 0.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: signalNoisePower
+      value: 0.471
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
