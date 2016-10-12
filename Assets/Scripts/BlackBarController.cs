@@ -15,11 +15,13 @@ public class BlackBarController : MonoBehaviour {
 
     public int barType;
 
+    public GameObject staticBG;
 
     // Use this for initialization
     void Start () {
         player = GameObject.Find("Player");
         levelController = GameObject.Find("LevelController");
+        staticBG = GameObject.Find("Static Background");
 
 
         Vector3 worldCameraMin = GetWorldPositionOnPlane(Vector3.zero, 0);
@@ -56,7 +58,9 @@ public class BlackBarController : MonoBehaviour {
         distToPlayerY = transform.position.y - player.transform.position.y;
         distToPlayerX = transform.position.x - player.transform.position.x;
         levelScript = levelController.GetComponent<LevelController>();
-        transform.parent = levelScript.levelRoot.transform;
+        //transform.parent = levelScript.levelRoot.transform;
+
+        transform.parent = staticBG.transform;
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
@@ -83,40 +87,40 @@ public class BlackBarController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-	    if(levelScript.rotating)
-        {
-            transform.parent = levelScript.levelRoot.transform;
+	    //if(levelScript.rotating)
+     //   {
+     //       transform.parent = levelScript.levelRoot.transform;
 
-            if (!moving)
-            {
-                // Get distance between the player anf the platform the world is rotating around
-                playerToPlatform = player.transform.position.y - levelScript.levelRoot.transform.parent.position.y;
-                moving = true;
+     //       if (!moving)
+     //       {
+     //           // Get distance between the player anf the platform the world is rotating around
+     //           playerToPlatform = player.transform.position.y - levelScript.levelRoot.transform.parent.position.y;
+     //           moving = true;
 
                 
-                Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2 * playerToPlatform, transform.localPosition.z);
+     //           Vector3 tgtLocalPos = new Vector3(transform.localPosition.x, transform.localPosition.y + levelScript.currDir * -2 * playerToPlatform, transform.localPosition.z);
 
-                //Debug.Log("moving to: " + tgtLocalPos);
+     //           //Debug.Log("moving to: " + tgtLocalPos);
 
-                Hashtable moveArgs = new Hashtable();
-                moveArgs.Add("position", tgtLocalPos);
-                moveArgs.Add("islocal", true);
-                moveArgs.Add("time", 0.8f * levelScript.flipDuration);
-                moveArgs.Add("easetype", iTween.EaseType.easeInQuad);
-                moveArgs.Add("oncomplete", "toggleMoving");
-                moveArgs.Add("oncompletetarget", gameObject);
+     //           Hashtable moveArgs = new Hashtable();
+     //           moveArgs.Add("position", tgtLocalPos);
+     //           moveArgs.Add("islocal", true);
+     //           moveArgs.Add("time", 0.8f * levelScript.flipDuration);
+     //           moveArgs.Add("easetype", iTween.EaseType.easeInQuad);
+     //           moveArgs.Add("oncomplete", "toggleMoving");
+     //           moveArgs.Add("oncompletetarget", gameObject);
 
-                iTween.MoveTo(gameObject, moveArgs);
-            }
-        } else
-        {
-            transform.parent = player.transform;
+     //           iTween.MoveTo(gameObject, moveArgs);
+     //       }
+     //   } else
+     //   {
+     //       //transform.parent = player.transform;
 
-            // Convert the box's desired world position to the root's local coordinates
-            //Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
-            //tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
-            //transform.localPosition = tgtLocalPos;
-        }
+     //       // Convert the box's desired world position to the root's local coordinates
+     //       Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
+     //       tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
+     //       transform.localPosition = tgtLocalPos;
+     //   }
 
 	}
 }
