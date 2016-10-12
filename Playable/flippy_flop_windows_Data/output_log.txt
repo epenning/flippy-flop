@@ -16,25 +16,25 @@ Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\fl
 Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.037 seconds
+- Completed reload, in  0.036 seconds
 Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.646428 ms
+UnloadTime: 0.672145 ms
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.836783 ms
+UnloadTime: 3.805513 ms
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 3367.
-Total: 0.573954 ms (FindLiveObjects: 0.149333 ms CreateObjectMapping: 0.034483 ms MarkObjects: 0.370849 ms  DeleteObjects: 0.018410 ms)
+Total: 0.592364 ms (FindLiveObjects: 0.151963 ms CreateObjectMapping: 0.029808 ms MarkObjects: 0.379031 ms  DeleteObjects: 0.030977 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.152876 ms
+UnloadTime: 1.015524 ms
 
 Unloading 66 unused Assets to reduce memory usage. Loaded Objects now: 3750.
-Total: 0.573369 ms (FindLiveObjects: 0.103451 ms CreateObjectMapping: 0.046757 ms MarkObjects: 0.385753 ms  DeleteObjects: 0.036529 ms)
+Total: 0.584182 ms (FindLiveObjects: 0.102575 ms CreateObjectMapping: 0.040620 ms MarkObjects: 0.374355 ms  DeleteObjects: 0.066337 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2188 -> priority: 1 
+  Thread -> id: 26d8 -> priority: 1 
