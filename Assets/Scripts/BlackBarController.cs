@@ -34,19 +34,19 @@ public class BlackBarController : MonoBehaviour {
         {
             // Left
             case 1:
-                transform.position = new Vector3(worldCameraMin.x - (transform.localScale.x / 1.95f), worldCameraCenter.y, 0);
+                transform.position = new Vector3(worldCameraMin.x - (transform.localScale.x / 2f), worldCameraCenter.y, 0);
                 break;
             // Top
             case 2:
-                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y + (transform.localScale.y / 1.95f), 0);
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMax.y + (transform.localScale.y / 2f), 0);
                 break;
             // Right
             case 3:
-                transform.position = new Vector3(worldCameraMax.x + (transform.localScale.x / 1.95f), worldCameraCenter.y, 0);
+                transform.position = new Vector3(worldCameraMax.x + (transform.localScale.x / 2f), worldCameraCenter.y, 0);
                 break;
             // Bottom
             case 4:
-                transform.position = new Vector3(worldCameraCenter.x, worldCameraMin.y - (transform.localScale.y / 1.95f), 0);
+                transform.position = new Vector3(worldCameraCenter.x, worldCameraMin.y - (transform.localScale.y / 2f), 0);
                 break;
             default:
                 break;
@@ -110,12 +110,12 @@ public class BlackBarController : MonoBehaviour {
             }
         } else
         {
-            //transform.parent = player.transform;
+            transform.parent = player.transform;
 
             // Convert the box's desired world position to the root's local coordinates
-            Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
-            tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
-            transform.localPosition = tgtLocalPos;
+            //Vector3 tgtLocalPos = new Vector3(player.transform.position.x + distToPlayerX, player.transform.position.y + (levelScript.currDir * -1 * distToPlayerY), 0);
+            //tgtLocalPos = levelScript.levelRoot.transform.InverseTransformPoint(tgtLocalPos);
+            //transform.localPosition = tgtLocalPos;
         }
 
 	}

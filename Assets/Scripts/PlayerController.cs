@@ -71,7 +71,9 @@ public class PlayerController : MonoBehaviour {
 
     // Used for horizontal drag
     public float velocityXSmoothing;
-    
+
+
+    GameObject shadowCollider;
 
     // Use this for initialization
     void Start () {
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour {
         levelScript = levelController.GetComponent<LevelController>();
         flipIconScript = flipIcon.GetComponent<FlipIconController>();
         movementScript = GetComponent<MovementController>();
+        shadowCollider = GameObject.Find("Flip Shadow");
 
         // Use kinematics equations to calculate necessary gravity and jumpVelocity
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
@@ -323,7 +326,11 @@ public class PlayerController : MonoBehaviour {
 
         respawning = true;
         velocity = Vector2.zero;
+        
         CheckpointController checkpointScript = lastCheckpoint.GetComponent<CheckpointController>();
+
+
+        shadowCollider.GetComponent<BoxCollider2D>().enabled = false;
 
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
@@ -367,6 +374,8 @@ public class PlayerController : MonoBehaviour {
 
     void finishRespawning()
     {
+        shadowCollider.GetComponent<ShadowCollider>().numColls = 0;
+        shadowCollider.GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;        
         GetComponent<SpriteRenderer>().enabled = true;
         respawning = false; 

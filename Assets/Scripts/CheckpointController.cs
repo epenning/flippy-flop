@@ -25,6 +25,7 @@ public class CheckpointController : MonoBehaviour {
     public Sprite activeSpriteBack;
 
     Animator animator;
+    AudioSource audioSource;
 
     void Awake()
     {
@@ -41,6 +42,8 @@ public class CheckpointController : MonoBehaviour {
             animator = transform.GetChild(0).gameObject.GetComponent<Animator>(); 
         else
             animator = GetComponent<Animator>();
+
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -73,6 +76,9 @@ public class CheckpointController : MonoBehaviour {
             flipSide = levelScript.flipSide;
             playerScript.lastCheckpoint = gameObject;
             GetComponentInChildren<ParticleSystem>().Stop();
+
+            audioSource.Play();
+
             if (animator)
             {
                 // trigger grow animation
