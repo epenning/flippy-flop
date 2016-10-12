@@ -122,8 +122,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.5, y: -70}
-  m_SizeDelta: {x: 285, y: 90}
+  m_AnchoredPosition: {x: 113.5, y: -76}
+  m_SizeDelta: {x: 285, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11087340
 MonoBehaviour:
@@ -145,11 +145,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 56ff870d047ab6a4cb8d13e51d28faf0, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -312,8 +312,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 56ff870d047ab6a4cb8d13e51d28faf0, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -505,8 +505,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214.6, y: 54}
-  m_SizeDelta: {x: 58, y: 20}
+  m_AnchoredPosition: {x: -210.4, y: 57}
+  m_SizeDelta: {x: 58, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711529478
 MonoBehaviour:
@@ -528,8 +528,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 56ff870d047ab6a4cb8d13e51d28faf0, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -579,8 +579,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163, y: 98}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -160, y: 95}
+  m_SizeDelta: {x: 160, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843705291
 MonoBehaviour:
@@ -602,11 +602,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 77412e00b25401346ac98e51829346da, type: 3}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 88
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -823,8 +823,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.7, y: 54}
-  m_SizeDelta: {x: 58, y: 18}
+  m_AnchoredPosition: {x: 36.7, y: 57}
+  m_SizeDelta: {x: 58, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550438606
 MonoBehaviour:
@@ -846,8 +846,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 56ff870d047ab6a4cb8d13e51d28faf0, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1128,11 +1128,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 56ff870d047ab6a4cb8d13e51d28faf0, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 52b382bc8c459eb4791b0394fca9d81a, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
