@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013072930644}
   - 114: {fileID: 114000010887426860}
-  - 50: {fileID: 50000013616520000}
   - 61: {fileID: 61000013725370364}
   m_Layer: 0
   m_Name: Flip Shadow
@@ -264,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.25, y: -1.99, z: 0}
+  m_LocalPosition: {x: -18.65, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -455,23 +454,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012275394692}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!50 &50000013616520000
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010314805224}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61000011990690660
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -676,7 +658,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f3788738910b004e8bec76091123f03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 090c85d864f789c48844aa318833590d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -824,7 +806,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ab3f00fd6005fc04f8ff6d2884f0f864, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 91b60996fcc5f69459cb71147e10c1f4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1076,7 +1058,7 @@ MonoBehaviour:
   bleedOn: 1
   crtMode: 0
   crtLinesMode: 0
-  screenLinesNum: 0
+  screenLinesNum: 1080
   bleedAmount: 1
   bleedDebugOn: 0
   bleedCurveY:
