@@ -252,7 +252,14 @@ public class PlayerController : MonoBehaviour {
             spriteRenderer.flipX = false;
         }
         animator.SetBool("Midair", midair);
-	}
+
+        // force landing animation to play
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_falling") && !midair)
+        {
+            animator.Play("player_land");
+        }
+
+    }
 
     public void updatePlatform(GameObject obj)
     {
