@@ -8,7 +8,7 @@ public class ParallaxBackgroundController : MonoBehaviour {
     LevelController levelScript;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         player = GameObject.Find("Player");
         levelScript = GameObject.Find("LevelController").GetComponent<LevelController>();
 
