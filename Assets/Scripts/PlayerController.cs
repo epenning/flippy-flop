@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour {
     public bool canMove = true;
     public bool canFlip = false;
     public bool midair = true;
-    public bool justLanded = true;
 
     // keys
 	public int keys;
@@ -118,18 +117,10 @@ public class PlayerController : MonoBehaviour {
         if(movementScript.collisions.below)
         {
             midair = false;
-            if(justLanded)
-            {
-                justLanded = false;
-                shadowCollider.GetComponent<ShadowCollider>().numColls = 0;
-                shadowCollider.GetComponent<BoxCollider2D>().enabled = true;
-            }
 
         } else
         {
-            justLanded = true;
             midair = true;
-            shadowCollider.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         // movement input

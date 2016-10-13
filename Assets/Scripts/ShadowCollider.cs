@@ -30,23 +30,15 @@ public class ShadowCollider : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        //Debug.Log("shadow triggered");
-        //Debug.Log(coll.gameObject.tag);
-
-
         // disallow player flipping on shadow collision with obstacles, platforms
         if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle" || coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy")
         {
             numColls++;
-            //playerController.canFlip = false;
         }
     }
 
     void OnTriggerExit2D(Collider2D coll)
     {
-        //Debug.Log("shadow de-triggered");
-
-
         // allow player to flip again
         if (coll.gameObject.tag == "platform" || coll.gameObject.tag == "obstacle" || coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy")
         {
