@@ -1009,6 +1009,7 @@ MonoBehaviour:
   key: {fileID: 8300000, guid: 7a05ddcb474c594429cc2cbd1a8f265a, type: 3}
   door: {fileID: 8300000, guid: 1eca7e4a81a95c748bc97e35bcccf4ae, type: 3}
   grassland: {fileID: 8300000, guid: 4e8ab1a10378ddc4fbf88cef445a4653, type: 3}
+  hellland: {fileID: 8300000, guid: 48eb0a2d9feb942408641d0f50b3e7fb, type: 3}
 --- !u!114 &114000013578754618
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -258,7 +258,10 @@ public class PlayerController : MonoBehaviour {
         {
             animator.Play("player_land");
             // play landing sfx
-            triggeredSFX.Play("grassland");
+            if (levelScript.levelNum == 3 && levelScript.flipSide == -1)
+                triggeredSFX.Play("hellland");
+            else
+                triggeredSFX.Play("grassland");
         }
 
     }

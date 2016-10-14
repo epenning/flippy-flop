@@ -8,6 +8,7 @@ public class TriggeredSFX : MonoBehaviour {
     public AudioClip key;
     public AudioClip door;
     public AudioClip grassland;
+    public AudioClip hellland;
 
     void Start()
     {
@@ -27,6 +28,10 @@ public class TriggeredSFX : MonoBehaviour {
         if (type == "grassland")
         {
             source.PlayOneShot(grassland, 2f);
+        }
+        if (type == "hellland")
+        {
+            source.PlayOneShot(hellland, 2f);
         }
     }
 }
