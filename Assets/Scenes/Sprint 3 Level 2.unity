@@ -106,6 +106,7 @@ GameObject:
   - 4: {fileID: 40879948}
   - 212: {fileID: 40879950}
   - 61: {fileID: 40879949}
+  - 50: {fileID: 40879951}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (11)
   m_TagString: obstacle
@@ -128,7 +129,7 @@ Transform:
   - {fileID: 1609754051}
   - {fileID: 1360083957}
   m_Father: {fileID: 51000596}
-  m_RootOrder: 72
+  m_RootOrder: 61
 --- !u!61 &40879949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -178,6 +179,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &40879951
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40879947}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &51000595
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +283,7 @@ Transform:
   - {fileID: 1558493327}
   - {fileID: 1553429670}
   - {fileID: 1845863165}
+  - {fileID: 40879948}
   - {fileID: 1481465255}
   - {fileID: 1762679653}
   - {fileID: 706949600}
@@ -276,15 +295,14 @@ Transform:
   - {fileID: 1941218900}
   - {fileID: 1678449122}
   - {fileID: 1355398095}
-  - {fileID: 40879948}
   - {fileID: 1443261492}
   - {fileID: 972413865}
   - {fileID: 1006702329}
   - {fileID: 1084804154}
+  - {fileID: 479790541}
   - {fileID: 718215951}
   - {fileID: 611825588}
   - {fileID: 1733231794}
-  - {fileID: 479790541}
   - {fileID: 1153289852}
   - {fileID: 2005086363}
   m_Father: {fileID: 0}
@@ -807,6 +825,7 @@ GameObject:
   - 4: {fileID: 1723484348}
   - 212: {fileID: 238545098}
   - 61: {fileID: 238545097}
+  - 50: {fileID: 238545099}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (1)
   m_TagString: obstacle
@@ -824,7 +843,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -863,6 +882,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &238545099
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238545096}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &243434967 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -1817,6 +1853,7 @@ GameObject:
   - 4: {fileID: 479790541}
   - 212: {fileID: 479790543}
   - 61: {fileID: 479790542}
+  - 50: {fileID: 479790544}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (12)
   m_TagString: obstacle
@@ -1839,7 +1876,7 @@ Transform:
   - {fileID: 1869046023}
   - {fileID: 2038433805}
   m_Father: {fileID: 51000596}
-  m_RootOrder: 80
+  m_RootOrder: 77
 --- !u!61 &479790542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1850,7 +1887,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1889,6 +1926,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &479790544
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479790540}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &504972243 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013959643588, guid: 21607765af87aa44dbbc37a410be9aaf,
@@ -1921,6 +1975,7 @@ GameObject:
   - 4: {fileID: 523627479}
   - 212: {fileID: 523627481}
   - 61: {fileID: 523627480}
+  - 50: {fileID: 523627482}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (10)
   m_TagString: obstacle
@@ -1954,7 +2009,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1993,6 +2048,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &523627482
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523627478}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &523863736
 Prefab:
   m_ObjectHideFlags: 0
@@ -2214,6 +2286,7 @@ GameObject:
   - 4: {fileID: 507974297}
   - 212: {fileID: 579860688}
   - 61: {fileID: 579860687}
+  - 50: {fileID: 579860689}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (6)
   m_TagString: obstacle
@@ -2231,7 +2304,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -2270,6 +2343,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &579860689
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579860686}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &582034580
 Prefab:
   m_ObjectHideFlags: 0
@@ -2681,6 +2771,7 @@ GameObject:
   - 4: {fileID: 728884336}
   - 212: {fileID: 735474256}
   - 61: {fileID: 735474255}
+  - 50: {fileID: 735474257}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (2)
   m_TagString: obstacle
@@ -2698,7 +2789,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -2737,6 +2828,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &735474257
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735474254}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &745692721 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70,
@@ -3412,23 +3520,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 212000013380432648, guid: 09e3a55868d6fe84782fb0748a21fd9d,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f11c729a5defaa246a5da4b0f1701cde,
-        type: 3}
-    - target: {fileID: 212000012653064162, guid: 09e3a55868d6fe84782fb0748a21fd9d,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9bd11e049d1a4b84ea9ecf6b2ce7bec0,
-        type: 3}
-    - target: {fileID: 212000012653064162, guid: 09e3a55868d6fe84782fb0748a21fd9d,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09e3a55868d6fe84782fb0748a21fd9d, type: 2}
   m_IsPrefabParent: 0
@@ -3453,6 +3544,7 @@ GameObject:
   - 4: {fileID: 926807173}
   - 212: {fileID: 926807175}
   - 61: {fileID: 926807174}
+  - 50: {fileID: 926807176}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (8)
   m_TagString: obstacle
@@ -3486,7 +3578,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -3525,6 +3617,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &926807176
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926807172}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &927044490
 Prefab:
   m_ObjectHideFlags: 0
@@ -3742,6 +3851,7 @@ GameObject:
   - 4: {fileID: 427206065}
   - 212: {fileID: 986541350}
   - 61: {fileID: 986541349}
+  - 50: {fileID: 986541351}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (7)
   m_TagString: obstacle
@@ -3759,7 +3869,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -3798,6 +3908,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &986541351
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986541348}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1006702329 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -4865,6 +4992,7 @@ GameObject:
   - 4: {fileID: 1389426350}
   - 212: {fileID: 1314438168}
   - 61: {fileID: 1314438167}
+  - 50: {fileID: 1314438169}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (4)
   m_TagString: obstacle
@@ -4882,7 +5010,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -4921,6 +5049,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1314438169
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314438166}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1345442832
 Prefab:
   m_ObjectHideFlags: 0
@@ -5114,6 +5259,7 @@ GameObject:
   - 4: {fileID: 1388596996}
   - 212: {fileID: 1388596998}
   - 61: {fileID: 1388596997}
+  - 50: {fileID: 1388596999}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (9)
   m_TagString: obstacle
@@ -5147,7 +5293,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -5186,6 +5332,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1388596999
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388596995}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1388989800 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013959643588, guid: 21607765af87aa44dbbc37a410be9aaf,
@@ -5777,17 +5940,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212000010353797042, guid: 3dd11b1c9c3180c4d805d0ac591ab379,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: af38021112080cb4d91a19eaee28e593,
-        type: 3}
-    - target: {fileID: 212000010353797042, guid: 3dd11b1c9c3180c4d805d0ac591ab379,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd11b1c9c3180c4d805d0ac591ab379, type: 2}
   m_IsPrefabParent: 0
@@ -5802,6 +5954,7 @@ GameObject:
   - 4: {fileID: 1553429670}
   - 212: {fileID: 1553429672}
   - 61: {fileID: 1553429671}
+  - 50: {fileID: 1553429673}
   m_Layer: 10
   m_Name: Obstacle 2x1 Down_DayNight
   m_TagString: obstacle
@@ -5835,7 +5988,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.25}
   serializedVersion: 2
@@ -5874,6 +6027,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1553429673
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553429669}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1558493327 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -6917,6 +7087,7 @@ GameObject:
   - 4: {fileID: 1031399348}
   - 212: {fileID: 1873483431}
   - 61: {fileID: 1873483430}
+  - 50: {fileID: 1873483432}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (3)
   m_TagString: obstacle
@@ -6934,7 +7105,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -6973,6 +7144,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1873483432
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1873483429}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1897651424
 Prefab:
   m_ObjectHideFlags: 0
@@ -7151,6 +7339,7 @@ GameObject:
   - 4: {fileID: 1294846652}
   - 212: {fileID: 1919002312}
   - 61: {fileID: 1919002311}
+  - 50: {fileID: 1919002313}
   m_Layer: 10
   m_Name: Obstacle 1x3 Up 2 (5)
   m_TagString: obstacle
@@ -7168,7 +7357,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -7207,6 +7396,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1919002313
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919002310}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1931065674 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012430394490, guid: aaef633b6a3024543b0cc6236612a7c6,
@@ -7628,17 +7834,6 @@ Prefab:
     - target: {fileID: 1000010662981846, guid: 09e3a55868d6fe84782fb0748a21fd9d, type: 2}
       propertyPath: m_Name
       value: Obstacle 1x3 Down 2_DayNight (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012653064162, guid: 09e3a55868d6fe84782fb0748a21fd9d,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 939a78d48b20c9e42bd6e35e49736e6f,
-        type: 3}
-    - target: {fileID: 212000012653064162, guid: 09e3a55868d6fe84782fb0748a21fd9d,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09e3a55868d6fe84782fb0748a21fd9d, type: 2}
