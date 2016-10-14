@@ -263,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011922104290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.65, y: -0.9, z: 0}
+  m_LocalPosition: {x: -18.25, y: -1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -477,7 +477,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -637,7 +637,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1008,6 +1008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 8300000, guid: 7a05ddcb474c594429cc2cbd1a8f265a, type: 3}
   door: {fileID: 8300000, guid: 1eca7e4a81a95c748bc97e35bcccf4ae, type: 3}
+  grassland: {fileID: 8300000, guid: 4e8ab1a10378ddc4fbf88cef445a4653, type: 3}
 --- !u!114 &114000013578754618
 MonoBehaviour:
   m_ObjectHideFlags: 1

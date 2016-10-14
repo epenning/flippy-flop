@@ -257,6 +257,8 @@ public class PlayerController : MonoBehaviour {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("player_falling") && !midair)
         {
             animator.Play("player_land");
+            // play landing sfx
+            triggeredSFX.Play("grassland");
         }
 
     }
