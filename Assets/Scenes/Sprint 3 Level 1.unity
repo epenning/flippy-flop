@@ -3229,11 +3229,6 @@ Prefab:
       propertyPath: mat_tape
       value: 
       objectReference: {fileID: 659276662}
-    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: volume
-      value: 0.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
