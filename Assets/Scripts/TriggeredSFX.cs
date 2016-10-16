@@ -10,6 +10,8 @@ public class TriggeredSFX : MonoBehaviour {
     public AudioClip grassland;
     public AudioClip hellland;
 
+    public float volume;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -19,19 +21,19 @@ public class TriggeredSFX : MonoBehaviour {
     {
         if (type == "key")
         {
-            source.PlayOneShot(key, 1f);
+            source.PlayOneShot(key, volume * 1f);
         }
         if (type == "door")
         {
-            source.PlayOneShot(door, 1f);
+            source.PlayOneShot(door, volume * 1f);
         }
         if (type == "grassland")
         {
-            source.PlayOneShot(grassland, 2f);
+            source.PlayOneShot(grassland, volume * 1f);
         }
         if (type == "hellland")
         {
-            source.PlayOneShot(hellland, 2f);
+            source.PlayOneShot(hellland, volume * 1f);
         }
     }
 }

@@ -19,6 +19,8 @@ public class FootstepSFX : MonoBehaviour {
     bool playing = false;
     int stepType = 0;   // 1 means day, 2 means night, 3 means hell
 
+    public float volume;
+
     void Start()
     {
         playerScript = playerController.GetComponent<PlayerController>();
@@ -65,20 +67,20 @@ public class FootstepSFX : MonoBehaviour {
                 timer = 0f;
 
                 AudioClip step;
-                float volume = 1f;
+                float currVolume;
 
                 if (stepType == 3)
                 {
                     step = hellSteps[Random.Range(0, hellSteps.Length - 1)];
-                    volume = 0.5f;
+                    currVolume = volume / 2;
                 }
                 else
                 {
                     step = grassStep;
-                    volume = 1f;
+                    currVolume = volume;
                 }
 
-                footstepSource.PlayOneShot(step, volume);
+                footstepSource.PlayOneShot(step, currVolume);
             } else
             {
                 timer += Time.deltaTime;
