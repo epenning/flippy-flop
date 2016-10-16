@@ -38,13 +38,20 @@ public class LevelController : MonoBehaviour {
 
     public int levelNum;
 
+    public float musicVol = 1f;
+    public float checkpointVol = 1f;
+
+    public float masterVol = 1f;
+
     // Use this for initialization
     void Start () {
         flipSide = 1;
 
         // control music to daytime
-        dayMusic.volume = 1f;
+        dayMusic.volume = musicVol;
         nightMusic.volume = 0f;
+
+        AudioListener.volume = masterVol;
 
 
         platformBlockList = GameObject.FindGameObjectsWithTag("platform block");
@@ -126,7 +133,7 @@ public class LevelController : MonoBehaviour {
 
         Hashtable volArgs = new Hashtable();
         volArgs.Add("from", volControl);
-        volArgs.Add("to", 1f);
+        volArgs.Add("to", musicVol);
         volArgs.Add("time", flipDuration);
         volArgs.Add("onupdate", "updateMusicVols");
         volArgs.Add("onupdatetarget", gameObject);
@@ -149,7 +156,7 @@ public class LevelController : MonoBehaviour {
 
         Hashtable volArgs = new Hashtable();
         volArgs.Add("from", volControl);
-        volArgs.Add("to", 1f);
+        volArgs.Add("to", musicVol);
         volArgs.Add("time", 0);
         volArgs.Add("onupdate", "updateMusicVols");
         volArgs.Add("onupdatetarget", gameObject);
@@ -183,11 +190,11 @@ public class LevelController : MonoBehaviour {
         if (currDir == -1)
         {
             dayMusic.volume = val;
-            nightMusic.volume = 1 - val;
+            nightMusic.volume = musicVol - val;
         }
         else
         {
-            dayMusic.volume = 1 - val;
+            dayMusic.volume = musicVol - val;
             nightMusic.volume = val;
         }
     }

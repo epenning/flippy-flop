@@ -15,7 +15,7 @@ AudioImporter:
     1:
       loadType: 0
       sampleRateSetting: 2
-      sampleRateOverride: 22050
+      sampleRateOverride: 11025
       compressionFormat: 1
       quality: 1
       conversionMode: 0

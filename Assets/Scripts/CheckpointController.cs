@@ -77,6 +77,7 @@ public class CheckpointController : MonoBehaviour {
             playerScript.lastCheckpoint = gameObject;
             GetComponentInChildren<ParticleSystem>().Stop();
 
+            audioSource.volume = levelScript.checkpointVol;
             audioSource.Play();
 
             if (animator)
