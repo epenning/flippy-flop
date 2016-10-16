@@ -90,8 +90,7 @@ public class LevelController : MonoBehaviour {
                 }
                 else
                 {
-
-                    if (!halfRotated && (levelRoot.transform.parent.localRotation.x < 0.75))
+                    if (!halfRotated && (Mathf.Abs(levelRoot.transform.parent.localRotation.x) < 0.75))
                     {
                         halfRotated = true;
                         // enable day sprites, disable night sprites
