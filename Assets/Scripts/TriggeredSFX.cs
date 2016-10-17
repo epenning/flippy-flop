@@ -9,6 +9,7 @@ public class TriggeredSFX : MonoBehaviour {
     public AudioClip door;
     public AudioClip grassland;
     public AudioClip hellland;
+    public AudioClip flipdisabled;
 
     public float volume;
 
@@ -34,6 +35,10 @@ public class TriggeredSFX : MonoBehaviour {
         if (type == "hellland")
         {
             source.PlayOneShot(hellland, volume * 1f);
+        }
+        if (type == "flipdisabled")
+        {
+            source.PlayOneShot(flipdisabled, volume * 0.5f);
         }
     }
 }
