@@ -54,7 +54,7 @@ public class LevelController : MonoBehaviour {
         AudioListener.volume = masterVol;
 
 
-        platformBlockList = GameObject.FindGameObjectsWithTag("platform block");
+        platformBlockList = GameObject.FindGameObjectsWithTag("platform");
         obstacleList = GameObject.FindGameObjectsWithTag("obstacle");
         trapList = GameObject.FindGameObjectsWithTag("trap");
         enemyList = GameObject.FindGameObjectsWithTag("enemy");
