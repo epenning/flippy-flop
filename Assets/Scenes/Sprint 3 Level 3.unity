@@ -5079,6 +5079,11 @@ Prefab:
       propertyPath: mat_tape
       value: 
       objectReference: {fileID: 2079214016}
+    - target: {fileID: 114000013578754618, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hiddenOnStart
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
