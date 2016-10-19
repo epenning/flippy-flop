@@ -445,16 +445,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: levelController
-      value: 
-      objectReference: {fileID: 2084587148}
-    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: background
-      value: 
-      objectReference: {fileID: 1583716853}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat1
@@ -485,6 +475,26 @@ Prefab:
       propertyPath: mat_tape
       value: 
       objectReference: {fileID: 1816247087}
+    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 2084587148}
+    - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 1583716853}
+    - target: {fileID: 82000012983914658, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000011960044790, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: screenLinesNum
@@ -493,16 +503,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &297061795 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000011960044790, guid: bc7b05984478b95458e304036f5c2250,
-    type: 2}
-  m_PrefabInternal: {fileID: 297061794}
---- !u!82 &297061796 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000012983914658, guid: bc7b05984478b95458e304036f5c2250,
-    type: 2}
-  m_PrefabInternal: {fileID: 297061794}
 --- !u!1001 &317823242
 Prefab:
   m_ObjectHideFlags: 0
@@ -4030,21 +4030,6 @@ Prefab:
       propertyPath: levelRoot
       value: 
       objectReference: {fileID: 686527886}
-    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
-        type: 2}
-      propertyPath: nightMusic
-      value: 
-      objectReference: {fileID: 297061796}
-    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
-        type: 2}
-      propertyPath: dayMusic
-      value: 
-      objectReference: {fileID: 297061795}
-    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
-        type: 2}
-      propertyPath: levelNum
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}
   m_IsPrefabParent: 0

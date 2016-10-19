@@ -8,8 +8,13 @@ public class LevelController : MonoBehaviour {
 
     public GameObject exit;
 
-    public AudioSource dayMusic;
-    public AudioSource nightMusic;
+    AudioSource upMusic;
+    AudioSource downMusic;
+
+    public AudioClip dayIntroMusic;
+    public AudioClip dayLoopMusic;
+    public AudioClip nightLoopMusic;
+    public AudioClip hellLoopMusic;
 
     public int currDir = -1;
 
@@ -17,13 +22,9 @@ public class LevelController : MonoBehaviour {
     public bool halfRotated = false;
 
     public float rotSpeed;
-
     public int flipSide;
-
     public bool startRotate;
-
     public float flipDuration;
-
     public float volControl;
 
     public GameObject[] platformBlockList;
@@ -40,20 +41,22 @@ public class LevelController : MonoBehaviour {
 
     public float musicVol = 1f;
     public float checkpointVol = 1f;
-
     public float masterVol = 1f;
 
     // Use this for initialization
     void Start () {
         flipSide = 1;
 
+        // set upMusic and downMusic
+        upMusic = GameObject.Find("Up Music").GetComponent<AudioSource>();
+        downMusic = GameObject.Find("Down Music").GetComponent<AudioSource>();
+
         // control music to daytime
-        dayMusic.volume = musicVol;
-        nightMusic.volume = 0f;
+        upMusic.volume = musicVol;
+        downMusic.volume = 0f;
 
         AudioListener.volume = masterVol;
-
-
+        
         platformBlockList = GameObject.FindGameObjectsWithTag("platform");
         obstacleList = GameObject.FindGameObjectsWithTag("obstacle");
         trapList = GameObject.FindGameObjectsWithTag("trap");
@@ -64,13 +67,30 @@ public class LevelController : MonoBehaviour {
 
         objList = platformBlockList.Concat<GameObject>(obstacleList).Concat<GameObject>(trapList).Concat<GameObject>(enemyList).Concat<GameObject>(checkpointList).Concat<GameObject>(doorList).Concat<GameObject>(backgroundList).ToArray<GameObject>();
 
-
-
-
         foreach(GameObject obj in objList)
         {
             obj.GetComponent<Renderer>().enabled = true;
             obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+        }
+
+        // set up and down audiosources to correct clips
+        if (levelNum == 1)
+        {
+            StartCoroutine(playIntroMusic());
+        }
+        else if (levelNum == 2)
+        {
+            upMusic.clip = dayLoopMusic;
+            downMusic.clip = nightLoopMusic;
+            upMusic.Play();
+            downMusic.Play();
+        }
+        else if (levelNum == 3)
+        {
+            upMusic.clip = dayLoopMusic;
+            downMusic.clip = hellLoopMusic;
+            upMusic.Play();
+            downMusic.Play();
         }
     }
 	
@@ -79,8 +99,6 @@ public class LevelController : MonoBehaviour {
 
         if (rotating)
         {
-
-            
             if (currDir == 1)
             {
 
@@ -109,14 +127,23 @@ public class LevelController : MonoBehaviour {
                 }
             }
             
-            
-            
-
             if (!startRotate)
                 rotateLevel();
-
         }
 	}
+
+    IEnumerator playIntroMusic()
+    {
+        upMusic.clip = dayIntroMusic;
+        downMusic.clip = dayIntroMusic;
+        upMusic.Play();
+        downMusic.Play();
+        yield return new WaitForSeconds(dayIntroMusic.length);
+        upMusic.clip = dayLoopMusic;
+        downMusic.clip = dayLoopMusic;
+        upMusic.Play();
+        downMusic.Play();
+    }
 
     void rotateLevel()
     {
@@ -139,7 +166,6 @@ public class LevelController : MonoBehaviour {
         volArgs.Add("onupdatetarget", gameObject);
 
         iTween.ValueTo(gameObject, volArgs);
-
     }
 
     // Use this when the player dies and the last checkpoint is on the other side of the world (prevents weird-looking repawn)
@@ -189,13 +215,13 @@ public class LevelController : MonoBehaviour {
     {
         if (currDir == -1)
         {
-            dayMusic.volume = val;
-            nightMusic.volume = musicVol - val;
+            upMusic.volume = val;
+            downMusic.volume = musicVol - val;
         }
         else
         {
-            dayMusic.volume = musicVol - val;
-            nightMusic.volume = val;
+            upMusic.volume = musicVol - val;
+            downMusic.volume = val;
         }
     }
 
@@ -208,7 +234,5 @@ public class LevelController : MonoBehaviour {
         levelRoot.transform.parent.transform.rotation = Quaternion.Euler(180 * ((currDir + 1) / 2), 0, 0);
         GameObject.Find("Player").GetComponent<BoxCollider2D>().enabled = true;
         volControl = 0f;
-
     }
-
 }
