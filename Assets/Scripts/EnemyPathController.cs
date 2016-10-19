@@ -14,6 +14,10 @@ public class EnemyPathController : MonoBehaviour {
 
     float startingY;
 
+    bool justFlipped;
+
+    int ignoreCollTimer;
+
     // Use this for initialization
     void Start () {
         rbody = transform.parent.gameObject.GetComponent<Rigidbody2D>();
@@ -26,6 +30,18 @@ public class EnemyPathController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(justFlipped)
+        {
+            ignoreCollTimer++;
+        }
+
+        if(ignoreCollTimer >= 30)
+        {
+            justFlipped = false;
+            ignoreCollTimer = 0;
+        }
+
         // move forward
         if (GameObject.Find("LevelController").GetComponent<LevelController>().rotating)
         {
@@ -60,8 +76,9 @@ public class EnemyPathController : MonoBehaviour {
         // turn around if about to hit an obstacle
         if (coll.gameObject.tag == "obstacle")
         {
-            if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating) {
+            if(!GameObject.Find("LevelController").GetComponent<LevelController>().rotating && !justFlipped) {
                 direction *= -1;
+                justFlipped = true;
             }
             
         }
