@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // respawn from falling off map
-        if (transform.position.y < bgMinY || transform.position.x > bgMaxX || transform.position.x < bgMinX)
+        if (transform.position.y < bgMinY)
         {
             // Reached the border of the background
             Die(true);
