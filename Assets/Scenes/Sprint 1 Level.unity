@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 447016334}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &109717257
@@ -910,6 +910,7 @@ GameObject:
   - 222: {fileID: 447016338}
   - 114: {fileID: 447016337}
   - 114: {fileID: 447016336}
+  - 114: {fileID: 447016339}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -1021,6 +1022,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447016334}
+--- !u!114 &447016339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 447016334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8816f0f1250a9284ba2b4ad4abd4479c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
+  buttonsCount: 3
+  selector: 0
+  ID: 1
 --- !u!1 &665703634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1048,7 @@ GameObject:
   - 222: {fileID: 665703638}
   - 114: {fileID: 665703637}
   - 114: {fileID: 665703636}
+  - 114: {fileID: 665703639}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1143,6 +1160,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665703634}
+--- !u!114 &665703639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665703634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8816f0f1250a9284ba2b4ad4abd4479c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
+  buttonsCount: 3
+  selector: 0
+  ID: 2
 --- !u!1001 &684291117
 Prefab:
   m_ObjectHideFlags: 0
@@ -1771,6 +1803,10 @@ Prefab:
       propertyPath: exit
       value: 
       objectReference: {fileID: 162490802}
+    - target: {fileID: 1000011904136690, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}
   m_IsPrefabParent: 0
@@ -2192,6 +2228,7 @@ GameObject:
   - 222: {fileID: 1518893784}
   - 114: {fileID: 1518893783}
   - 114: {fileID: 1518893782}
+  - 114: {fileID: 1518893785}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -2303,6 +2340,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1518893780}
+--- !u!114 &1518893785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1518893780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8816f0f1250a9284ba2b4ad4abd4479c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
+  buttonsCount: 3
+  selector: 0
+  ID: 3
 --- !u!1001 &1527636493
 Prefab:
   m_ObjectHideFlags: 0
@@ -2601,7 +2653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1791314194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2813,6 +2865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1791314193}
+  buttonsCount: 3
+  selector: 1
+  ID: 0
 --- !u!4 &1908088240
 Transform:
   m_ObjectHideFlags: 0
