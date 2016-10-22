@@ -16,14 +16,23 @@ public class PauseMenu : MonoBehaviour {
     //Define the number of button
     public int ID;
 
+    public PlayerController playerScript;
+
+    void Start()
+    {
+        playerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
+
     void Update(){
         //Display or hide the pause menu based on keyboard input
         if (Input.GetKeyDown(KeyCode.Escape) && !panelDisplayed)
         {
             Time.timeScale = 0;
             ShowPanel();
+            
         } else if (Input.GetKeyDown(KeyCode.Escape) && panelDisplayed){
             HidePanel();
+            playerScript.gamePaused = false;
         }
          
     }
@@ -32,6 +41,7 @@ public class PauseMenu : MonoBehaviour {
     private void ShowPanel(){
         panelDisplayed = true;
         pausePanel.SetActive(panelDisplayed);
+        playerScript.gamePaused = true;
 
         //Assign the vaule to selector based on keyboard input
         if (Input.GetKeyDown(KeyCode.A))
@@ -84,6 +94,7 @@ public class PauseMenu : MonoBehaviour {
         panelDisplayed = false;
         pausePanel.SetActive(panelDisplayed);
         Time.timeScale = 1;
+        //playerScript.gamePaused = false;
     }
 
     //Resume function
@@ -91,6 +102,7 @@ public class PauseMenu : MonoBehaviour {
         panelDisplayed = false;
         pausePanel.SetActive(panelDisplayed);
         Time.timeScale = 1;
+        playerScript.gamePaused = false;
     }
 
     //Restart function

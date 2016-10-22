@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     public float bgMaxX;
     public float bgYScale;
     public float bgXScale;
+    public bool gamePaused;
 
     // contacted platforms
     public GameObject oldPlatform;
@@ -97,6 +98,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(gamePaused)
+        {
+            return;
+        }
 
         // foosteps SFX
         if ((velocity.x < -0.1f || velocity.x > 0.1f) && !midair)
