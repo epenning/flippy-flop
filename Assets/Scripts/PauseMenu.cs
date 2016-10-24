@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -14,9 +15,14 @@ public class PauseMenu : MonoBehaviour {
     public int selector;
 
     //Define the number of button
-    public int ID;
+    //public int ID;
 
     public PlayerController playerScript;
+
+    public GameObject resumeButton;
+    public GameObject restartButton;
+    public GameObject exitButton;
+
 
     void Start()
     {
@@ -42,8 +48,10 @@ public class PauseMenu : MonoBehaviour {
         panelDisplayed = true;
         pausePanel.SetActive(panelDisplayed);
         playerScript.gamePaused = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(resumeButton);
 
-        //Assign the vaule to selector based on keyboard input
+ /*       //Assign the vaule to selector based on keyboard input
         if (Input.GetKeyDown(KeyCode.A))
         {
             //Restric the minimun value of the selector
@@ -86,7 +94,7 @@ public class PauseMenu : MonoBehaviour {
                     ExitGame();
                     break;
             }
-        }
+        }*/
     }
 
     //Hide the pause menu
@@ -95,6 +103,7 @@ public class PauseMenu : MonoBehaviour {
         pausePanel.SetActive(panelDisplayed);
         Time.timeScale = 1;
         //playerScript.gamePaused = false;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     //Resume function
@@ -116,4 +125,5 @@ public class PauseMenu : MonoBehaviour {
         Application.LoadLevel("UI Test");
         Time.timeScale = 1;
     }
+
 }

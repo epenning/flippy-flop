@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 447016334}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &109717257
@@ -949,11 +949,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1518893782}
+    m_SelectOnRight: {fileID: 665703636}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.3137255, g: 0.59607846, b: 0.15294118, a: 1}
@@ -1036,7 +1036,10 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   buttonsCount: 3
   selector: 0
-  ID: 1
+  playerScript: {fileID: 0}
+  resumeButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1 &665703634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1177,10 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   buttonsCount: 3
   selector: 0
-  ID: 2
+  playerScript: {fileID: 0}
+  resumeButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1001 &684291117
 Prefab:
   m_ObjectHideFlags: 0
@@ -2267,11 +2273,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 665703636}
+    m_SelectOnRight: {fileID: 447016336}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.57254905, g: 0.57254905, b: 0.57254905, a: 1}
@@ -2354,7 +2360,10 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   buttonsCount: 3
   selector: 0
-  ID: 3
+  playerScript: {fileID: 0}
+  resumeButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1001 &1527636493
 Prefab:
   m_ObjectHideFlags: 0
@@ -2867,7 +2876,10 @@ MonoBehaviour:
   pausePanel: {fileID: 1791314193}
   buttonsCount: 3
   selector: 1
-  ID: 0
+  playerScript: {fileID: 0}
+  resumeButton: {fileID: 447016334}
+  restartButton: {fileID: 665703634}
+  exitButton: {fileID: 1518893780}
 --- !u!4 &1908088240
 Transform:
   m_ObjectHideFlags: 0
