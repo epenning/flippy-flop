@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
         if (canMove)
         {
             // jump
-            if (Input.GetKeyDown(KeyCode.Space) && !midair)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && !midair)
             {
                 velocity.y = jumpVelocity;
 
@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour {
             // flipping
             if (canFlip && !midair && !flipOnCooldown)
             {
-                if (Input.GetKeyDown(KeyCode.W))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     // play flip SFX
                     flipSFX.Play();
