@@ -45,6 +45,9 @@ public class LevelController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Cursor.visible = false;
+
+
         flipSide = 1;
 
         // set upMusic and downMusic
