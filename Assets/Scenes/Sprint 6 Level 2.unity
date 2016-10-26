@@ -568,6 +568,52 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 95352264}
+--- !u!21 &117916598
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_First
+  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &142343814
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Clear
+  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &155484052
 Prefab:
   m_ObjectHideFlags: 0
@@ -2106,35 +2152,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012296591872, guid: 82b19f481fc30cb40949e1cfde8b9613,
     type: 2}
   m_PrefabInternal: {fileID: 377316546}
---- !u!21 &392817095
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Forth
-  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &416674100
 Prefab:
   m_ObjectHideFlags: 0
@@ -2241,6 +2258,52 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014223682666, guid: db347bdd93e465f499c0ee77613d0c20,
     type: 2}
   m_PrefabInternal: {fileID: 431917864}
+--- !u!1001 &447618976
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873232935}
+    m_Modifications:
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -16.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_RootOrder
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011492239876, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_Name
+      value: Checkpoint_DayNight_Down (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &454238149
 Prefab:
   m_ObjectHideFlags: 0
@@ -2560,109 +2623,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 514740743}
---- !u!21 &520713277
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Third
-  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LastTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
---- !u!1001 &520890701
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 873232935}
-    m_Modifications:
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 31.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -15.571
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_RootOrder
-      value: 78
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: activeSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: 3218f8e9b80594a48926c707fdfeb833,
-        type: 3}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: inactiveSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: ee8822adb90cd3e4db40da3f00ccc5eb,
-        type: 3}
-    - target: {fileID: 212000011366659632, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014247910842, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_Name
-      value: Night Checkpoint (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &520890702 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70,
-    type: 2}
-  m_PrefabInternal: {fileID: 520890701}
 --- !u!1001 &569876574
 Prefab:
   m_ObjectHideFlags: 0
@@ -2997,6 +2957,52 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 593840607}
+--- !u!1001 &596970639
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873232935}
+    m_Modifications:
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 31.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -15.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_RootOrder
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011492239876, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_Name
+      value: Checkpoint_DayNight_Down (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &600383574
 Prefab:
   m_ObjectHideFlags: 0
@@ -4036,6 +4042,41 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 843729464}
+--- !u!21 &864529529
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Third
+  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LastTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1 &873232934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,7 +4108,7 @@ Transform:
   - {fileID: 1460486024}
   - {fileID: 371869108}
   - {fileID: 957662708}
-  - {fileID: 2037156873}
+  - {fileID: 1021465257}
   - {fileID: 1246848752}
   - {fileID: 514209525}
   - {fileID: 701316777}
@@ -4140,7 +4181,7 @@ Transform:
   - {fileID: 2076349654}
   - {fileID: 1695570006}
   - {fileID: 2106557378}
-  - {fileID: 520890702}
+  - {fileID: 1461214405}
   - {fileID: 1965915183}
   - {fileID: 2140988279}
   - {fileID: 1105490102}
@@ -4154,7 +4195,7 @@ Transform:
   - {fileID: 785338746}
   - {fileID: 95352265}
   - {fileID: 1546529131}
-  - {fileID: 891149841}
+  - {fileID: 1208325162}
   - {fileID: 1647918699}
   - {fileID: 468207146}
   - {fileID: 1619082099}
@@ -4291,74 +4332,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010569979994, guid: 9447829061dabd7418b0586053cb5070,
     type: 2}
   m_PrefabInternal: {fileID: 878771664}
---- !u!1001 &891149840
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 873232935}
-    m_Modifications:
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 150.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -16.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_RootOrder
-      value: 92
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014247910842, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_Name
-      value: Night Checkpoint (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: activeSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: 3218f8e9b80594a48926c707fdfeb833,
-        type: 3}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: inactiveSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: ee8822adb90cd3e4db40da3f00ccc5eb,
-        type: 3}
-    - target: {fileID: 212000011366659632, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &891149841 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70,
-    type: 2}
-  m_PrefabInternal: {fileID: 891149840}
 --- !u!1001 &895052416
 Prefab:
   m_ObjectHideFlags: 0
@@ -4803,6 +4776,57 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 989809912}
+--- !u!4 &1021465257 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35,
+    type: 2}
+  m_PrefabInternal: {fileID: 1024950223}
+--- !u!1001 &1024950223
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873232935}
+    m_Modifications:
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -17.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011492239876, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+      propertyPath: m_Name
+      value: Checkpoint_DayNight_Down (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1041554913
 Prefab:
   m_ObjectHideFlags: 0
@@ -5027,6 +5051,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 1116169443}
+--- !u!21 &1119101413
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Tape
+  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1148697581
 Prefab:
   m_ObjectHideFlags: 0
@@ -5176,6 +5223,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010569979994, guid: 9447829061dabd7418b0586053cb5070,
     type: 2}
   m_PrefabInternal: {fileID: 1177359630}
+--- !u!4 &1208325162 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35,
+    type: 2}
+  m_PrefabInternal: {fileID: 447618976}
 --- !u!1001 &1228869101
 Prefab:
   m_ObjectHideFlags: 0
@@ -5448,65 +5500,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 873232935}
     m_Modifications:
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalPosition.x
       value: 97.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -14.699
+      value: -14.75
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+    - target: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014247910842, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_Name
-      value: Night Checkpoint (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: activeSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: 3218f8e9b80594a48926c707fdfeb833,
-        type: 3}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: inactiveSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: ee8822adb90cd3e4db40da3f00ccc5eb,
-        type: 3}
-    - target: {fileID: 212000011366659632, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: a9f63b83b2c3ea241ade8c8e9fcacf35, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1285960329 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70,
+  m_PrefabParentObject: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35,
     type: 2}
   m_PrefabInternal: {fileID: 1285960328}
 --- !u!1001 &1296825468
@@ -5606,6 +5637,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b942ad1a7973b5e4babd1c550304e883, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &1356794085
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Second
+  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
+  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _CurvesTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1391171743
 Prefab:
   m_ObjectHideFlags: 0
@@ -5653,29 +5713,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011536324094, guid: 381a4adac2d95ee41a818c6867e9936e,
     type: 2}
   m_PrefabInternal: {fileID: 1391171743}
---- !u!21 &1392019631
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Clear
-  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &1438161487
 Prefab:
   m_ObjectHideFlags: 0
@@ -5799,29 +5836,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010457725960, guid: 70b2bdafa21b4a944afef7ed3419d841,
     type: 2}
   m_PrefabInternal: {fileID: 1460486023}
---- !u!21 &1480044662
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Tape
-  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+--- !u!4 &1461214405 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35,
+    type: 2}
+  m_PrefabInternal: {fileID: 596970639}
 --- !u!1001 &1488053570
 Prefab:
   m_ObjectHideFlags: 0
@@ -6170,7 +6189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010579173368, guid: 5c474c5c2a52776488f7153d645136fa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -12.329
+      value: -12.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000010579173368, guid: 5c474c5c2a52776488f7153d645136fa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7436,29 +7455,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 1790458929}
---- !u!21 &1819513278
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_First
-  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &1819712597
 Prefab:
   m_ObjectHideFlags: 0
@@ -7764,6 +7760,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 1866097472}
+--- !u!21 &1935433665
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Forth
+  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1961658538
 Prefab:
   m_ObjectHideFlags: 0
@@ -8014,99 +8039,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 2021248788}
---- !u!1001 &2037156872
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 873232935}
-    m_Modifications:
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -17.174
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: activeSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: 3218f8e9b80594a48926c707fdfeb833,
-        type: 3}
-    - target: {fileID: 114000012052125012, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: inactiveSpriteBack
-      value: 
-      objectReference: {fileID: 21300000, guid: ee8822adb90cd3e4db40da3f00ccc5eb,
-        type: 3}
-    - target: {fileID: 212000011366659632, guid: 8ae82a72c5387fc4793d65c148ffae70,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8ae82a72c5387fc4793d65c148ffae70, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &2037156873 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011620343310, guid: 8ae82a72c5387fc4793d65c148ffae70,
-    type: 2}
-  m_PrefabInternal: {fileID: 2037156872}
---- !u!21 &2052641706
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Second
-  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
-  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _CurvesTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &2076349653
 Prefab:
   m_ObjectHideFlags: 0
