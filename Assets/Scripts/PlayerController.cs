@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.W))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     flipIconScript.flashDisabled();
                     triggeredSFX.Play("flipdisabled");
