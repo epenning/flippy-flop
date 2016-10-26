@@ -873,7 +873,7 @@ MonoBehaviour:
   timeToJumpApex: 0.35
   accelerationTimeAirborne: 0.2
   accelerationTimeGrounded: 0.2
-  moveSpeed: 4.8
+  moveSpeed: 5
   jumpVelocity: 0
   gravity: 0
   velocity: {x: 0, y: 0, z: 0}
