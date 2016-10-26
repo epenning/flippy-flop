@@ -248,7 +248,7 @@ MonoBehaviour:
   inactiveSpriteFront: {fileID: 21300000, guid: c3aac6c21c225744d9f05832f10d40a3,
     type: 3}
   activeSpriteFront: {fileID: 21300000, guid: 579e217c302649c4585a45ea782ec1ee, type: 3}
-  inactiveSpriteBack: {fileID: 21300000, guid: 7a3cc672f9f541e4f9663f61318cab10, type: 3}
+  inactiveSpriteBack: {fileID: 21300000, guid: b6993761f5d34f246b863e9d4ab42146, type: 3}
   activeSpriteBack: {fileID: 21300000, guid: ee4e9ad0b9161e94fba1383c8a3a4186, type: 3}
 --- !u!198 &198000012758874738
 ParticleSystem:
@@ -256,7 +256,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013393460660}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 1
   startDelay:
     scalar: 0
@@ -294,13 +294,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 1191627114
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 0
   scalingMode: 1
-  randomSeed: 1191627114
   InitialModule:
     serializedVersion: 2
     enabled: 1
