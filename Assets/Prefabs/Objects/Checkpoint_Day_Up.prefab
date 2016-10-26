@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010450230780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 37.99, y: 3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -249,14 +249,14 @@ MonoBehaviour:
     type: 3}
   activeSpriteFront: {fileID: 21300000, guid: 579e217c302649c4585a45ea782ec1ee, type: 3}
   inactiveSpriteBack: {fileID: 21300000, guid: 20fd9a5a804ae64429905647d4e9bd24, type: 3}
-  activeSpriteBack: {fileID: 21300000, guid: fe05ea1d11392a146b6475a4502aa349, type: 3}
+  activeSpriteBack: {fileID: 21300000, guid: d0a1cb78da81ecc45b63fccb51ecaa3b, type: 3}
 --- !u!198 &198000011215177208
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010359111588}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 1
   startDelay:
     scalar: 0
@@ -294,13 +294,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 1191627136
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 0
   scalingMode: 1
-  randomSeed: 1191627136
   InitialModule:
     serializedVersion: 2
     enabled: 1
