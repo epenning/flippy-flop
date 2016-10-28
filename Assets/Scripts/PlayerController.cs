@@ -294,7 +294,13 @@ public class PlayerController : MonoBehaviour {
         // don't activate triggers if hitting in the middle of flipping
         if (!levelScript.rotating)
         {
-            // handle end condition
+            // handle last level game end condition
+            if (coll.gameObject.tag == "end")
+            {
+                // go back to first main menu
+                SceneManager.LoadScene(0);
+            }
+            // handle level end condition
             if (coll.gameObject.tag == "exit")
             {
                 if (keys >= 1)

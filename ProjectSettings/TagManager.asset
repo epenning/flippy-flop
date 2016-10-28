@@ -15,6 +15,7 @@ TagManager:
   - root
   - checkpoint
   - background
+  - end
   layers:
   - Default
   - TransparentFX

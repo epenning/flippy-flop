@@ -30,6 +30,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sprint 6 Level 3.unity
   - enabled: 1
+    path: Assets/Scenes/Sprint 8 Level 4.unity
+  - enabled: 1
     path: Assets/Scenes/end.unity
   - enabled: 1
     path: Assets/Scenes/Settings.unity
