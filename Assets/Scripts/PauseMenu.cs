@@ -116,14 +116,14 @@ public class PauseMenu : MonoBehaviour {
     }
 
     //Restart function
-    public void RestartGame(int index){
-        SceneManager.LoadScene(index);
+    public void RestartGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 
     //Exit function
     public void ExitGame(){
-        Application.LoadLevel("MainMenu");
+        SceneManager.LoadScene("MainMenu");
         Cursor.visible = true;
         Time.timeScale = 1;
     }
