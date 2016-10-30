@@ -145,6 +145,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013629317152, guid: 3b0539a60269e0e4ab10dd249ee3864a,
     type: 2}
   m_PrefabInternal: {fileID: 4795854}
+--- !u!21 &34952625
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Forth
+  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &36241288
 Prefab:
   m_ObjectHideFlags: 0
@@ -568,35 +597,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 95352264}
---- !u!21 &113130789
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Forth
-  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &155484052
 Prefab:
   m_ObjectHideFlags: 0
@@ -770,6 +770,41 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011469916994, guid: 8e36b6c30be68ad45814e79d025f4029,
     type: 2}
   m_PrefabInternal: {fileID: 178955342}
+--- !u!21 &181104340
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Third
+  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LastTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &188018197
 Prefab:
   m_ObjectHideFlags: 0
@@ -2135,29 +2170,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012296591872, guid: 82b19f481fc30cb40949e1cfde8b9613,
     type: 2}
   m_PrefabInternal: {fileID: 377316546}
---- !u!21 &415574880
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Clear
-  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &416674100
 Prefab:
   m_ObjectHideFlags: 0
@@ -2629,6 +2641,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 514740743}
+--- !u!21 &546006800
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Clear
+  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &569876574
 Prefab:
   m_ObjectHideFlags: 0
@@ -3828,15 +3863,15 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011809313560, guid: 5bf21b9c12ae42a4d8e2e18e69e6b92e,
     type: 2}
   m_PrefabInternal: {fileID: 792574462}
---- !u!21 &826813809
+--- !u!21 &813860980
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Third
-  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Hidden/postVHSPro_Second
+  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
+  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -3844,13 +3879,7 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LastTex
+        name: _CurvesTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -4613,6 +4642,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011469916994, guid: 8e36b6c30be68ad45814e79d025f4029,
     type: 2}
   m_PrefabInternal: {fileID: 951535351}
+--- !u!21 &957377661
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Tape
+  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &957662707
 Prefab:
   m_ObjectHideFlags: 0
@@ -4664,29 +4716,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010658430188, guid: 54b99fe6047691e47972228c391670c1,
     type: 2}
   m_PrefabInternal: {fileID: 957662707}
---- !u!21 &968491914
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Tape
-  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &972005093
 Prefab:
   m_ObjectHideFlags: 0
@@ -5290,6 +5319,74 @@ Transform:
   m_PrefabParentObject: {fileID: 4000014223682666, guid: db347bdd93e465f499c0ee77613d0c20,
     type: 2}
   m_PrefabInternal: {fileID: 1228869101}
+--- !u!1001 &1236807130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 328
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 184.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010980928932, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012500923360, guid: 27882db3da754e74cbfd7bca34c00237,
+        type: 2}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1827265214}
+    - target: {fileID: 114000012500923360, guid: 27882db3da754e74cbfd7bca34c00237,
+        type: 2}
+      propertyPath: resumeButton
+      value: 
+      objectReference: {fileID: 1827265213}
+    - target: {fileID: 114000012500923360, guid: 27882db3da754e74cbfd7bca34c00237,
+        type: 2}
+      propertyPath: restartButton
+      value: 
+      objectReference: {fileID: 1827265212}
+    - target: {fileID: 114000012500923360, guid: 27882db3da754e74cbfd7bca34c00237,
+        type: 2}
+      propertyPath: exitButton
+      value: 
+      objectReference: {fileID: 1827265211}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 27882db3da754e74cbfd7bca34c00237, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1236807131 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012500923360, guid: 27882db3da754e74cbfd7bca34c00237,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236807130}
+  m_Script: {fileID: 11500000, guid: 8816f0f1250a9284ba2b4ad4abd4479c, type: 3}
 --- !u!1001 &1243411874
 Prefab:
   m_ObjectHideFlags: 0
@@ -5448,6 +5545,29 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012955909748, guid: 18cb1735be2bb9f42954645435c6fa31,
     type: 2}
   m_PrefabInternal: {fileID: 1246848751}
+--- !u!21 &1263192723
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_First
+  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1283298610
 Prefab:
   m_ObjectHideFlags: 0
@@ -5818,35 +5938,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011226317030, guid: a9f63b83b2c3ea241ade8c8e9fcacf35,
     type: 2}
   m_PrefabInternal: {fileID: 596970639}
---- !u!21 &1485295233
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Second
-  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
-  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _CurvesTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &1488053570
 Prefab:
   m_ObjectHideFlags: 0
@@ -7300,29 +7391,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010569979994, guid: 9447829061dabd7418b0586053cb5070,
     type: 2}
   m_PrefabInternal: {fileID: 1760454851}
---- !u!21 &1764253914
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_First
-  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &1771340081
 Prefab:
   m_ObjectHideFlags: 0
@@ -7535,6 +7603,161 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011469916994, guid: 8e36b6c30be68ad45814e79d025f4029,
     type: 2}
   m_PrefabInternal: {fileID: 1819712597}
+--- !u!1001 &1827265210
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012030129496, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012632286660, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1236807131}
+    - target: {fileID: 114000012632286660, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1236807131}
+    - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011236451060, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1236807131}
+    - target: {fileID: 114000011236451060, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0415848526ee7374ea6f3dd13c06a27d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1827265211 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010148386108, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827265210}
+--- !u!1 &1827265212 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011473901334, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827265210}
+--- !u!1 &1827265213 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012205681576, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827265210}
+--- !u!1 &1827265214 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010730256610, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827265210}
 --- !u!1001 &1828848365
 Prefab:
   m_ObjectHideFlags: 0

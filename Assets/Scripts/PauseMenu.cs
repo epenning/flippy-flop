@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -115,14 +116,14 @@ public class PauseMenu : MonoBehaviour {
     }
 
     //Restart function
-    public void RestartGame(){
-        Application.LoadLevel("Sprint 1 Level");
+    public void RestartGame(int index){
+        SceneManager.LoadScene(index);
         Time.timeScale = 1;
     }
 
     //Exit function
     public void ExitGame(){
-        Application.LoadLevel("UI Test");
+        Application.LoadLevel("MainMenu");
         Time.timeScale = 1;
     }
 
