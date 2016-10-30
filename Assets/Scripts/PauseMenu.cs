@@ -124,6 +124,7 @@ public class PauseMenu : MonoBehaviour {
     //Exit function
     public void ExitGame(){
         Application.LoadLevel("MainMenu");
+        Cursor.visible = true;
         Time.timeScale = 1;
     }
 

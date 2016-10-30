@@ -229,12 +229,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012632286660, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    - target: {fileID: 223000013340239732, guid: 0415848526ee7374ea6f3dd13c06a27d,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 297061795}
+    - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2114323421}
-    - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
+    - target: {fileID: 114000012632286660, guid: 0415848526ee7374ea6f3dd13c06a27d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -623,6 +628,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &297061795 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
+    type: 2}
+  m_PrefabInternal: {fileID: 297061794}
 --- !u!1001 &317823242
 Prefab:
   m_ObjectHideFlags: 0
