@@ -1,0 +1,82 @@
+Initialize engine version: 5.4.0f3 (a6d8d714de6f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4058 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.039 seconds
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Erin\Documents\School\cs354S\flippy-flop\Playable\flippy_flop_windows_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.677114 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.797334 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 354.
+Total: 0.196383 ms (FindLiveObjects: 0.021041 ms CreateObjectMapping: 0.011689 ms MarkObjects: 0.147872 ms  DeleteObjects: 0.015488 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.483068 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 363.
+Total: 0.189662 ms (FindLiveObjects: 0.029515 ms CreateObjectMapping: 0.006721 ms MarkObjects: 0.145534 ms  DeleteObjects: 0.007598 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.351853 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 279.
+Total: 0.248986 ms (FindLiveObjects: 0.039452 ms CreateObjectMapping: 0.039159 ms MarkObjects: 0.152547 ms  DeleteObjects: 0.016657 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.269150 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.151963 ms (FindLiveObjects: 0.023086 ms CreateObjectMapping: 0.019287 ms MarkObjects: 0.103744 ms  DeleteObjects: 0.005552 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.373479 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1053.
+Total: 0.238465 ms (FindLiveObjects: 0.042958 ms CreateObjectMapping: 0.011689 ms MarkObjects: 0.177680 ms  DeleteObjects: 0.005844 ms)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.646721 ms
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1787.
+Total: 0.350685 ms (FindLiveObjects: 0.060200 ms CreateObjectMapping: 0.018703 ms MarkObjects: 0.254831 ms  DeleteObjects: 0.016657 ms)
+
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.071927 ms
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 2090.
+Total: 1.116347 ms (FindLiveObjects: 0.068383 ms CreateObjectMapping: 0.052602 ms MarkObjects: 0.316785 ms  DeleteObjects: 0.677991 ms)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.364457 ms
+
+Unloading 155 unused Assets to reduce memory usage. Loaded Objects now: 620.
+Total: 1.291982 ms (FindLiveObjects: 0.033315 ms CreateObjectMapping: 0.011397 ms MarkObjects: 0.163945 ms  DeleteObjects: 1.082740 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.506447 ms
+
+Unloading 117 unused Assets to reduce memory usage. Loaded Objects now: 386.
+Total: 0.623634 ms (FindLiveObjects: 0.014611 ms CreateObjectMapping: 0.007305 ms MarkObjects: 0.143488 ms  DeleteObjects: 0.457936 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 171c -> priority: 1 
