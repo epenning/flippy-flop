@@ -90,15 +90,15 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &29209675
+--- !u!21 &28512006
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Second
-  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
-  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
+  m_Name: Hidden/postVHSPro_Third
+  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -106,7 +106,42 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _CurvesTex
+        name: _FeedbackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LastTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &38336009
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Forth
+  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _FeedbackTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -437,32 +472,32 @@ Prefab:
         type: 2}
       propertyPath: mat1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2112668226}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1023738729}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 28512006}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 38336009}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat_clear
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1389518708}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: mat_tape
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1543302863}
     - target: {fileID: 114000010357207832, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: levelController
@@ -486,7 +521,7 @@ Prefab:
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: screenLinesNum
-      value: 720
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013578754618, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
@@ -857,15 +892,15 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010608429528, guid: fdeebebbd9cdc234892bb46f0ffdc419,
     type: 2}
   m_PrefabInternal: {fileID: 2045281755}
---- !u!21 &1076925429
+--- !u!21 &1023738729
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Third
-  m_Shader: {fileID: 4800000, guid: de4e63e4455b14b8e8c57542f8089707, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Hidden/postVHSPro_Second
+  m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
+  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -873,13 +908,7 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LastTex
+        name: _CurvesTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -1001,29 +1030,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012515205886, guid: 6c2343edb7d27f142a26ad4cefad2990,
     type: 2}
   m_PrefabInternal: {fileID: 469293934}
---- !u!21 &1343368139
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Tape
-  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &1376080329
 Prefab:
   m_ObjectHideFlags: 0
@@ -1066,15 +1072,38 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0602a91a293582b45929cc01523f969e, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1484026000
+--- !u!21 &1389518708
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_First
-  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
+  m_Name: Hidden/postVHSPro_Clear
+  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &1543302863
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_Tape
+  m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -1192,8 +1221,28 @@ Prefab:
     - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
         type: 2}
       propertyPath: musicVol
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: dayIntroMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 99ae9469e23ce6e4e852d6d664485f1e, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: dayLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: e13a90cad59f3f64c88834fa4f25ea42, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: nightLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dcb6aafdd6cb744ab6154a4ed50115b, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: hellLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 91b60996fcc5f69459cb71147e10c1f4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}
   m_IsPrefabParent: 0
@@ -1428,35 +1477,6 @@ Camera:
   m_PrefabParentObject: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
     type: 2}
   m_PrefabInternal: {fileID: 402094716}
---- !u!21 &1743448877
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Forth
-  m_Shader: {fileID: 4800000, guid: 65c19848f188f4192a05ff1eece78fee, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _FeedbackTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1 &1787831356 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011904136690, guid: efb4382a5024c36449dbac67c6dffb05,
@@ -1556,29 +1576,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 226112c09bbfe7f458b189df2d2eaec9, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1966445752
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/postVHSPro_Clear
-  m_Shader: {fileID: 4800000, guid: 3c6a64923374747f7b15711533b5971a, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1001 &2045281755
 Prefab:
   m_ObjectHideFlags: 0
@@ -1667,6 +1664,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c2f9464522ad7e48a4049e277e2d087, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &2112668226
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/postVHSPro_First
+  m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &2114842862
 Prefab:
   m_ObjectHideFlags: 0
