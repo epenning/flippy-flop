@@ -37,6 +37,8 @@ public class LevelController : MonoBehaviour {
 
     public GameObject[] objList;
 
+    public GameObject[] audioList;
+
     public int levelNum;
 
     public float musicVol = 1f;
@@ -70,7 +72,9 @@ public class LevelController : MonoBehaviour {
 
         objList = platformBlockList.Concat<GameObject>(obstacleList).Concat<GameObject>(trapList).Concat<GameObject>(enemyList).Concat<GameObject>(checkpointList).Concat<GameObject>(doorList).Concat<GameObject>(backgroundList).ToArray<GameObject>();
 
-        foreach(GameObject obj in objList)
+        audioList = GameObject.FindGameObjectsWithTag("ambient sound");
+
+        foreach (GameObject obj in objList)
         {
             obj.GetComponent<Renderer>().enabled = true;
             obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
@@ -169,6 +173,44 @@ public class LevelController : MonoBehaviour {
         volArgs.Add("onupdatetarget", gameObject);
 
         iTween.ValueTo(gameObject, volArgs);
+
+        if (currDir == 1)
+        {
+            foreach (GameObject aud in audioList)
+            {
+                AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
+
+                if (volScript.playingSide == -1)
+                {
+                    // enable backside sounds
+                    volScript.fadeVolTo(volScript.defaultVolume);
+                }
+                else if (volScript.playingSide == 1)
+                {
+                    // disable frontside sounds
+                    volScript.fadeVolTo(0f);
+                }
+            }
+        }
+        else
+        {
+            foreach (GameObject aud in audioList)
+            {
+                AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
+                if (volScript.playingSide == -1)
+                {
+                    // disable backside sounds
+                    volScript.fadeVolTo(0f);
+                }
+                else if (volScript.playingSide == 1)
+                {
+                    // enable frontside sounds
+                    volScript.fadeVolTo(volScript.defaultVolume);
+                }
+            }
+
+        }
+
     }
 
     // Use this when the player dies and the last checkpoint is on the other side of the world (prevents weird-looking repawn)
@@ -200,6 +242,21 @@ public class LevelController : MonoBehaviour {
                 obj.GetComponent<Renderer>().enabled = false;
                 obj.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
             }
+
+            foreach (GameObject aud in audioList)
+            {
+                AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
+
+                if (volScript.playingSide == -1)
+                {
+                    // enable backside sounds
+                    volScript.fadeVolTo(volScript.defaultVolume);
+                } else if(volScript.playingSide == 1)
+                {
+                    // disable frontside sounds
+                    volScript.fadeVolTo(0f);
+                }
+            }
         }
         else
         {
@@ -208,6 +265,21 @@ public class LevelController : MonoBehaviour {
             {
                 obj.GetComponent<Renderer>().enabled = true;
                 obj.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+            }
+
+            foreach (GameObject aud in audioList)
+            {
+                AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
+                if (volScript.playingSide == -1)
+                {
+                    // disable backside sounds
+                    volScript.fadeVolTo(0f);
+                }
+                else if (volScript.playingSide == 1)
+                {
+                    // enable frontside sounds
+                    volScript.fadeVolTo(volScript.defaultVolume);
+                }
             }
 
         }
