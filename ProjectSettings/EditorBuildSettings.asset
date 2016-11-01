@@ -18,6 +18,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sprint 3 Level 3.unity
   - enabled: 0
+    path: Assets/Scenes/Sprint 6 Level 1.unity
+  - enabled: 0
+    path: Assets/Scenes/Sprint 6 Level 2.unity
+  - enabled: 0
+    path: Assets/Scenes/Sprint 6 Level 3.unity
+  - enabled: 0
     path: Assets/Scenes/UI Test.unity
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
@@ -26,11 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InnerMenu.unity
   - enabled: 1
-    path: Assets/Scenes/Sprint 6 Level 1.unity
+    path: Assets/Scenes/Sprint 8 Level 1.unity
   - enabled: 1
-    path: Assets/Scenes/Sprint 6 Level 2.unity
+    path: Assets/Scenes/Sprint 8 Level 2.unity
   - enabled: 1
-    path: Assets/Scenes/Sprint 6 Level 3.unity
+    path: Assets/Scenes/GameKid 2.unity
+  - enabled: 1
+    path: Assets/Scenes/Sprint 8 Level 3.unity
   - enabled: 1
     path: Assets/Scenes/Sprint 8 Level 4.unity
   - enabled: 1
