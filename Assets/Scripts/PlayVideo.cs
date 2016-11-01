@@ -9,10 +9,10 @@ public class PlayVideo : MonoBehaviour {
     
 	void Start () {
         GetComponent<RawImage>().texture = movie as MovieTexture;
-        StartCoroutine(playIntroMusic());
+        StartCoroutine(playVideo());
 	}
 
-    IEnumerator playIntroMusic()
+    IEnumerator playVideo()
     {
         movie.Play();
         yield return new WaitForSeconds(movie.duration);
