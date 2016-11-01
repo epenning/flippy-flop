@@ -43,6 +43,8 @@ public class MasterVolumeController : MonoBehaviour {
         trigSFXscript.doorVol = innerGameVol * doorVol;
 
         footSFXscript.volume = innerGameVol * footstepVol;
+
+        currInnerVol = innerGameVol;
     }
 
     public void fadeInnerVolTo(float tgtVol, float time)
