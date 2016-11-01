@@ -310,7 +310,7 @@ public class PlayerController : MonoBehaviour {
 
                     // progress to next level
                     keys--;
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    fadeBlackNextLevel();
                 }
                 else
                 {
@@ -404,5 +404,25 @@ public class PlayerController : MonoBehaviour {
         GetComponent<BoxCollider2D>().enabled = true;        
         GetComponent<SpriteRenderer>().enabled = true;
         respawning = false; 
+    }
+
+    void fadeBlackNextLevel()
+    {
+        gamePaused = true;
+
+        iTween.CameraFadeAdd();
+
+        Hashtable fadeArgs = new Hashtable();
+        fadeArgs.Add("amount", 1.0f);
+        fadeArgs.Add("time", 2.0f);
+        fadeArgs.Add("oncomplete", "finishFadeBlack");
+        fadeArgs.Add("oncompletetarget", gameObject);
+
+        iTween.CameraFadeTo(fadeArgs);
+    }
+
+    void finishFadeBlack()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
