@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour {
     public AudioClip nightLoopMusic;
     public AudioClip hellLoopMusic;
 
+    // -1 for front side, 1 for back side
     public int currDir = -1;
 
     public bool rotating = false;
@@ -136,6 +137,17 @@ public class LevelController : MonoBehaviour {
             
             if (!startRotate)
                 rotateLevel();
+        } else
+        {
+            if(currDir == 1)
+            {
+                upMusic.volume = 0f;
+                downMusic.volume = musicVol;
+            } else
+            {
+                upMusic.volume = musicVol;
+                downMusic.volume = 0f;
+            }
         }
 	}
 

@@ -12,9 +12,18 @@ public class AudioSourceController : MonoBehaviour
 
     public AudioSource audSrc;
 
+    public bool prioritySound;
+    public bool playing = false;
+    public float reducedInnerVol = 0.5f;
+    public float timeToReduce = 0.25f;
+
+    MasterVolumeController mVolScript;
+
     // Use this for initialization
     void Start()
     {
+        mVolScript = GameObject.Find("MasterVolumeController").GetComponent<MasterVolumeController>();
+
         audSrc = GetComponent<AudioSource>();
         if (playingSide >= 0)
         {
@@ -27,7 +36,7 @@ public class AudioSourceController : MonoBehaviour
         Hashtable volArgs = new Hashtable();
         volArgs.Add("from", currVolume);
         volArgs.Add("to", tgtVol);
-        volArgs.Add("time", GameObject.Find("LevelController").GetComponent<LevelController>().flipDuration);
+        volArgs.Add("time", timeToReduce);
         volArgs.Add("onupdate", "updateVol");
         volArgs.Add("onupdatetarget", gameObject);
 
@@ -42,6 +51,28 @@ public class AudioSourceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(audSrc.isPlaying)
+        {
+            if(!playing)
+            {
+                playing = true;
+                if(prioritySound)
+                {
+                    mVolScript.fadeInnerVolTo(reducedInnerVol, timeToReduce);
+                }
+            }
+        } else
+        {
+            if (playing)
+            {
+                playing = false;
+                if (prioritySound)
+                {
+                    mVolScript.fadeInnerVolTo(mVolScript.innerGameVol, timeToReduce);
+                }
+            }
+        }
         audSrc.volume = currVolume;
     }
 }
