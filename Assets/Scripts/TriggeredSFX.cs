@@ -11,7 +11,11 @@ public class TriggeredSFX : MonoBehaviour {
     public AudioClip hellland;
     public AudioClip flipdisabled;
 
-    public float volume;
+    public float volume = 1f;
+    public float landingVol = 1f;
+    public float flipDisabledVol = 1f;
+    public float keyVol = 1f;
+    public float doorVol = 1f;
 
     void Start()
     {
@@ -22,23 +26,23 @@ public class TriggeredSFX : MonoBehaviour {
     {
         if (type == "key")
         {
-            source.PlayOneShot(key, volume * 1f);
+            source.PlayOneShot(key, keyVol);
         }
         if (type == "door")
         {
-            source.PlayOneShot(door, volume * 1f);
+            source.PlayOneShot(door, doorVol);
         }
         if (type == "grassland")
         {
-            source.PlayOneShot(grassland, volume * 1f);
+            source.PlayOneShot(grassland, landingVol);
         }
         if (type == "hellland")
         {
-            source.PlayOneShot(hellland, volume * 1f);
+            source.PlayOneShot(hellland, landingVol);
         }
         if (type == "flipdisabled")
         {
-            source.PlayOneShot(flipdisabled, volume * 0.5f);
+            source.PlayOneShot(flipdisabled, flipDisabledVol);
         }
     }
 }
