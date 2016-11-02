@@ -102,6 +102,12 @@ public class LevelController : MonoBehaviour {
             downMusic.clip = hellLoopMusic;
             upMusic.Play();
             downMusic.Play();
+        } else if(levelNum == 4)
+        {
+            upMusic.clip = dayLoopMusic;
+            downMusic.clip = dayLoopMusic;
+            upMusic.Play();
+            downMusic.Play();
         }
     }
 	

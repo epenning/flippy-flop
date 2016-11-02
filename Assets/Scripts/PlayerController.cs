@@ -298,7 +298,8 @@ public class PlayerController : MonoBehaviour {
             if (coll.gameObject.tag == "end")
             {
                 // go back to first main menu
-                SceneManager.LoadScene(0);
+                //SceneManager.LoadScene(0);
+                fadeBlackNextLevel();
             }
             // handle level end condition
             if (coll.gameObject.tag == "exit")
@@ -414,7 +415,14 @@ public class PlayerController : MonoBehaviour {
 
         Hashtable fadeArgs = new Hashtable();
         fadeArgs.Add("amount", 1.0f);
-        fadeArgs.Add("time", 2.0f);
+        if (levelScript.levelNum == 4)
+        {
+            fadeArgs.Add("time", 5.0f);
+            fadeArgs.Add("easetype", iTween.EaseType.linear);
+        } else
+        {
+            fadeArgs.Add("time", 2.0f);
+        }
         fadeArgs.Add("oncomplete", "finishFadeBlack");
         fadeArgs.Add("oncompletetarget", gameObject);
 
@@ -423,6 +431,12 @@ public class PlayerController : MonoBehaviour {
 
     void finishFadeBlack()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(levelScript.levelNum == 4)
+        {
+            SceneManager.LoadScene(0);
+        } else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
