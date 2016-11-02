@@ -19,12 +19,23 @@ public class AudioSourceController : MonoBehaviour
 
     MasterVolumeController mVolScript;
 
+    public bool isTriggeredSound;
+
+    GameObject playerObj;
+    public bool hasPlayed = false;
+
     // Use this for initialization
     void Start()
     {
         mVolScript = GameObject.Find("MasterVolumeController").GetComponent<MasterVolumeController>();
-
+        
         audSrc = GetComponent<AudioSource>();
+
+        if(isTriggeredSound)
+        {
+            playerObj = GameObject.Find("Player");
+        }
+
         if (playingSide >= 0)
         {
             currVolume = defaultVolume;
@@ -51,6 +62,15 @@ public class AudioSourceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isTriggeredSound && !hasPlayed)
+        {
+            if (playerObj.transform.position.x >= transform.position.x)
+            {
+                hasPlayed = true;
+                audSrc.Play();
+            }
+        }
+
 
         if(audSrc.isPlaying)
         {
