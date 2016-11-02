@@ -46,6 +46,9 @@ public class LevelController : MonoBehaviour {
     public float checkpointVol = 1f;
     public float masterVol = 1f;
 
+    public float upMusicVol = 1f;
+    public float downMusicVol = 1f;
+
     // Use this for initialization
     void Start () {
         Cursor.visible = false;
@@ -58,7 +61,7 @@ public class LevelController : MonoBehaviour {
         downMusic = GameObject.Find("Down Music").GetComponent<AudioSource>();
 
         // control music to daytime
-        upMusic.volume = musicVol;
+        upMusic.volume = musicVol * upMusicVol;
         downMusic.volume = 0f;
 
         AudioListener.volume = masterVol;
@@ -142,10 +145,10 @@ public class LevelController : MonoBehaviour {
             if(currDir == 1)
             {
                 upMusic.volume = 0f;
-                downMusic.volume = musicVol;
+                downMusic.volume = musicVol * downMusicVol;
             } else
             {
-                upMusic.volume = musicVol;
+                upMusic.volume = musicVol * upMusicVol;
                 downMusic.volume = 0f;
             }
         }
