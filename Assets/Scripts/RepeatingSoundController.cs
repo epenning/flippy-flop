@@ -15,10 +15,13 @@ public class RepeatingSoundController : MonoBehaviour {
 
     public float timeLeft;
 
+    public float startDelay;
+    public bool hasStarted = false;
+
     // Use this for initialization
     void Start () {
         audSrc = GetComponent<AudioSource>();
-        timeLeft = repeatInterval;
+        timeLeft = startDelay;
         audSrc.volume = masterListVol;
 
         for(int i = 0; i < volumeList.Length; i++) 
@@ -26,7 +29,7 @@ public class RepeatingSoundController : MonoBehaviour {
             volumeList[i] *= masterListVol;
         }
 
-        playCurrentSound();
+        //playCurrentSound();
     }
 	
 	// Update is called once per frame
@@ -34,6 +37,10 @@ public class RepeatingSoundController : MonoBehaviour {
         timeLeft -= Time.deltaTime;
         if(timeLeft < 0)
         {
+            if(!hasStarted)
+            {
+                hasStarted = true;
+            }
             playCurrentSound();
         }
 	}

@@ -15,6 +15,7 @@ public class MasterVolumeController : MonoBehaviour {
     public float keyVol = 1f;
     public float doorVol = 1f;
     public float innerGameVol = 1f;
+       
 
 
     AudioSource flipSource;
