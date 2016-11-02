@@ -15,7 +15,8 @@ public class MasterVolumeController : MonoBehaviour {
     public float keyVol = 1f;
     public float doorVol = 1f;
     public float innerGameVol = 1f;
-       
+
+    public bool innerGameMuted = false;
 
 
     AudioSource flipSource;
@@ -50,6 +51,10 @@ public class MasterVolumeController : MonoBehaviour {
 
     public void fadeInnerVolTo(float tgtVol, float time)
     {
+        if(innerGameMuted)
+        {
+            return;
+        }
         Hashtable volArgs = new Hashtable();
         volArgs.Add("from", currInnerVol);
         volArgs.Add("to", tgtVol);
@@ -64,6 +69,7 @@ public class MasterVolumeController : MonoBehaviour {
     {
         currInnerVol = val;
     }
+
 
     // Update is called once per frame
     void Update () {
