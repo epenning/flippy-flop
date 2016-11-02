@@ -942,7 +942,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Hidden/postVHSPro_Second
   m_Shader: {fileID: 4800000, guid: e2075d3cd3deb45c78fdc81aab250ef7, type: 3}
-  m_ShaderKeywords: VHS_BLEED_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON VHS_VIGNETTE_ON
+  m_ShaderKeywords: VHS_BLEED_ON VHS_FISHEYE_ON VHS_OLD_THREE_PHASE VHS_SIGNAL_TWEAK_ON
+    VHS_VIGNETTE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -1145,7 +1146,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Hidden/postVHSPro_Tape
   m_Shader: {fileID: 4800000, guid: caea6b3daf52a4416949b7b9c0146d77, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_LINENOISE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -1714,7 +1715,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Hidden/postVHSPro_First
   m_Shader: {fileID: 4800000, guid: e5b137a48bf2c4c668927fd89b6ccbcd, type: 3}
-  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_JITTER_H_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
+  m_ShaderKeywords: VHS_FILMGRAIN_ON VHS_FISHEYE_ON VHS_JITTER_H_ON VHS_JITTER_V_ON
+    VHS_LINENOISE_ON VHS_SCANLINES_ON VHS_STRETCH_ON VHS_YIQNOISE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -1746,7 +1748,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010870508264, guid: bd3c2361d2a67b34281c2d47026a7dcf, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -379.2
+      value: -380.255
       objectReference: {fileID: 0}
     - target: {fileID: 4000010870508264, guid: bd3c2361d2a67b34281c2d47026a7dcf, type: 2}
       propertyPath: m_LocalRotation.x

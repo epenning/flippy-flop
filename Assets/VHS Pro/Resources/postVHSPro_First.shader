@@ -318,7 +318,7 @@
 	    			//shift part of the screen sometimes with freq
 	    			float2 twitchVertical(float freq, float2 uv, float t){
 
-					   float vShift = 0.4*onOff(freq,3.0,0.9, t);
+					   float vShift = 0.8;
 					   vShift*=(sin(t)*sin(t*20.0) + (0.5 + 0.1*sin(t*200.0)*cos(t)));
 						uv.y = fmod(uv.y + vShift, 1.0); 
 						return uv;
