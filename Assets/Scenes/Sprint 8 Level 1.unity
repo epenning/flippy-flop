@@ -133,6 +133,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -378,6 +390,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -1176,6 +1200,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -1247,7 +1277,7 @@ GameObject:
   - 114: {fileID: 371975794}
   - 114: {fileID: 371975793}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: radio
   m_TagString: ambient sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1270,8 +1300,10 @@ MonoBehaviour:
   audSrc: {fileID: 0}
   prioritySound: 0
   playing: 0
-  reducedInnerVol: 0.5
+  reducedInnerVol: 0.9
   timeToReduce: 0.25
+  isTriggeredSound: 0
+  hasPlayed: 0
 --- !u!114 &371975794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,31 +1332,41 @@ AudioSource:
   Loop: 1
   Mute: 0
   Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
+  Priority: 159
+  DopplerLevel: 0
   MinDistance: 50
   MaxDistance: 300
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - time: 0.16666667
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -6.002399
+      outSlope: -6.002399
       tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+    - time: 0.3678161
+      value: 0.2810185
+      inSlope: -1.5005997
+      outSlope: -1.5005997
+      tangentMode: 0
+    - time: 0.62528735
+      value: 0.06666666
+      inSlope: -0.37514994
+      outSlope: -0.37514994
+      tangentMode: 0
+    - time: 0.99655175
+      value: 0.0037036985
+      inSlope: -0.16673319
+      outSlope: -0.16673319
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1383,7 +1425,7 @@ GameObject:
   - 114: {fileID: 379571223}
   - 114: {fileID: 379571222}
   m_Layer: 0
-  m_Name: Audio Source (1)
+  m_Name: wind
   m_TagString: ambient sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1419,8 +1461,10 @@ MonoBehaviour:
   audSrc: {fileID: 0}
   prioritySound: 0
   playing: 0
-  reducedInnerVol: 0.5
+  reducedInnerVol: 0.4
   timeToReduce: 0.25
+  isTriggeredSound: 0
+  hasPlayed: 0
 --- !u!114 &379571223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,6 +1921,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -3395,6 +3445,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -3446,6 +3508,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -3594,6 +3668,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -3721,6 +3807,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -4009,9 +4107,149 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 108000012037643162, guid: 0602a91a293582b45929cc01523f969e,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9963489
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000012037643162, guid: 0602a91a293582b45929cc01523f969e,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000012037643162, guid: 0602a91a293582b45929cc01523f969e,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9338235
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0602a91a293582b45929cc01523f969e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1077172328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1077172329}
+  - 82: {fileID: 1077172331}
+  - 114: {fileID: 1077172330}
+  m_Layer: 0
+  m_Name: thunder truiggered
+  m_TagString: ambient sound
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077172329
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077172328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.6, y: -19.4, z: -92.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1102389447}
+  m_RootOrder: 2
+--- !u!114 &1077172330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077172328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421f2a8acda9f8448b79353be9e3fd74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currVolume: 0
+  defaultVolume: 2
+  playingSide: 0
+  audSrc: {fileID: 0}
+  prioritySound: 1
+  playing: 0
+  reducedInnerVol: 1
+  timeToReduce: 0.25
+  isTriggeredSound: 1
+  hasPlayed: 0
+--- !u!82 &1077172331
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077172328}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 79dd328eff07d1046966ac93ceac56fa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.866
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 5
+  MaxDistance: 200
+  Pan2D: -0.23
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &1093582447 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011584246234, guid: 6c57df0e1910649479a9ea679bbecfe6,
@@ -4124,6 +4362,7 @@ Transform:
   m_Children:
   - {fileID: 371975796}
   - {fileID: 379571221}
+  - {fileID: 1077172329}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1001 &1132409749
@@ -4505,6 +4744,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -4556,6 +4807,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -4733,6 +4996,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -4933,6 +5202,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -4984,6 +5259,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -5528,6 +5809,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000010045679564, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -5723,6 +6016,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -5899,6 +6198,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -6335,6 +6646,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -6642,6 +6965,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
+        type: 2}
+      propertyPath: musicVol
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
+        type: 2}
+      propertyPath: footstepVol
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
+        type: 2}
+      propertyPath: landingVol
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 999c3e9e2b7388f429a325b831a4788b, type: 2}
   m_IsPrefabParent: 0
@@ -6688,6 +7026,12 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Down_Obelisk (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013580462352, guid: 81e4cc5b470bb644d912379c9ab9ecb4,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8339463efe211a46866923214d0778e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
   m_IsPrefabParent: 0
@@ -7872,6 +8216,18 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle_1x3_Day_Up_Obelisk (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f71c56576cd9454a9763169baaf0e16,
+        type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
