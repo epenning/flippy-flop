@@ -311,7 +311,7 @@ Prefab:
     - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
         type: 2}
       propertyPath: musicVol
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
         type: 2}
