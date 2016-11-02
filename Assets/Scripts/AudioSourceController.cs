@@ -57,7 +57,7 @@ public class AudioSourceController : MonoBehaviour
             if(!playing)
             {
                 playing = true;
-                if(prioritySound)
+                if(prioritySound && currVolume > 0f)
                 {
                     mVolScript.fadeInnerVolTo(reducedInnerVol, timeToReduce);
                 }
@@ -67,7 +67,7 @@ public class AudioSourceController : MonoBehaviour
             if (playing)
             {
                 playing = false;
-                if (prioritySound)
+                if (prioritySound && currVolume > 0f)
                 {
                     mVolScript.fadeInnerVolTo(mVolScript.innerGameVol, timeToReduce);
                 }
