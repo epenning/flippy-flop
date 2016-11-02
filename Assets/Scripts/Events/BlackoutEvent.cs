@@ -6,7 +6,7 @@ public class BlackoutEvent : MonoBehaviour
 {
 
     public bool hasStarted = false;
-    public GameObject tornadoCanvas;
+    public GameObject blackoutCanvas;
 
     GameObject playerObj;
     LevelController levelScript;
@@ -19,7 +19,6 @@ public class BlackoutEvent : MonoBehaviour
     {
         playerObj = GameObject.Find("Player");
         levelScript = GameObject.Find("LevelController").GetComponent<LevelController>();
-        //tornadoCanvas = GameObject.Find("Tornado Warning Canvas");
         masterVolScript = GameObject.Find("MasterVolumeController").GetComponent<MasterVolumeController>();
         mainCamera = Camera.main.gameObject;
 
@@ -50,7 +49,7 @@ public class BlackoutEvent : MonoBehaviour
 
     void activateCanvas()
     {
-        tornadoCanvas.SetActive(true);
+        blackoutCanvas.SetActive(true);
         Invoke("stopScreenTwitch", 0.1f);
     }
 
