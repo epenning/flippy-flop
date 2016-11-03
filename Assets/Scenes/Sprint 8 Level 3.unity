@@ -4248,6 +4248,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212000010837672560, guid: 226112c09bbfe7f458b189df2d2eaec9,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010837672560, guid: 226112c09bbfe7f458b189df2d2eaec9,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010837672560, guid: 226112c09bbfe7f458b189df2d2eaec9,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 226112c09bbfe7f458b189df2d2eaec9, type: 2}
   m_IsPrefabParent: 0
@@ -8447,26 +8462,6 @@ Prefab:
       propertyPath: mat_tape
       value: 
       objectReference: {fileID: 2079214016}
-    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: screenLinesNum
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: doorVol
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000011960044790, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013578754618, guid: bc7b05984478b95458e304036f5c2250,
-        type: 2}
-      propertyPath: hiddenOnStart
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
