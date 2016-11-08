@@ -590,6 +590,10 @@ Prefab:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: bf8677cd35abcd04ab41f4ddc03cdfb7, type: 2}
+    - target: {fileID: 1000013961606884, guid: bc7b05984478b95458e304036f5c2250, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
@@ -899,7 +903,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013659164158, guid: 255b69df50544dd4599005de44aea952, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 95
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4000013659164158, guid: 255b69df50544dd4599005de44aea952, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1104,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseXval: 0
-  distToSilence: 106.5
+  distToSilence: 96.5
   currDist: 0
   maxVol: 1
   currVol: 0
