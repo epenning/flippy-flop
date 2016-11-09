@@ -28,6 +28,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
+    path: Assets/Scenes/TV On.unity
+  - enabled: 1
     path: Assets/Scenes/GameKid Intro.unity
   - enabled: 1
     path: Assets/Scenes/InnerMenu.unity

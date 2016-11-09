@@ -300,7 +300,11 @@ public class PlayerController : MonoBehaviour {
             {
                 // go back to first main menu
                 //SceneManager.LoadScene(0);
-                fadeBlackNextLevel();
+                //fadeBlackNextLevel();
+                if (levelScript.levelNum == 4)
+                {
+                    SceneManager.LoadScene(0);
+                }
             }
             // handle level end condition
             if (coll.gameObject.tag == "exit")
@@ -312,7 +316,7 @@ public class PlayerController : MonoBehaviour {
 
                     // progress to next level
                     keys--;
-                    fadeBlackNextLevel();
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
                 else
                 {
