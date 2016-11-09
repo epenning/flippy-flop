@@ -9467,8 +9467,13 @@ Prefab:
         type: 2}
       propertyPath: movie
       value: 
-      objectReference: {fileID: 15200000, guid: fadd2baac4cb88f42b40c9f4e5694831,
+      objectReference: {fileID: 15200000, guid: 290c377bb55816041b2b0c8bd7c5d1f6,
         type: 3}
+    - target: {fileID: 82000013427834566, guid: 0aa940d7055ec4640988c4036fb275f9,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 290c377bb55816041b2b0c8bd7c5d1f6, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aa940d7055ec4640988c4036fb275f9, type: 2}
   m_IsPrefabParent: 0
