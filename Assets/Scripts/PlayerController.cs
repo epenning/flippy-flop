@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour {
             movementScript.Move(velocity * Time.deltaTime);
 
             // flipping
-            if (canFlip && !midair && !flipOnCooldown)
+            if (canFlip && !midair && !flipOnCooldown && !flipIconScript.hidden)
             {
                 if (Input.GetKeyDown(KeyCode.S))
                 {
@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.S) && !flipIconScript.hidden)
                 {
                     flipIconScript.flashDisabled();
                     triggeredSFX.Play("flipdisabled");
@@ -226,7 +226,8 @@ public class PlayerController : MonoBehaviour {
         // respawn from checkpoint
         if(Input.GetKeyDown(KeyCode.R))
         {
-            Die(false);
+            if(lastCheckpoint)
+                Die(false);
         }
 
         // respawn from falling off map

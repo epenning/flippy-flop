@@ -54,7 +54,7 @@ public class TornadoWarningEvent : MonoBehaviour {
     void stopScreenTwitch()
     {
         mainCamera.GetComponent<postVHSPro>().twitchVOn = false;
-        Invoke("reactivateTwitch", 30f);
+        Invoke("reactivateTwitch", 15f);
     }
 
     void reactivateTwitch()
