@@ -1800,6 +1800,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!1 &281054933 stripped
 GameObject:
@@ -1997,6 +2002,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &310295168
 AudioSource:
@@ -2311,6 +2321,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &403818618 stripped
 AudioSource:
@@ -2636,6 +2651,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &466035732 stripped
 AudioSource:
@@ -3543,13 +3563,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currVolume: 0
   defaultVolume: 1
-  playingSide: 1
+  playingSide: 0
   audSrc: {fileID: 0}
   prioritySound: 1
   playing: 0
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 1
+  triggerLightning: 1
+  lightningDuration: 1
+  lightningDelay: 2
+  lightningBrightness: 8
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!114 &670169959
 MonoBehaviour:
@@ -5980,6 +6005,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1126967532
 AudioSource:
@@ -7494,6 +7524,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1310193787
 AudioSource:
@@ -8580,11 +8615,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: 63.4
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -11.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.z
