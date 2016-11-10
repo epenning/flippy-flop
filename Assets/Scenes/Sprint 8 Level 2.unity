@@ -154,11 +154,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012153899072, guid: 226112c09bbfe7f458b189df2d2eaec9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.15
+      value: -18.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012153899072, guid: 226112c09bbfe7f458b189df2d2eaec9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.6
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4000012153899072, guid: 226112c09bbfe7f458b189df2d2eaec9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -647,6 +647,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &119919925
 AudioSource:
@@ -1416,11 +1421,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: -18.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1515,6 +1520,11 @@ Prefab:
         type: 2}
       propertyPath: hiddenOnStart
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013644333126, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
@@ -2590,6 +2600,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &460006251
 AudioSource:
@@ -3803,11 +3818,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000014223682666, guid: db347bdd93e465f499c0ee77613d0c20, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 142.5
+      value: 115.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000014223682666, guid: db347bdd93e465f499c0ee77613d0c20, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -12.5
+      value: -15.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000014223682666, guid: db347bdd93e465f499c0ee77613d0c20, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3917,6 +3932,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &727852283
 AudioSource:
@@ -4951,6 +4971,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &934648377
 AudioSource:
@@ -6679,6 +6704,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!21 &1524887260
 Material:
@@ -7561,6 +7591,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1636624008
 AudioSource:
@@ -8023,7 +8058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694373337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 144.7, y: -17.4, z: 0}
+  m_LocalPosition: {x: 170, y: -17.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -8049,6 +8084,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 1
+  triggerLightning: 1
+  lightningDuration: 0.75
+  lightningDelay: 1.5
+  lightningBrightness: 8
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1694373340
 AudioSource:
@@ -8059,7 +8099,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8b30d02698a7a304a82357f771409eca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac9beb03b29f7ae4b9b461262fde74d1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.866
   m_Pitch: 1
@@ -8430,6 +8470,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 1
+  triggerLightning: 1
+  lightningDuration: 0.5
+  lightningDelay: 0
+  lightningBrightness: 3
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1749019430
 AudioSource:
@@ -8680,6 +8725,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!1001 &1760454851
 Prefab:
@@ -10006,6 +10056,11 @@ MonoBehaviour:
   reducedInnerVol: 0.5
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &2097895752
 AudioSource:

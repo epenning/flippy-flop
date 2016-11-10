@@ -20,8 +20,15 @@ public class AudioSourceController : MonoBehaviour
     MasterVolumeController mVolScript;
 
     public bool isTriggeredSound;
+    public bool triggerLightning;
+    public float lightningDuration;
+    public float lightningDelay;
+    public float lightningBrightness;
+    public bool lightningEnded = false;
+    Color originalLightColor;
 
     GameObject playerObj;
+    GameObject mainLight;
     public bool hasPlayed = false;
 
     // Use this for initialization
@@ -34,6 +41,11 @@ public class AudioSourceController : MonoBehaviour
         if(isTriggeredSound)
         {
             playerObj = GameObject.Find("Player");
+            if (triggerLightning)
+            {
+                mainLight = GameObject.Find("Main Light");
+                originalLightColor = mainLight.GetComponent<Light>().color;
+            }
         }
 
         if (playingSide >= 0)
@@ -62,7 +74,38 @@ public class AudioSourceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isTriggeredSound && !hasPlayed)
+
+        // lightning code
+        if (isTriggeredSound && triggerLightning && hasPlayed && !lightningEnded)
+        {
+            if (lightningDelay <= 0)
+            {
+                mainLight.GetComponent<Light>().color = new Color(0.7f,0.7f,1f,1f);
+
+                if (lightningDuration > 0)
+                {
+                    lightningDuration -= Time.deltaTime;
+                    if (mainLight.GetComponent<Light>().intensity > 1)
+                        mainLight.GetComponent<Light>().intensity = 1;
+                    else
+                        mainLight.GetComponent<Light>().intensity = lightningBrightness;
+                }
+
+                if (lightningDuration <= 0)
+                {
+                    mainLight.GetComponent<Light>().intensity = 1;
+                    lightningEnded = true;
+                    mainLight.GetComponent<Light>().color = originalLightColor;
+                }
+            }
+            else if (lightningDuration > 0)
+            {
+                lightningDelay -= Time.deltaTime;
+            }
+        }
+
+        // trigger code
+        if (isTriggeredSound && !hasPlayed)
         {
             if (playerObj.transform.position.x >= transform.position.x)
             {
