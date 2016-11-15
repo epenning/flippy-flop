@@ -141,8 +141,13 @@ Prefab:
     - target: {fileID: 82000012104025260, guid: 9c7c2e764f2918a4f80714406eb98bcb,
         type: 2}
       propertyPath: m_Volume
-      value: 0.35
+      value: 0.013
       objectReference: {fileID: 0}
+    - target: {fileID: 82000012104025260, guid: 9c7c2e764f2918a4f80714406eb98bcb,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a235d13f510bafd4294baf3d182ad96f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7c2e764f2918a4f80714406eb98bcb, type: 2}
   m_IsPrefabParent: 0
@@ -712,7 +717,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9788924af94cd084f87e36042dc2b5f6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.062
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -830,7 +835,7 @@ MonoBehaviour:
   bleedOn: 1
   crtMode: 0
   crtLinesMode: 0
-  screenLinesNum: 720
+  screenLinesNum: 0
   bleedAmount: 1
   bleedDebugOn: 0
   bleedCurveY:

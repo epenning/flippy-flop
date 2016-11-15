@@ -622,7 +622,7 @@ MonoBehaviour:
   volumeList:
   - 1
   - 1
-  repeatInterval: 10
+  repeatInterval: 14
   currentIndex: 0
   timeLeft: 0
   startDelay: 5
@@ -2542,8 +2542,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 460006249}
   - 82: {fileID: 460006251}
+  - 114: {fileID: 460006253}
   - 114: {fileID: 460006250}
-  - 114: {fileID: 460006252}
   m_Layer: 0
   m_Name: rain
   m_TagString: ambient sound
@@ -2558,7 +2558,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 460006248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196.7, y: -13.199999, z: 0}
+  m_LocalPosition: {x: 185.5, y: -13.199999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2572,24 +2572,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 460006248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421f2a8acda9f8448b79353be9e3fd74, type: 3}
+  m_Script: {fileID: 11500000, guid: 686adc3cb5e65c9438603f749de050ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currVolume: 0
-  defaultVolume: 2
-  playingSide: 0
-  audSrc: {fileID: 0}
-  prioritySound: 0
-  playing: 0
-  reducedInnerVol: 1
-  timeToReduce: 0.25
-  isTriggeredSound: 0
-  triggerLightning: 0
-  lightningDuration: 0
-  lightningDelay: 0
-  lightningBrightness: 0
-  lightningEnded: 0
-  hasPlayed: 0
+  persistThroughLevels: 1
 --- !u!82 &460006251
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2599,9 +2585,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3a0713f991c61dc4486ab68c1aa194af, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce6f167ccdd6baf4cb412b553ce8b97a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.287
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2618,33 +2604,33 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0.05
-      value: 1
+    - time: 0
+      value: 0.97962964
       inSlope: -20.007967
       outSlope: -20.007967
       tangentMode: 0
-    - time: 0.11034483
-      value: 0.5050926
-      inSlope: -9.46528
+    - time: 0.05862069
+      value: 0.48472226
+      inSlope: -4.327887
       outSlope: -3.1774697
       tangentMode: 1
-    - time: 0.21724138
-      value: 0.28564814
+    - time: 0.16551724
+      value: 0.26527777
       inSlope: -1.2504979
       outSlope: -1.2504979
       tangentMode: 0
-    - time: 0.4
-      value: 0.125
+    - time: 0.34827587
+      value: 0.104629636
       inSlope: -0.31262448
       outSlope: -0.31262448
       tangentMode: 0
-    - time: 0.79655176
-      value: 0.021759257
+    - time: 0.7448276
+      value: 0.0013888925
       inSlope: -0.07815612
       outSlope: -0.07815612
       tangentMode: 0
-    - time: 1
-      value: 0.009259257
+    - time: 0.94827586
+      value: 0
       inSlope: -0.05001994
       outSlope: -0.05001994
       tangentMode: 0
@@ -2655,7 +2641,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2684,7 +2670,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &460006252
+--- !u!114 &460006253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2692,10 +2678,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 460006248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 686adc3cb5e65c9438603f749de050ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d15059a0ee2b5a43969a2f572f908ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persistThroughLevels: 1
+  currDist: 0
+  maxDist: 170
+  minVol: 0
+  maxVol: 0.3
+  currVol: 0
 --- !u!1001 &468207145
 Prefab:
   m_ObjectHideFlags: 0
@@ -3890,7 +3880,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fb689eda6be139b46bef0392dd8deaae, type: 3}
   masterListVol: 1
   volumeList:
-  - 1
+  - 0.75
   repeatInterval: 41
   currentIndex: 0
   timeLeft: 0
@@ -3908,7 +3898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currVolume: 0
-  defaultVolume: 1
+  defaultVolume: 0.7
   playingSide: -1
   audSrc: {fileID: 0}
   prioritySound: 0
@@ -4733,10 +4723,10 @@ Transform:
   - {fileID: 1585766943}
   - {fileID: 1760454852}
   - {fileID: 1177359631}
-  - {fileID: 331203646}
-  - {fileID: 314872588}
   - {fileID: 318498579}
+  - {fileID: 331203646}
   - {fileID: 1140799649}
+  - {fileID: 314872588}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1001 &878097859
@@ -4927,7 +4917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundList:
   - {fileID: 8300000, guid: ceddce380bc9e43489a70cd629594c3f, type: 3}
-  masterListVol: 1
+  masterListVol: 0.75
   volumeList:
   - 1
   repeatInterval: 65
@@ -4947,7 +4937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currVolume: 0
-  defaultVolume: 1
+  defaultVolume: 0.6
   playingSide: -1
   audSrc: {fileID: 0}
   prioritySound: 0
@@ -6200,6 +6190,7 @@ GameObject:
   - 4: {fileID: 1275599377}
   - 82: {fileID: 1275599379}
   - 114: {fileID: 1275599378}
+  - 114: {fileID: 1275599380}
   m_Layer: 0
   m_Name: thunder truiggered (2)
   m_TagString: ambient sound
@@ -6320,6 +6311,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1275599380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275599376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686adc3cb5e65c9438603f749de050ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistThroughLevels: 1
 --- !u!1001 &1283298610
 Prefab:
   m_ObjectHideFlags: 0
@@ -7719,7 +7722,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636624004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.5, y: -92.6, z: 0}
+  m_LocalPosition: {x: 85.5, y: -78.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -7749,7 +7752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currVolume: 0
-  defaultVolume: 1
+  defaultVolume: 0.5
   playingSide: -1
   audSrc: {fileID: 0}
   prioritySound: 0
@@ -7784,42 +7787,47 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 150
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0.05
-      value: 1
-      inSlope: -20.007967
-      outSlope: -20.007967
+    - time: 0
+      value: 0.20972224
+      inSlope: -0.8226951
+      outSlope: -0.8226951
       tangentMode: 0
-    - time: 0.1
-      value: 0.5
-      inSlope: -5.0019917
-      outSlope: -5.0019917
-      tangentMode: 0
-    - time: 0.2
-      value: 0.25
-      inSlope: -1.2504979
-      outSlope: -1.2504979
-      tangentMode: 0
-    - time: 0.4
+    - time: 0.053333335
       value: 0.125
-      inSlope: -0.31262448
-      outSlope: -0.31262448
+      inSlope: -1.6020429
+      outSlope: -1.6020429
       tangentMode: 0
-    - time: 0.79655176
-      value: 0.021759257
-      inSlope: -0.07815612
-      outSlope: -0.07815612
+    - time: 0.10666667
+      value: 0.0625
+      inSlope: -0.5861718
+      outSlope: -0.5861718
+      tangentMode: 0
+    - time: 0.21333334
+      value: 0.03125
+      inSlope: -0.14654295
+      outSlope: -0.14654295
+      tangentMode: 0
+    - time: 0.42666668
+      value: 0.015625
+      inSlope: -0.036635738
+      outSlope: -0.036635738
+      tangentMode: 0
+    - time: 0.85333335
+      value: 0.0078125
+      inSlope: -0.0091589345
+      outSlope: -0.0091589345
       tangentMode: 0
     - time: 1
-      value: 0.009259257
-      inSlope: -0.05001994
-      outSlope: -0.05001994
+      value: 0.006666667
+      inSlope: -0.006669329
+      outSlope: -0.006669329
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -10129,7 +10137,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: abf8276e64baac74096c61a448d39f85, type: 3}
   masterListVol: 1
   volumeList:
-  - 1
+  - 0.75
   repeatInterval: 28
   currentIndex: 0
   timeLeft: 0
@@ -10147,7 +10155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currVolume: 0
-  defaultVolume: 1
+  defaultVolume: 0.75
   playingSide: -1
   audSrc: {fileID: 0}
   prioritySound: 0
