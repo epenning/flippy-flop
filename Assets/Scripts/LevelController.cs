@@ -201,15 +201,18 @@ public class LevelController : MonoBehaviour {
             {
                 AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
 
-                if (volScript.playingSide == -1)
+                if (volScript)
                 {
-                    // enable backside sounds
-                    volScript.fadeVolTo(volScript.defaultVolume);
-                }
-                else if (volScript.playingSide == 1)
-                {
-                    // disable frontside sounds
-                    volScript.fadeVolTo(0f);
+                    if (volScript.playingSide == -1)
+                    {
+                        // enable backside sounds
+                        volScript.fadeVolTo(volScript.defaultVolume);
+                    }
+                    else if (volScript.playingSide == 1)
+                    {
+                        // disable frontside sounds
+                        volScript.fadeVolTo(0f);
+                    }
                 }
             }
         }
@@ -218,15 +221,19 @@ public class LevelController : MonoBehaviour {
             foreach (GameObject aud in audioList)
             {
                 AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
-                if (volScript.playingSide == -1)
+
+                if (volScript)
                 {
-                    // disable backside sounds
-                    volScript.fadeVolTo(0f);
-                }
-                else if (volScript.playingSide == 1)
-                {
-                    // enable frontside sounds
-                    volScript.fadeVolTo(volScript.defaultVolume);
+                    if (volScript.playingSide == -1)
+                    {
+                        // disable backside sounds
+                        volScript.fadeVolTo(0f);
+                    }
+                    else if (volScript.playingSide == 1)
+                    {
+                        // enable frontside sounds
+                        volScript.fadeVolTo(volScript.defaultVolume);
+                    }
                 }
             }
 
@@ -268,15 +275,20 @@ public class LevelController : MonoBehaviour {
             {
                 AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
 
-                if (volScript.playingSide == -1)
+                if(volScript)
                 {
-                    // enable backside sounds
-                    volScript.fadeVolTo(volScript.defaultVolume);
-                } else if(volScript.playingSide == 1)
-                {
-                    // disable frontside sounds
-                    volScript.fadeVolTo(0f);
+                    if (volScript.playingSide == -1)
+                    {
+                        // enable backside sounds
+                        volScript.fadeVolTo(volScript.defaultVolume);
+                    }
+                    else if (volScript.playingSide == 1)
+                    {
+                        // disable frontside sounds
+                        volScript.fadeVolTo(0f);
+                    }
                 }
+
             }
         }
         else
@@ -291,15 +303,20 @@ public class LevelController : MonoBehaviour {
             foreach (GameObject aud in audioList)
             {
                 AudioSourceController volScript = aud.GetComponent<AudioSourceController>();
-                if (volScript.playingSide == -1)
+
+
+                if (volScript)
                 {
-                    // disable backside sounds
-                    volScript.fadeVolTo(0f);
-                }
-                else if (volScript.playingSide == 1)
-                {
-                    // enable frontside sounds
-                    volScript.fadeVolTo(volScript.defaultVolume);
+                    if (volScript.playingSide == -1)
+                    {
+                        // disable backside sounds
+                        volScript.fadeVolTo(0f);
+                    }
+                    else if (volScript.playingSide == 1)
+                    {
+                        // enable frontside sounds
+                        volScript.fadeVolTo(volScript.defaultVolume);
+                    }
                 }
             }
 
