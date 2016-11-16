@@ -15,5 +15,6 @@ public class Level4MusicVolFade : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         masterVolScript.musicVol = volAdjuster.currVol;
-	}
+        masterVolScript.footstepVol = volAdjuster.currVol;
+    }
 }
