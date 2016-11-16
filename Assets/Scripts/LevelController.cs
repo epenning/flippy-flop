@@ -338,6 +338,14 @@ public class LevelController : MonoBehaviour {
         }
     }
 
+    public void disableAmbientSounds()
+    {
+        foreach (GameObject aud in audioList)
+        {
+            aud.SetActive(false);
+        }
+    }
+
     public void finishRotating()
     {
         rotating = false;
