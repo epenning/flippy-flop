@@ -4,9 +4,6 @@ using System.Collections;
 public class VolumeAttenuation : MonoBehaviour
 {
 
-    //public float baseXval;
-    //public float distToSilence;
-
     public float currDist;
     public float maxDist = 10f;
 
@@ -19,7 +16,6 @@ public class VolumeAttenuation : MonoBehaviour
     public bool persist;
     public bool maintainMaxVol;
 
-    //public float baseDistToPlayer;
 
     // Use this for initialization
     void Start()
@@ -28,8 +24,6 @@ public class VolumeAttenuation : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
         playerObj = GameObject.Find("Player");
-        //baseXval = playerObj.transform.position.x;
-        //baseDistToPlayer = Mathf.Abs(transform.position.x - baseXval);
     }
 
     // Update is called once per frame
