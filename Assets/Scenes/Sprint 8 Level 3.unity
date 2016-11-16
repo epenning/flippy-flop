@@ -8523,7 +8523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010264168080, guid: 02af4cd0eff3de44498ed91ddf5870d5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -17.25
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4000010264168080, guid: 02af4cd0eff3de44498ed91ddf5870d5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8558,6 +8558,27 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.129
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014010739334, guid: 02af4cd0eff3de44498ed91ddf5870d5,
+        type: 2}
+      propertyPath: inactiveSpriteFront
+      value: 
+      objectReference: {fileID: 21300000, guid: f814300da60a64b4f97d667e39870d34,
+        type: 3}
+    - target: {fileID: 212000013458538146, guid: 02af4cd0eff3de44498ed91ddf5870d5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f814300da60a64b4f97d667e39870d34,
+        type: 3}
+    - target: {fileID: 212000011967986126, guid: 02af4cd0eff3de44498ed91ddf5870d5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013472064696, guid: 02af4cd0eff3de44498ed91ddf5870d5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02af4cd0eff3de44498ed91ddf5870d5, type: 2}
@@ -9484,7 +9505,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -16.25
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9513,6 +9534,11 @@ Prefab:
     - target: {fileID: 1000012971122698, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_Name
       value: Checkpoint_DayHell_Down (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000013380934426, guid: 4d44df193948e1147bef1c187f393a07,
+        type: 2}
+      propertyPath: randomSeed
+      value: 704279360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
@@ -10195,7 +10221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -14.75
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13969,7 +13995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -15.25
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4000010345018554, guid: 4d44df193948e1147bef1c187f393a07, type: 2}
       propertyPath: m_LocalPosition.z
