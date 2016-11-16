@@ -245,7 +245,7 @@ MonoBehaviour:
   activated: 0
   rotPoint: {x: 0, y: 0, z: 0}
   pickups: []
-  inactiveSpriteFront: {fileID: 21300000, guid: c3aac6c21c225744d9f05832f10d40a3,
+  inactiveSpriteFront: {fileID: 21300000, guid: 494216e8e1195bf438c6cf1fa0052e06,
     type: 3}
   activeSpriteFront: {fileID: 21300000, guid: f814300da60a64b4f97d667e39870d34, type: 3}
   inactiveSpriteBack: {fileID: 21300000, guid: f814300da60a64b4f97d667e39870d34, type: 3}
@@ -2032,7 +2032,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3aac6c21c225744d9f05832f10d40a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 494216e8e1195bf438c6cf1fa0052e06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -248,7 +248,7 @@ MonoBehaviour:
   inactiveSpriteFront: {fileID: 21300000, guid: f814300da60a64b4f97d667e39870d34,
     type: 3}
   activeSpriteFront: {fileID: 21300000, guid: d0a1cb78da81ecc45b63fccb51ecaa3b, type: 3}
-  inactiveSpriteBack: {fileID: 21300000, guid: ebf9ef52a4872964bb747d540fcca1b3, type: 3}
+  inactiveSpriteBack: {fileID: 21300000, guid: b6993761f5d34f246b863e9d4ab42146, type: 3}
   activeSpriteBack: {fileID: 21300000, guid: ee4e9ad0b9161e94fba1383c8a3a4186, type: 3}
 --- !u!198 &198000013380934426
 ParticleSystem:
