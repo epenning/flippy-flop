@@ -402,6 +402,20 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: f37967d9928f74b4d93d0c43b32c0926,
         type: 3}
+    - target: {fileID: 212000012520799676, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010179438096, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000014043899092, guid: c4e79d0ef03d24747b6445e14b15e988,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e79d0ef03d24747b6445e14b15e988, type: 2}
   m_IsPrefabParent: 0
@@ -760,7 +774,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010805007340, guid: 559a5367d6eea2a42a7f379d13d99d88, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 257.5
+      value: 256.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010805007340, guid: 559a5367d6eea2a42a7f379d13d99d88, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1303,6 +1317,11 @@ MonoBehaviour:
   reducedInnerVol: 0.9
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!114 &371975794
 MonoBehaviour:
@@ -1464,6 +1483,11 @@ MonoBehaviour:
   reducedInnerVol: 0.4
   timeToReduce: 0.25
   isTriggeredSound: 0
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!114 &379571223
 MonoBehaviour:
@@ -4188,6 +4212,11 @@ MonoBehaviour:
   reducedInnerVol: 1
   timeToReduce: 0.25
   isTriggeredSound: 1
+  triggerLightning: 0
+  lightningDuration: 0
+  lightningDelay: 0
+  lightningBrightness: 0
+  lightningEnded: 0
   hasPlayed: 0
 --- !u!82 &1077172331
 AudioSource:
@@ -5030,7 +5059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013583953822, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.15
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000013583953822, guid: 81e4cc5b470bb644d912379c9ab9ecb4, type: 2}
       propertyPath: m_LocalPosition.z
