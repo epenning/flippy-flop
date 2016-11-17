@@ -42,7 +42,7 @@ public class FootstepSFX : MonoBehaviour {
     void Update()
     {
         // set step type by world
-        if (playerScript.levelScript.levelNum == 1 || playerScript.levelScript.flipSide == 1)
+        if (playerScript.levelScript.levelNum == 1 || playerScript.levelScript.flipSide == 1 || playerScript.levelScript.levelNum == 4)
         {
             // day steps
             stepType = 1;

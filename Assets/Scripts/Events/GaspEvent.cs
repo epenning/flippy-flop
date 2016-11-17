@@ -14,6 +14,8 @@ public class GaspEvent : MonoBehaviour
     MasterVolumeController masterVolScript;
     PlayerController playerScript;
 
+    AudioSource gaspSound;
+
     // Use this for initialization
     void Start()
     {
@@ -21,6 +23,7 @@ public class GaspEvent : MonoBehaviour
         levelScript = GameObject.Find("LevelController").GetComponent<LevelController>();
         masterVolScript = GameObject.Find("MasterVolumeController").GetComponent<MasterVolumeController>();
         mainCamera = Camera.main.gameObject;
+        gaspSound = GetComponent<AudioSource>();
 
         playerScript = playerObj.GetComponent<PlayerController>();
     }
@@ -40,6 +43,7 @@ public class GaspEvent : MonoBehaviour
 
     void startScreenTwitch()
     {
+        gaspSound.Play();
         playerScript.gamePaused = true;
         masterVolScript.innerGameMuted = true;
         masterVolScript.updateInnerVol(0f);
@@ -49,6 +53,10 @@ public class GaspEvent : MonoBehaviour
 
     void activateCanvas()
     {
+        GameObject.Find("Glass Panel").SetActive(false);
+        GameObject.Find("Main Light").SetActive(false);
+        levelScript.disableAmbientSounds();
+        masterVolScript.musicVol = 0f;
         blackCanvas.SetActive(true);
         Invoke("stopScreenTwitch", 0.1f);
     }

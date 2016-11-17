@@ -303,7 +303,9 @@ public class PlayerController : MonoBehaviour {
                 //fadeBlackNextLevel();
                 if (levelScript.levelNum == 4)
                 {
-                    SceneManager.LoadScene(0);
+                    fadeBlackNextLevel();
+
+                    //SceneManager.LoadScene(0);
                 }
             }
             // handle level end condition
