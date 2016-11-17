@@ -1401,7 +1401,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011067855436, guid: 4bb3d829da74cf04bb4e96f25801db59, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 117.5
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 4000011067855436, guid: 4bb3d829da74cf04bb4e96f25801db59, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5781,6 +5781,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013497833490, guid: d4d21ffa0bb20484797a6f34cb06ea4b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4d21ffa0bb20484797a6f34cb06ea4b, type: 2}
   m_IsPrefabParent: 0
@@ -6129,7 +6133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1518571359
 RectTransform:
   m_ObjectHideFlags: 0

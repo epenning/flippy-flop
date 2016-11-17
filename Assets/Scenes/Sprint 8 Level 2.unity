@@ -4956,14 +4956,14 @@ Transform:
   - {fileID: 454238150}
   - {fileID: 514740744}
   - {fileID: 843470365}
+  - {fileID: 510306047}
   - {fileID: 188018198}
   - {fileID: 1665964678}
-  - {fileID: 510306047}
-  - {fileID: 1722967950}
   - {fileID: 1863380994}
-  - {fileID: 377316547}
-  - {fileID: 223264217}
   - {fileID: 593840608}
+  - {fileID: 223264217}
+  - {fileID: 1722967950}
+  - {fileID: 377316547}
   - {fileID: 1585766943}
   - {fileID: 1760454852}
   - {fileID: 1177359631}
@@ -11095,6 +11095,10 @@ Prefab:
     - target: {fileID: 4000012017590036, guid: d4d21ffa0bb20484797a6f34cb06ea4b, type: 2}
       propertyPath: m_RootOrder
       value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013497833490, guid: d4d21ffa0bb20484797a6f34cb06ea4b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4d21ffa0bb20484797a6f34cb06ea4b, type: 2}
