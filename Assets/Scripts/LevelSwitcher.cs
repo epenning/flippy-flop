@@ -18,4 +18,9 @@ public class LevelSwitcher : MonoBehaviour {
     {
         SceneManager.LoadScene(levelName);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
