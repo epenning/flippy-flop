@@ -53,10 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelRoot: {fileID: 0}
   exit: {fileID: 0}
-  dayIntroMusic: {fileID: 8300000, guid: 2fbe818762e30fa4880045aa6bb7c5b6, type: 3}
-  dayLoopMusic: {fileID: 8300000, guid: 6c9604601446e5444a03b6fb1593b61e, type: 3}
-  nightLoopMusic: {fileID: 8300000, guid: 23d14480166ab1a4a94d39fed33ca270, type: 3}
-  hellLoopMusic: {fileID: 8300000, guid: feb7c247659cfd344b47ccf349d32bc6, type: 3}
+  dayIntroMusic: {fileID: 8300000, guid: 99ae9469e23ce6e4e852d6d664485f1e, type: 3}
+  dayLoopMusic: {fileID: 8300000, guid: e13a90cad59f3f64c88834fa4f25ea42, type: 3}
+  nightLoopMusic: {fileID: 8300000, guid: 2dcb6aafdd6cb744ab6154a4ed50115b, type: 3}
+  hellLoopMusic: {fileID: 8300000, guid: a3a90832e4ace51429cc38b23d006d41, type: 3}
   currDir: -1
   rotating: 0
   halfRotated: 0
@@ -73,7 +73,10 @@ MonoBehaviour:
   doorList: []
   backgroundList: []
   objList: []
+  audioList: []
   levelNum: 2
-  musicVol: 0.7
+  musicVol: 0.5
   checkpointVol: 0.5
   masterVol: 1
+  upMusicVol: 1
+  downMusicVol: 1

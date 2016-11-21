@@ -51,12 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da379496087e2f40bbe49495f5bf230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currInnerVol: 0
   masterVol: 1
-  musicVol: 0.7
-  checkpointVol: 0.5
+  musicVol: 0.3
+  checkpointVol: 0.7
   flipVol: 0.15
-  footstepVol: 0.4
-  landingVol: 0.8
+  footstepVol: 0.2
+  landingVol: 0.4
   flipDisabledVol: 0.8
   keyVol: 0.6
   doorVol: 1
+  innerGameVol: 1
+  innerGameMuted: 0

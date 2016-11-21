@@ -1238,6 +1238,81 @@ Prefab:
       propertyPath: mat_tape
       value: 
       objectReference: {fileID: 1816247087}
+    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: screenLinesNum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010168381756, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 81ca00e50eefc69409d2ebfca8743b5e, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellSteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48eb0a2d9feb942408641d0f50b3e7fb, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellSteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5801ad0b1e658034db4ca215cb1419b4, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellSteps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: fd510853b436598498fe9f00b57d63c6, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellSteps.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48b4e168df9bd0944aefe5fa29608cb1, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellSteps.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e9aae9c40e26e224fba7036d30801449, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: woodStep
+      value: 
+      objectReference: {fileID: 8300000, guid: e3d98cc91bae285439a9c855edf5cd64, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: grassStep
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e8ab1a10378ddc4fbf88cef445a4653, type: 3}
+    - target: {fileID: 114000011364829546, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: carpetStep
+      value: 
+      objectReference: {fileID: 8300000, guid: 8cd85e969cae7ff408c5c3751abd0a10, type: 3}
+    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: key
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a05ddcb474c594429cc2cbd1a8f265a, type: 3}
+    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 8300000, guid: 1eca7e4a81a95c748bc97e35bcccf4ae, type: 3}
+    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: grassland
+      value: 
+      objectReference: {fileID: 8300000, guid: 1994c24bd9e6aa849889af2c0d5b734c, type: 3}
+    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: hellland
+      value: 
+      objectReference: {fileID: 8300000, guid: 48b4e168df9bd0944aefe5fa29608cb1, type: 3}
+    - target: {fileID: 114000012876671326, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: flipdisabled
+      value: 
+      objectReference: {fileID: 8300000, guid: 838422437d355cd45b30964dfb00ce91, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
@@ -8890,6 +8965,26 @@ Prefab:
       propertyPath: levelNum
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: dayIntroMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 99ae9469e23ce6e4e852d6d664485f1e, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: dayLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: e13a90cad59f3f64c88834fa4f25ea42, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: nightLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dcb6aafdd6cb744ab6154a4ed50115b, type: 3}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: hellLoopMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: a3a90832e4ace51429cc38b23d006d41, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}
   m_IsPrefabParent: 0
