@@ -7,7 +7,8 @@ public class TriggeredSFX : MonoBehaviour {
 
     public AudioClip key;
     public AudioClip door;
-    public AudioClip grassland;
+    public AudioClip[] dayland;
+    public AudioClip[] nightland;
     public AudioClip hellland;
     public AudioClip flipdisabled;
 
@@ -32,9 +33,13 @@ public class TriggeredSFX : MonoBehaviour {
         {
             source.PlayOneShot(door, doorVol);
         }
-        if (type == "grassland")
+        if (type == "dayland")
         {
-            source.PlayOneShot(grassland, landingVol);
+            source.PlayOneShot(dayland[Random.Range(0, dayland.Length - 1)], landingVol);
+        }
+        if (type == "nightland")
+        {
+            source.PlayOneShot(nightland[Random.Range(0, nightland.Length - 1)], landingVol);
         }
         if (type == "hellland")
         {

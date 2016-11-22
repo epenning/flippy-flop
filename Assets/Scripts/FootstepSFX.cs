@@ -5,9 +5,11 @@ public class FootstepSFX : MonoBehaviour {
 
     public AudioSource footstepSource;
 
+    public AudioClip[] daySteps;
+    public AudioClip[] nightSteps;
     public AudioClip[] hellSteps;
+
     public AudioClip woodStep;
-    public AudioClip grassStep;
     public AudioClip carpetStep;
 
     public GameObject playerController;
@@ -69,14 +71,19 @@ public class FootstepSFX : MonoBehaviour {
                 AudioClip step;
                 float currVolume;
 
-                if (stepType == 3)
+                if (stepType == 2)
+                {
+                    step = nightSteps[Random.Range(0, nightSteps.Length - 1)];
+                    currVolume = volume;
+                }
+                else if (stepType == 3)
                 {
                     step = hellSteps[Random.Range(0, hellSteps.Length - 1)];
                     currVolume = volume / 2;
                 }
                 else
                 {
-                    step = grassStep;
+                    step = daySteps[Random.Range(0, daySteps.Length - 1)];
                     currVolume = volume;
                 }
 
