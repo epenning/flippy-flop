@@ -32,12 +32,12 @@ public class PauseMenu : MonoBehaviour {
 
     void Update(){
         //Display or hide the pause menu based on keyboard input
-        if (Input.GetKeyDown(KeyCode.Escape) && !panelDisplayed)
+        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Button Start")) && !panelDisplayed)
         {
             Time.timeScale = 0;
             ShowPanel();
             
-        } else if (Input.GetKeyDown(KeyCode.Escape) && panelDisplayed){
+        } else if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Button Start")) && panelDisplayed){
             HidePanel();
             playerScript.gamePaused = false;
         }
