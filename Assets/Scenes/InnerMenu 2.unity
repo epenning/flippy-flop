@@ -198,8 +198,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211, y: 183}
-  m_SizeDelta: {x: 328, y: 56}
+  m_AnchoredPosition: {x: -162, y: 183}
+  m_SizeDelta: {x: 426, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167082906
 MonoBehaviour:
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Unkown Issue!!!
+  m_Text: System was reset unexpectedly.
 --- !u!222 &167082907
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -273,8 +273,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71, y: 143}
-  m_SizeDelta: {x: 609, y: 55}
+  m_AnchoredPosition: {x: -68, y: 143}
+  m_SizeDelta: {x: 616, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343341104
 MonoBehaviour:
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Successfully get your latest save data.
+  m_Text: Latest save data restored - continue playing.
 --- !u!222 &343341105
 CanvasRenderer:
   m_ObjectHideFlags: 0
