@@ -5567,16 +5567,6 @@ Prefab:
       propertyPath: m_Name
       value: Trap_1x1_DayNight_Up_Spikes (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 212000013289419678, guid: 82b19f481fc30cb40949e1cfde8b9613,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012114717916, guid: 82b19f481fc30cb40949e1cfde8b9613,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82b19f481fc30cb40949e1cfde8b9613, type: 2}
   m_IsPrefabParent: 0
