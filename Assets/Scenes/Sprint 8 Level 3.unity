@@ -3978,6 +3978,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013124801338, guid: d57b48e16b47341478fd35db79ea7009,
     type: 2}
   m_PrefabInternal: {fileID: 1472339779}
+--- !u!20 &666988863 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20000012284530524, guid: bc7b05984478b95458e304036f5c2250,
+    type: 2}
+  m_PrefabInternal: {fileID: 1277199360}
 --- !u!1001 &668853374
 Prefab:
   m_ObjectHideFlags: 0
@@ -7454,16 +7459,6 @@ Prefab:
       propertyPath: m_Name
       value: Trap_1x1_DayHell_Down_Spikes (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 212000013005983766, guid: d57b48e16b47341478fd35db79ea7009,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000011567618014, guid: d57b48e16b47341478fd35db79ea7009,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d57b48e16b47341478fd35db79ea7009, type: 2}
   m_IsPrefabParent: 0
@@ -7670,7 +7665,7 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 666988863}
     - target: {fileID: 114000012667716602, guid: 0415848526ee7374ea6f3dd13c06a27d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7984,6 +7979,11 @@ Prefab:
       propertyPath: background
       value: 
       objectReference: {fileID: 281054933}
+    - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: screenLinesNum
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
   m_IsPrefabParent: 0
