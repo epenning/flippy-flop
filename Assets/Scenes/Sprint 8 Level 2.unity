@@ -1002,6 +1002,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010569979994, guid: 9447829061dabd7418b0586053cb5070,
     type: 2}
   m_PrefabInternal: {fileID: 162864111}
+--- !u!1 &173084096 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011498116970, guid: 6c2343edb7d27f142a26ad4cefad2990,
+    type: 2}
+  m_PrefabInternal: {fileID: 1800342283}
 --- !u!1001 &198826048
 Prefab:
   m_ObjectHideFlags: 0
@@ -1586,7 +1591,7 @@ Prefab:
         type: 2}
       propertyPath: background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 173084096}
     - target: {fileID: 114000013578754618, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: hiddenOnStart
@@ -1653,7 +1658,7 @@ Prefab:
         type: 2}
       propertyPath: levelRoot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1335966483}
     - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
         type: 2}
       propertyPath: nightMusic

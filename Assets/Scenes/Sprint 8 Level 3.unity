@@ -4052,7 +4052,7 @@ Prefab:
         type: 2}
       propertyPath: levelRoot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 977394601}
     - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
         type: 2}
       propertyPath: nightMusic
@@ -7064,6 +7064,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013724744564, guid: b3ef3ddd07ce64d4f811881b412bd450,
     type: 2}
   m_PrefabInternal: {fileID: 1108242032}
+--- !u!1 &1116356821 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011498116970, guid: 6c2343edb7d27f142a26ad4cefad2990,
+    type: 2}
+  m_PrefabInternal: {fileID: 418646459}
 --- !u!1001 &1119779790
 Prefab:
   m_ObjectHideFlags: 0
@@ -8098,7 +8103,7 @@ Prefab:
         type: 2}
       propertyPath: background
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1116356821}
     - target: {fileID: 114000013631364590, guid: bc7b05984478b95458e304036f5c2250,
         type: 2}
       propertyPath: screenLinesNum
