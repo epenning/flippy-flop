@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour {
         bgMaxX = background.transform.position.x + bgSpriteBounds.max.x * bgXScale;
 
         // respawn from checkpoint
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Button B"))
         {
             if(lastCheckpoint)
                 Die(false);
