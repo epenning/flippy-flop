@@ -23,4 +23,12 @@ public class LevelSwitcher : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Button Start"))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 }
