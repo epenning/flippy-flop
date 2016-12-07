@@ -36,6 +36,7 @@ public class GaspEvent : MonoBehaviour
             if (playerObj.transform.position.x >= transform.position.x)
             {
                 hasStarted = true;
+                gaspSound.Play();
                 startScreenTwitch();
             }
         }
@@ -43,7 +44,6 @@ public class GaspEvent : MonoBehaviour
 
     void startScreenTwitch()
     {
-        gaspSound.Play();
         playerScript.gamePaused = true;
         masterVolScript.innerGameMuted = true;
         masterVolScript.updateInnerVol(0f);
