@@ -104,8 +104,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012353415754}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -2.75, y: -13.625, z: 0}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: -16.55, y: -3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_Children:
@@ -254,9 +254,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012353415754}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 63601d2e26b615f4988cff4f6c2953ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: d842b66e0096d8549acc5ed25ff79d77, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -297,7 +297,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010091052696}
-  serializedVersion: 4
+  serializedVersion: 2
   lengthInSec: 5
   startDelay:
     scalar: 0
@@ -335,13 +335,12 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
+  randomSeed: 2088503152
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 2088503152
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2116,7 +2115,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 8cfe8eaf4f9fa1c4cac9fb0496e10450, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1ea229a7a9c0af4cb0522a854e2d2a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
