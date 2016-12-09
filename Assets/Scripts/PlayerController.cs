@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.S) && !flipIconScript.hidden)
+                if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("Button X")) && !flipIconScript.hidden)
                 {
                     flipIconScript.flashDisabled();
                     triggeredSFX.Play("flipdisabled");
@@ -227,14 +227,14 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Button B"))
         {
             if(lastCheckpoint)
-                Die(false);
+                Die(false, true);
         }
 
         // respawn from falling off map
         if (transform.position.y < bgMinY)
         {
             // Reached the border of the background
-            Die(true);
+            Die(true, false);
         }
 
 
@@ -343,15 +343,16 @@ public class PlayerController : MonoBehaviour {
             // handle trap collision (only if flipped upside-down)
             if ((coll.gameObject.tag == "trap" || coll.gameObject.tag == "enemy"))
             {
-                Die(false);
+                Die(false, false);
             }
         }
     }
 
-    void Die(bool outOfBounds)
+    void Die(bool outOfBounds, bool restarted)
     {
         // play death sound
-        triggeredSFX.Play("death");
+        if(!restarted)
+            triggeredSFX.Play("death");
 
         if (respawning || levelScript.rotating)
             return;

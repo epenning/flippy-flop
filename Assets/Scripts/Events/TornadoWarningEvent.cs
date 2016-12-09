@@ -41,6 +41,7 @@ public class TornadoWarningEvent : MonoBehaviour {
         playerScript.gamePaused = true;
         masterVolScript.innerGameMuted = true;
         masterVolScript.updateInnerVol(0f);
+        GameObject.Find("radio").SetActive(false);
         mainCamera.GetComponent<postVHSPro>().twitchVOn = true;
         Invoke("activateCanvas", 0.1f);
     }
