@@ -1682,7 +1682,12 @@ Prefab:
     - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
         type: 2}
       propertyPath: upMusicVol
-      value: 0.5
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012031404798, guid: efb4382a5024c36449dbac67c6dffb05,
+        type: 2}
+      propertyPath: musicVol
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb4382a5024c36449dbac67c6dffb05, type: 2}

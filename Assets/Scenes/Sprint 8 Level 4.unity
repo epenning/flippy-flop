@@ -358,12 +358,12 @@ Prefab:
     - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
         type: 2}
       propertyPath: musicVol
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 114000013526756704, guid: 999c3e9e2b7388f429a325b831a4788b,
         type: 2}
       propertyPath: footstepVol
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 999c3e9e2b7388f429a325b831a4788b, type: 2}
