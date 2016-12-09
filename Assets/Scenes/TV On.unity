@@ -141,7 +141,7 @@ Prefab:
     - target: {fileID: 82000012104025260, guid: 9c7c2e764f2918a4f80714406eb98bcb,
         type: 2}
       propertyPath: m_Volume
-      value: 0.013
+      value: 0.056
       objectReference: {fileID: 0}
     - target: {fileID: 82000012104025260, guid: 9c7c2e764f2918a4f80714406eb98bcb,
         type: 2}
@@ -835,7 +835,7 @@ MonoBehaviour:
   bleedOn: 1
   crtMode: 0
   crtLinesMode: 0
-  screenLinesNum: 0
+  screenLinesNum: 720
   bleedAmount: 1
   bleedDebugOn: 0
   bleedCurveY:
