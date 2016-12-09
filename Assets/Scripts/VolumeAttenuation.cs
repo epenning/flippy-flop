@@ -29,6 +29,9 @@ public class VolumeAttenuation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!playerObj)
+            return;
+
         if(transform.position.x <= playerObj.transform.position.x && maintainMaxVol)
         {
             currVol = maxVol;

@@ -1522,11 +1522,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.6
+      value: -19.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: -0.66
       objectReference: {fileID: 0}
     - target: {fileID: 4000011250398432, guid: bc7b05984478b95458e304036f5c2250, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1601,6 +1601,11 @@ Prefab:
         type: 2}
       propertyPath: screenLinesNum
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223000011075497400, guid: bc7b05984478b95458e304036f5c2250,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7b05984478b95458e304036f5c2250, type: 2}
@@ -2321,7 +2326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686adc3cb5e65c9438603f749de050ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persistThroughLevels: 1
+  persistThroughLevels: 0
 --- !u!82 &460006251
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2432,7 +2437,7 @@ MonoBehaviour:
   minVol: 0
   maxVol: 0.3
   currVol: 0
-  persist: 0
+  persist: 1
   maintainMaxVol: 0
 --- !u!1001 &469913675
 Prefab:
