@@ -350,6 +350,9 @@ public class PlayerController : MonoBehaviour {
 
     void Die(bool outOfBounds)
     {
+        // play death sound
+        triggeredSFX.Play("death");
+
         if (respawning || levelScript.rotating)
             return;
 

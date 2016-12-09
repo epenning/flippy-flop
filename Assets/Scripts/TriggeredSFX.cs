@@ -11,12 +11,14 @@ public class TriggeredSFX : MonoBehaviour {
     public AudioClip[] nightland;
     public AudioClip hellland;
     public AudioClip flipdisabled;
+    public AudioClip death;
 
     public float volume = 1f;
     public float landingVol = 1f;
     public float flipDisabledVol = 1f;
     public float keyVol = 1f;
     public float doorVol = 1f;
+    public float deathVol = 1f;
 
     void Start()
     {
@@ -48,6 +50,10 @@ public class TriggeredSFX : MonoBehaviour {
         if (type == "flipdisabled")
         {
             source.PlayOneShot(flipdisabled, flipDisabledVol);
+        }
+        if (type == "death")
+        {
+            source.PlayOneShot(death, deathVol);
         }
     }
 }
